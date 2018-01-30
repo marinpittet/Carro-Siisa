@@ -278,6 +278,7 @@
 /* Seccion descripcion de productos */
 section.productos {
 	margin-top:130px;
+	background: linear-gradient(to right, #7FABC7 50%, #436289 50%);
 }
 .productos.container.row {
   display: flex;
