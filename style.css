@@ -1,3 +1,10 @@
+	div.navbar-total {
+		position: fixed;
+		top: 0;
+		padding: 0;
+		margin: 0;
+		z-index: 1000;
+	}
 /* barra de navegacion con pestañas contenido responsivo */
 	li.nav-item a {
 		color: rgba(255,255,255,0.6);
@@ -13,10 +20,11 @@
 	}
 	li.nav-item.active a{
 		color: #000;
-		background-color: rgba(248,249,250,0.85); 
+		background-color: rgba(248,249,250,0.7); 
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 400;
 		text-transform: uppercase;
+		border-top: solid 1px #555;
 	}
 	nav.navbar.navbar-expand-lg.navbar-fixed-top{
 		padding-bottom: 0;
@@ -30,7 +38,7 @@
 			padding: 0;
 		}
 	}
-	@media only screen and (min-width: 401px) and (max-width: 800px) {
+	@media only screen and (min-width: 401px) and (max-width: 992px) {
 		.tabli {
 			font-size: 12px;
 		}
@@ -46,7 +54,9 @@
 		margin-left: 30px;
 	}
 	nav.navbar.navbar-top {
-		background-color: rgba(248,249,250,0.85);
+		background: linear-gradient(to bottom, rgba(248,249,250,0.7), rgba(248,249,250,1));
+		border-bottom: solid 2px #D4145A;
+		box-shadow: 0px 2px 10px rgba(0,0,0,0.5) ;
 	}
 	@media only screen and (max-width: 400px) {
 		a.navbar-brand img {
@@ -54,7 +64,7 @@
 			margin-left: 0px;
 		}
 	}
-	@media only screen and (min-width: 401px) and (max-width: 800px) {
+	@media only screen and (min-width: 401px) and (max-width: 992px) {
 	
 	}
 /* logo y fondo barra de navegacion */
@@ -104,7 +114,7 @@
 			top: -14px;
 		}
 	}
-	@media only screen and (min-width: 401px) and (max-width: 800px) {
+	@media only screen and (min-width: 401px) and (max-width: 992px) {
 	
 	}
 /* boton y dropdown de ingreso de usuario */
@@ -118,13 +128,15 @@
 		left: 0;
 		top: 0;
 		right: 0;
-		height: 60%;
+		height: 700px;
 		z-index: -1;
 	}
 	@media only screen and (max-width: 400px) {
-		
+			header div.back-image {
+				height: 392px;
+			}
 	}
-	@media only screen and (min-width: 401px) and (max-width: 800px) {
+	@media only screen and (min-width: 401px) and (max-width: 992px) {
 	
 	}
 /* imagen de fondo cabecera */
@@ -132,7 +144,7 @@
 /* texto y botones sobre la imagen de cabecera */
 	div.hero-back {
 		background-color: rgba(0,0,0,0.5);
-		margin-top: 120px;
+		margin-top: 251px;
 		margin-right: 150px;
 		margin-left: 150px;
 		padding: 15px 20px;
@@ -174,7 +186,7 @@
 			font-size: 1.2em;
 		}
 		div.hero-back {
-			margin-top: 40px;
+			margin-top: 127px;
 			margin-left: 0;
 			margin-right: 0;
 		}
@@ -191,7 +203,24 @@
 			font-size: 2em;
 		}
 		div.hero-back {
-			margin-top: 130px;
+			margin-top: 313px;
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+		div.botones-Siisa {
+			margin-top: 100px;
+		}
+		button.btn-a,
+		button.btn-b {
+			font-size: 12px;
+		}
+	}
+	@media only screen and (min-width: 801px) and (max-width: 992px) {
+		.hero-back p.hero-text {
+			font-size: 2em;
+		}
+		div.hero-back {
+			margin-top: 276px;
 			margin-left: 50px;
 			margin-right: 50px;
 		}
@@ -211,7 +240,7 @@
 	    background: linear-gradient(to right, #9E005D, #D4145A);
 	    position: absolute;
 	    width: 100%;
-	    top: 60%;
+	    top: 700px;
 	    list-style-type: none;
 	    margin: 0;
 	    padding: 0;
@@ -237,9 +266,79 @@
 		div.cart-bar ul.links li a.menu-link {
 			font-size: 12px;
 		}
+		div.cart-bar ul.links {
+			top: 392px;
+		}
 	}
-	@media only screen and (min-width: 401px) and (max-width: 800px) {
+	@media only screen and (min-width: 401px) and (max-width: 992px) {
 	
 	}
 /* barra de navegacion del carro de compras con links directos a cada seccion del carro */
 /* -------------------------------------------------------------------------------------------------------------------- */
+/* Seccion descripcion de productos */
+section.productos {
+	margin-top:130px;
+}
+.productos.container.row {
+  display: flex;
+}
+.productos.container.row.col {
+  flex: 1; 
+}
+.persona {
+	background-color: #7FABC7;
+	color: #fff;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
+}
+.persona img {
+	margin-top: 70px;
+	margin-bottom: 70px;
+	width: 100%
+}
+.persona h2 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.empresa {
+	background-color: #547EA5;
+	color: #fff;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
+}
+.empresa img {
+	margin-top: 70px;
+	margin-bottom: 70px;
+	width: 100%
+}
+.empresa h2 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.vehiculo {
+	background-color: #436289;
+	color: #fff;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
+}
+.vehiculo img {
+	margin-top: 70px;
+	margin-bottom: 70px;
+	width: 100%
+}
+.vehiculo h2 {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 28px;
+	text-align: center;
+	margin-bottom: 50px;
+}
