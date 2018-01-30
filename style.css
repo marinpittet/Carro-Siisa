@@ -1,3 +1,4 @@
+/* navbar total fixed position */
 	div.navbar-total {
 		position: fixed;
 		top: 0;
@@ -105,7 +106,7 @@
 	    display: none; 
 	    overflow: hidden;
 	}
-	@media only screen and (max-width: 400px) {
+	@media only screen and (max-width: 500px) {
 		li span.nav-item-drop {
 			display: none;
 		}
@@ -198,14 +199,31 @@
 			font-size: 12px;
 		}
 	}
-	@media only screen and (min-width: 401px) and (max-width: 800px) {
+	@media only screen and (min-width: 401px) and (max-width: 520px) {
+		.hero-back p.hero-text {
+			font-size: 2em;
+		}
+		div.hero-back {
+			margin-top: 265px;
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+		div.botones-Siisa {
+			margin-top: 100px;
+		}
+		button.btn-a,
+		button.btn-b {
+			font-size: 12px;
+		}
+	}
+	@media only screen and (min-width: 521px) and (max-width: 800px) {
 		.hero-back p.hero-text {
 			font-size: 2em;
 		}
 		div.hero-back {
 			margin-top: 313px;
-			margin-left: 50px;
-			margin-right: 50px;
+			margin-left: 30px;
+			margin-right: 30px;
 		}
 		div.botones-Siisa {
 			margin-top: 100px;
@@ -245,6 +263,7 @@
 	    margin: 0;
 	    padding: 0;
 	    overflow: hidden;
+	    z-index: 10;
 	}
 	div.cart-bar ul.links li{
 		float: left;
@@ -282,6 +301,7 @@ section.productos {
 }
 .productos.container.row {
   display: flex;
+  position: absolute;
 }
 .productos.container.row.col {
   flex: 1; 
