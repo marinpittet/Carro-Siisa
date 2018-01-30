@@ -11,11 +11,6 @@
 		line-height: 15px;
 		text-transform: uppercase;
 	}
-	@media only screen and (max-width: 400px) {
-		.tabli.col-6 {
-			font-size: 10px;
-		}
-	}
 	li.nav-item.active a{
 		color: #000;
 		background-color: rgba(248,249,250,0.85); 
@@ -27,6 +22,22 @@
 		padding-bottom: 0;
 		margin-bottom: 0;
 	}
+	@media only screen and (max-width: 400px) {
+		.tabli {
+			font-size: 10px;
+		}
+		nav.navbar.navbar-expand-lg.navbar-fixed-top {
+			padding: 0;
+		}
+	}
+	@media only screen and (min-width: 401px) and (max-width: 800px) {
+		.tabli {
+			font-size: 12px;
+		}
+		nav.navbar.navbar-expand-lg.navbar-fixed-top {
+			padding: 0;
+		}
+	}
 /* barra de navegacion con pestañas contenido responsivo */
 /* -------------------------------------------------------------------------------------------------------------------- */
 /* logo y fondo barra de navegacion */
@@ -37,6 +48,15 @@
 	nav.navbar.navbar-top {
 		background-color: rgba(248,249,250,0.85);
 	}
+	@media only screen and (max-width: 400px) {
+		a.navbar-brand img {
+			height: 50px;
+			margin-left: 0px;
+		}
+	}
+	@media only screen and (min-width: 401px) and (max-width: 800px) {
+	
+	}
 /* logo y fondo barra de navegacion */
 /* -------------------------------------------------------------------------------------------------------------------- */
 /* boton y dropdown de ingreso de usuario */
@@ -45,11 +65,6 @@
 		right: 200px;
 		color: rgba(0,0,0,0.5);
 		font-weight: 300;
-	}
-	@media only screen and (max-width: 500px) {
-		li span.nav-item-drop {
-		display: none;
-	}
 	}
 	button.dropdown-toggle {
 		color: #fff;
@@ -75,7 +90,22 @@
 		overflow-x: scroll;
 	}
 	ul.navbar-nav.tabs::-webkit-scrollbar { 
+		-ms-overflow-style: none; 
+		overflow: -moz-scrollbars-none;
 	    display: none; 
+	    overflow: hidden;
+	}
+	@media only screen and (max-width: 400px) {
+		li span.nav-item-drop {
+			display: none;
+		}
+		button.dropdown-toggle {
+			font-size: 12px;
+			top: -14px;
+		}
+	}
+	@media only screen and (min-width: 401px) and (max-width: 800px) {
+	
 	}
 /* boton y dropdown de ingreso de usuario */
 /* -------------------------------------------------------------------------------------------------------------------- */
@@ -90,6 +120,12 @@
 		right: 0;
 		height: 60%;
 		z-index: -1;
+	}
+	@media only screen and (max-width: 400px) {
+		
+	}
+	@media only screen and (min-width: 401px) and (max-width: 800px) {
+	
 	}
 /* imagen de fondo cabecera */
 /* -------------------------------------------------------------------------------------------------------------------- */
@@ -133,35 +169,77 @@
 	    font-family: 'Roboto Condensed', sans-serif;
 	    width: 100%;
 	}
+	@media only screen and (max-width: 400px) {
+		.hero-back p.hero-text {
+			font-size: 1.2em;
+		}
+		div.hero-back {
+			margin-top: 40px;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		div.botones-Siisa {
+			margin-top: 30px;
+		}
+		button.btn-a,
+		button.btn-b {
+			font-size: 12px;
+		}
+	}
+	@media only screen and (min-width: 401px) and (max-width: 800px) {
+		.hero-back p.hero-text {
+			font-size: 2em;
+		}
+		div.hero-back {
+			margin-top: 130px;
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+		div.botones-Siisa {
+			margin-top: 100px;
+		}
+		button.btn-a,
+		button.btn-b {
+			font-size: 12px;
+		}
+	}
 /* texto y botones sobre la imagen de cabecera */
 /* -------------------------------------------------------------------------------------------------------------------- */
 /* barra de navegacion del carro de compras con links directos a cada seccion del carro */
-div.cart-bar ul.links {
-	display: inline;
-    background: linear-gradient(to right, #9E005D, #D4145A);
-    position: absolute;
-    width: 100%;
-    top: 60%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-div.cart-bar ul.links li{
-	float: left;
-	width: 33.3%
-}
-div.cart-bar ul.links li:hover{
-	background-color: rgba(255,255,255,0.2);
-}
-div.cart-bar ul.links li a.menu-link {
-	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 300;
-	display: block;
-    text-align: center;
-    padding: 8px;
-    text-decoration: none;
-}
+	div.cart-bar ul.links {
+		display: inline;
+	    background: linear-gradient(to right, #9E005D, #D4145A);
+	    position: absolute;
+	    width: 100%;
+	    top: 60%;
+	    list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	    overflow: hidden;
+	}
+	div.cart-bar ul.links li{
+		float: left;
+		width: 33.3%
+	}
+	div.cart-bar ul.links li:hover{
+		background-color: rgba(255,255,255,0.2);
+	}
+	div.cart-bar ul.links li a.menu-link {
+		color: #fff;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+		display: block;
+	    text-align: center;
+	    padding: 8px;
+	    text-decoration: none;
+	}
+	@media only screen and (max-width: 400px) {
+		div.cart-bar ul.links li a.menu-link {
+			font-size: 12px;
+		}
+	}
+	@media only screen and (min-width: 401px) and (max-width: 800px) {
+	
+	}
 /* barra de navegacion del carro de compras con links directos a cada seccion del carro */
 /* -------------------------------------------------------------------------------------------------------------------- */
