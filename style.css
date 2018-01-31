@@ -5,7 +5,7 @@
 		padding: 0;
 		margin: 0;
 		z-index: 1000;
-		background-color: #9F0F44;
+		/*background-color: #9F0F44;*/
 	}
 /* barra de navegacion con pestañas contenido responsivo */
 	li.nav-item a {
@@ -297,100 +297,147 @@
 /* barra de navegacion del carro de compras con links directos a cada seccion del carro */
 /* -------------------------------------------------------------------------------------------------------------------- */
 /* Seccion descripcion de productos */
-section.productos {
-	margin-top:130px;
-	background: linear-gradient(to right, #7FABC7 50%, #436289 50%);
-}
-.productos.container.row {
-  display: flex;
-  position: absolute;
-}
-.productos.container.row.col {
-  flex: 1; 
-}
-.persona {
-	background-color: #7FABC7;
-	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 300;
-}
-.persona img {
-	margin-top: 70px;
-	margin-bottom: 70px;
-	width: 100%
-}
-.persona h2 {
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 300;
-	text-transform: uppercase;
-	font-size: 28px;
-	text-align: center;
-	margin-bottom: 50px;
-}
-.persona p {
-	padding-right: 20px;
-  	padding-left: 20px;
-  	text-align: justify;
-}
-.empresa {
-	background-color: #547EA5;
-	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 300;
-}
-.empresa img {
-	margin-top: 70px;
-	margin-bottom: 70px;
-	width: 100%
-}
-.empresa h2 {
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 300;
-	text-transform: uppercase;
-	font-size: 28px;
-	text-align: center;
-	margin-bottom: 50px;
-}
-.empresa p {
-	padding-right: 20px;
-  	padding-left: 20px;
-  	text-align: justify;
-}
-.vehiculo {
-	background-color: #436289;
-	color: #fff;
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 300;
-}
-.vehiculo img {
-	margin-top: 70px;
-	margin-bottom: 70px;
-	width: 100%
-}
-.vehiculo h2 {
-	font-family: 'Roboto Condensed', sans-serif;
-	font-weight: 300;
-	text-transform: uppercase;
-	font-size: 28px;
-	text-align: center;
-	margin-bottom: 50px;
-}
-.vehiculo p {
-	padding-right: 20px;
-  	padding-left: 20px;
-  	text-align: justify;
-}
-button.btn-c {
-	padding: 10px;
-	margin-top: 50px;
-	margin-bottom: 100px;
-    background: rgba(0,0,0,0.5);
-    border: solid 2px #fff;
-    border-radius: 20px;
-    font-family: 'Roboto Condensed', sans-serif;
-    width: 50%;
-    transform: translateX(50%);
-}
-button.btn-c a {
-	color: #fff;
-}
+	section.productos {
+		margin-top:130px;
+		background: linear-gradient(to right, #7FABC7 50%, #436289 50%);
+	}
+	.productos.container.row {
+	  display: flex;
+	  position: absolute;
+	}
+	.productos.container.row.col {
+	  flex: 1; 
+	}
+	.persona {
+		background-color: #7FABC7;
+		color: #fff;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+	}
+	.persona img {
+		margin-top: 70px;
+		margin-bottom: 70px;
+		width: 100%
+	}
+	.persona h2 {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+		text-transform: uppercase;
+		font-size: 28px;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.persona p {
+		padding-right: 20px;
+	  	padding-left: 20px;
+	  	text-align: justify;
+	  	margin-bottom: 100px;
+	}
+	.empresa {
+		background-color: #547EA5;
+		color: #fff;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+	}
+	.empresa img {
+		margin-top: 70px;
+		margin-bottom: 70px;
+		width: 100%
+	}
+	.empresa h2 {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+		text-transform: uppercase;
+		font-size: 28px;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.empresa p {
+		padding-right: 20px;
+	  	padding-left: 20px;
+	  	text-align: justify;
+	}
+	.vehiculo {
+		background-color: #436289;
+		color: #fff;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+	}
+	.vehiculo img {
+		margin-top: 70px;
+		margin-bottom: 70px;
+		width: 100%
+	}
+	.vehiculo h2 {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+		text-transform: uppercase;
+		font-size: 28px;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.vehiculo p {
+		padding-right: 20px;
+	  	padding-left: 20px;
+	  	text-align: justify;
+	}
+	button.btn-c {
+		padding: 10px;
+		margin-top: 0px;
+		margin-bottom: 50px;
+	    background: rgba(0,0,0,0.5);
+	    border: solid 2px #fff;
+	    border-radius: 10px;
+	    font-family: 'Roboto Condensed', sans-serif;
+	    width: 50%;
+	    transform: translateX(50%);
+	}
+	button.btn-c a {
+		color: #fff;
+	}
+/* Seccion descripcion de productos */
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* Footer */
+	footer {
+		background-color: #eee;
+		color: #4D4D4D;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+		padding-top: 30px;
+
+	}
+	footer.container.row {
+	  display: flex;
+	  position: absolute;
+	}
+	footer.container.row.col {
+	  flex: 1; 
+	}
+	footer a {
+		color: #4D4D4D; 
+	}
+	footer li {
+		list-style: none;
+	}
+	.f-titulo {
+		text-align: left;
+		font-size: 1.5em;
+	}
+	.f-subtitulo {
+		font-weight: 400;
+		margin-bottom: 0.6em;
+	}
+	.fin {
+		 background: linear-gradient(to right, #9E005D, #D4145A);
+		 bottom: 0px;
+		 position: relative;
+		 padding-top: 20px;
+		 padding-bottom: 5px;
+	}
+	.fin p.copyright {
+		color: rgba(255,255,255,0.6);
+		font-size: 14px;
+		line-height: 15px;
+		text-align: center;
+		font-weight: 300;
+	}
