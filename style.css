@@ -57,7 +57,7 @@
 	}
 	nav.navbar.navbar-top {
 		background: linear-gradient(to bottom, rgba(248,249,250,0.7), rgba(248,249,250,1));
-		border-bottom: solid 2px #D4145A;
+		border-bottom: solid 2px #8F1B3A;
 		box-shadow: 0px 2px 10px rgba(0,0,0,0.5) ;
 		padding-bottom: 0px;
 	}
@@ -81,7 +81,7 @@
 	}
 	button.dropdown-toggle {
 		color: #fff;
-		background: linear-gradient(to right, #9E005D, #D4145A);
+		background: linear-gradient(to right, #8F1B3A, #D4145A);
 		margin-left: 20px;
 		border-radius: 0px 0px 5px 5px;
 		padding: 10px;
@@ -168,7 +168,7 @@
 	}
 	button.btn-a {
 		padding: 20px;
-	    background: linear-gradient(to right, #9E005D, #D4145A);
+	    background: linear-gradient(to top, #8F1B3A, #D4145A);
 	    color: #fff;
 	    border: solid 2px #fff;
 	    border-radius: 20px;
@@ -257,7 +257,7 @@
 /* barra de navegacion del carro de compras con links directos a cada seccion del carro */
 	div.cart-bar ul.links {
 		display: inline;
-	    background: linear-gradient(to right, #9E005D, #D4145A);
+	    background: linear-gradient(to right, #8F1B3A, #D4145A);
 	    position: absolute;
 	    width: 100%;
 	    top: 700px;
@@ -314,12 +314,16 @@
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 300;
 	}
-	.persona img {
+	.persona img,
+	.empresa img,
+	.vehiculo img  {
 		margin-top: 70px;
 		margin-bottom: 70px;
 		width: 100%
 	}
-	.persona h2 {
+	.persona h2,
+	.empresa h2, 
+	.vehiculo h2 {
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 300;
 		text-transform: uppercase;
@@ -327,7 +331,9 @@
 		text-align: center;
 		margin-bottom: 50px;
 	}
-	.persona p {
+	.persona p,
+	.empresa p,
+	.vehiculo p {
 		padding-right: 20px;
 	  	padding-left: 20px;
 	  	text-align: justify;
@@ -339,47 +345,11 @@
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 300;
 	}
-	.empresa img {
-		margin-top: 70px;
-		margin-bottom: 70px;
-		width: 100%
-	}
-	.empresa h2 {
-		font-family: 'Roboto Condensed', sans-serif;
-		font-weight: 300;
-		text-transform: uppercase;
-		font-size: 28px;
-		text-align: center;
-		margin-bottom: 50px;
-	}
-	.empresa p {
-		padding-right: 20px;
-	  	padding-left: 20px;
-	  	text-align: justify;
-	}
 	.vehiculo {
 		background-color: #436289;
 		color: #fff;
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 300;
-	}
-	.vehiculo img {
-		margin-top: 70px;
-		margin-bottom: 70px;
-		width: 100%
-	}
-	.vehiculo h2 {
-		font-family: 'Roboto Condensed', sans-serif;
-		font-weight: 300;
-		text-transform: uppercase;
-		font-size: 28px;
-		text-align: center;
-		margin-bottom: 50px;
-	}
-	.vehiculo p {
-		padding-right: 20px;
-	  	padding-left: 20px;
-	  	text-align: justify;
 	}
 	button.btn-c {
 		padding: 10px;
@@ -394,6 +364,48 @@
 	}
 	button.btn-c a {
 		color: #fff;
+	}
+	@media only screen and (max-width: 400px) {
+		button.btn-c {
+			width: 100%;
+			transform: translateX(0%);
+		}
+		.persona p,
+		.empresa p,
+		.vehiculo p {
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+	}
+	@media only screen and (min-width: 401px) and (max-width: 520px) {
+		button.btn-c {
+			width: 100%;
+			transform: translateX(0%);
+		}
+	}
+	@media only screen and (min-width: 521px) and (max-width: 800px) {
+		.persona h2,
+		.empresa h2, 
+		.vehiculo h2 {
+			font-size: 18px;
+		}
+		button.btn-c a {
+			font-size: 12px;
+		}
+		.persona p,
+		.empresa p,
+		.vehiculo p {
+			font-size: 12px;
+			padding-right: 5px;
+			padding-left: 5px;
+		}
+		button.btn-c {
+			width: 100%;
+			transform: translateX(0%);
+		}
+	}
+	@media only screen and (min-width: 801px) and (max-width: 992px) {
+		
 	}
 /* Seccion descripcion de productos */
 /* -------------------------------------------------------------------------------------------------------------------- */
@@ -428,7 +440,7 @@
 		margin-bottom: 0.6em;
 	}
 	.fin {
-		 background: linear-gradient(to right, #9E005D, #D4145A);
+		 background: linear-gradient(to right, #8F1B3A, #D4145A);
 		 bottom: 0px;
 		 position: relative;
 		 padding-top: 20px;
