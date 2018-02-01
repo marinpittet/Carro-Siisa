@@ -14,7 +14,7 @@
 <body>
 	<!-- imagen de fondo -->
 	<header>
-		<div class="back-image row"></div>
+		<div class="back-image"></div>
 	</header>
 	<!-- imagen de fondo -->
 	<!-- BARRA DE NAVEGACION GENERAL DEL SITIO -->
@@ -58,7 +58,7 @@
 		<!-- pestañas barra de navegacion general -->
 		<!-- logo siisa -->
 		<nav class="navbar navbar-top">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="index.html">
 				<img src="images/logo-siisa.svg" alt="Logo Siisa">
 			</a>
 			<!-- logo siisa -->
@@ -128,7 +128,7 @@
 		<ul class="links">
 			<div class="container">
 
-				<li><a class="menu-link" href="infoPersona.html">Información de Persona</a></li>
+				<li><a class="menu-link" href="#">Información de Persona</a></li>
 				<li><a class="menu-link" href="#">Información de Empresa</a></li>
 				<li><a class="menu-link" href="#">Vehículos Motorizados</a></li>
 
@@ -136,35 +136,83 @@
 		</ul>	
 	</div>
 	<!-- navegacion carro -->
-	<!-- triple seccion de productos -->
-	<section class="productos">
-		<div class="container">
-			<div class="row">
+	<!-- barra etapa de compra -->
+	<div class="shop-bar">
+		<ul class="links">
+			<div class="container">
+				<div class="row">
+					<div class="etapa col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 active"> <div class="status-bar"></div></div>
+					<div class="etapa col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"> <div class="status-bar"></div></div>
+					<div class="etapa col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"> <div class="status-bar"></div></div>
+					<div class="etapa col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"> <div class="status-bar"></div></div>
 
-				<div class="persona col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-					<img src="images/persona.svg" alt="logo persona">
-					<h2>Información de Persona</h2>
-					<button class="btn btn-c"><a href="infoPersona.html">Ver Productos</a></button>
-					<p>Aquí podrás consultar sobre tu situación comercial, y también si tienes lagunas previsionales producto de que alguno de tus empleadores no haya pagado tus cotizaciones. Para esto deberás autenticarte con SIISApass para dar cumplimiento a lo establecido en el Art. 3° de la Ley 20.575 y en el Art. 12° de la Ley Nº 19.628.</p>
 				</div>
-
-				<div class="empresa col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-					<img src="images/empresa.svg" alt="logo empresa">
-					<h2>Información de Empresa</h2>
-					<button class="btn btn-c"><a href="">Ver Productos</a></button>
-					<p>Te entregamos las herramientas para que puedas tener un panorama amplio sobre la situación comercial de terceros que sean personas jurídicas, y así tomar decisiones inteligentes y seguras.</p>
-				</div>
-
-				<div class="vehiculo col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-					<img src="images/vehiculo.svg" alt="logo vehiculo">
-					<h2>Vehículos Motorizados</h2>
-					<button class="btn btn-c"><a href="">Ver Productos</a></button>
-					<p>Aquí podrá consultar las anotaciones vigentes de un vehículo y validar los datos de propiedad del mismo a partir de los datos básicos del propietario y la placa patente.</p>
+				<div class="row">
+					<li class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"><a class="menu-link active" href="#">Comprar Servicios</a></li>
+					<li class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"><a class="menu-link" href="#">Detalles de Compra</a></li>
+					<li class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"><a class="menu-link" href="#">Confirmacion</a></li>
+					<li class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3"><a class="menu-link" href="#">Resultados</a></li>
 				</div>
 
 			</div>
+		</ul>	
+	</div>
+	<!-- barra etapa de compra -->
+	<!-- descripcion del carro -->
+	<div class="descripcion-back">
+		<div class="container">
+			<p>Aquí podrás consultar sobre tu situación comercial, y también si tienes lagunas previsionales producto de que alguno de tus empleadores no haya pagado tus cotizaciones. </p>
+			<p class="letra-chica">Para esto deberás autenticarte con SIISApass para dar cumplimiento a lo establecido en el Art. 3° de la Ley 20.575 y en el Art. 12° de la Ley Nº 19.628.</p>
+		</div>
+	</div>
+	<!-- descripcion del carro -->
+	<!-- productos y servicios -->
+	<section class="productos-cart">
+		<div class="container">
+			<div class="row">
+				<div class="col card-1 col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+					<a href=""><p>Ver Documento de Ejemplo <i class="fas fa-eye"></i></p></a>
+					<div class="linea"></div>
+					<img src="images/reporte-logo-13.svg" alt="logo-reporte">
+					<p class="titulo">Reporte de Persona</p>
+					<p class="cuerpo">Reporte orientado a evaluar a una Persona Natural y que incorpora información Comercial de acuerdo a ley vigente y sus modificaciones.</p>
+					<div class="linea"></div>
+					<a class="add-cart" href=""><p>Precio: $6.490 <i class="fas fa-2x fa-shopping-cart"></i></p></a>
+				</div>
+
+				<div class="col card-2 col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+					<a href=""><p>Ver Documento de Ejemplo <i class="fas fa-eye"></i></p></a>
+					<div class="linea"></div>
+					<img src="images/cheque-logo-13-13.svg" alt="cheque-reporte">
+					<p class="titulo">Verificación de Cheques</p>
+					<p class="cuerpo">Reporte orientado a evaluar comercialmente tanto al titular del cheque como el estado del cheque mismo.</p>
+					<div class="linea"></div>
+					<a class="add-cart" href=""><p>Precio: $6.490 <i class="fas fa-2x fa-shopping-cart"></i></p></a>
+				</div>
+
+				<div class="col card-1 col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+					<a href=""><p>Ver Documento de Ejemplo <i class="fas fa-eye"></i></p></a>
+					<div class="linea"></div>
+					<img src="images/certificado-logo-13-13.svg" alt="logo-certificado">
+					<p class="titulo">Certificado de Antecedentes Comerciales</p>
+					<p class="cuerpo">Reporte que da cuenta de la situación comercial del RUT consultado.</p>
+					<div class="linea"></div>
+					<a class="add-cart" href=""><p>Precio: $6.490 <i class="fas fa-2x fa-shopping-cart"></i></p></a>
+				</div>
+
+				<div class="col card-2 col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+					<a href=""><p>Ver Documento de Ejemplo <i class="fas fa-eye"></i></p></a>
+					<div class="linea"></div>
+					<img src="images/certificado-logo-13-13.svg" alt="logo-certificado">
+					<p class="titulo">Certificado de Pagos previsionales</p>
+					<p class="cuerpo">Informe que da cuenta del estado de pago de sus cotizaciones por parte de su(s) empleador(es).</p>
+					<div class="linea"></div>
+					<a class="add-cart" href=""><p>Precio: $6.490 <i class="fas fa-2x fa-shopping-cart"></i></p></a>
+				</div>
+			</div>			
 		</div>
 	</section>
+	<!-- productos y servicios -->
 
 	<footer>
 		<div class="container">
