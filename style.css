@@ -8,12 +8,12 @@ body {
 		padding: 0;
 		margin: 0;
 		z-index: 1000;
-		/*background-color: #9F0F44;*/
+		background: url(images/pattern/spiration-light.png);
 	}
 /* barra de navegacion con pestañas contenido responsivo */
 	li.nav-item a {
 		color: rgba(255,255,255,0.6);
-		background-color: rgba(0,0,0,0.4);
+		background-color: rgba(0,0,0,0.6);
 		text-align: center;
 		margin-left: -15px;
 		border-radius: 5px 5px 0px 0px;
@@ -76,13 +76,13 @@ body {
 /* logo y fondo barra de navegacion */
 /* -------------------------------------------------------------------------------------------------------------------- */
 /* boton y dropdown de ingreso de usuario */
-	li span.nav-item-drop {
+	nav li span.nav-item-drop {
 		position: absolute;
 		right: 200px;
 		color: rgba(0,0,0,0.5);
 		font-weight: 300;
 	}
-	button.dropdown-toggle {
+	nav button.dropdown-toggle {
 		color: #fff;
 		background: linear-gradient(to right, #8F1B3A, #D4145A);
 		margin-left: 20px;
@@ -93,29 +93,29 @@ body {
 		top: -19px;
 		border: none;
 	}
-	ul#login-dp.dropdown-menu.show {
+	nav ul#login-dp.dropdown-menu.show {
 		padding: 20px;
 		position: absolute;
 		width: 300px;
 		right: 0;
 		left: auto;
 	}
-	ul.navbar-nav.tabs {
+	nav ul.navbar-nav.tabs {
 		flex-direction: row;
 		max-width: 100vw;
 		overflow-x: scroll;
 	}
-	ul.navbar-nav.tabs::-webkit-scrollbar { 
+	nav ul.navbar-nav.tabs::-webkit-scrollbar { 
 		-ms-overflow-style: none; 
 		overflow: -moz-scrollbars-none;
 	    display: none; 
 	    overflow: hidden;
 	}
 	@media only screen and (max-width: 500px) {
-		li span.nav-item-drop {
+		nav li span.nav-item-drop {
 			display: none;
 		}
-		button.dropdown-toggle {
+		nav button.dropdown-toggle {
 			font-size: 12px;
 			top: -14px;
 		}
@@ -137,8 +137,22 @@ body {
 		height: 700px;
 		z-index: -1;
 	}
+	header div.back-image-2 {
+		background: url(images/background2.jpg) no-repeat center center fixed;
+		background-size: cover;
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		height: 700px;
+		z-index: -1;
+	}
 	@media only screen and (max-width: 400px) {
 			header div.back-image {
+				height: 392px;
+			}
+			header div.back-image-2 {
 				height: 392px;
 			}
 	}
@@ -381,6 +395,10 @@ body {
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
+	.card-1 p.ejemplo,
+	.card-2 p.ejemplo {
+		font-size: 0.8em;
+	}
 	div.linea {
 		height: 1px;
 		width: 100%;
@@ -448,7 +466,32 @@ body {
 	}
 	a.add-cart p{
 		color: #fff;
+	}
+	.cambio-seccion {
+		background-color: #436289;
+		width: 100%;
+		border-radius: 5px;
+		margin-bottom: 20px
+	}
+	.cambio-seccion p.titulo {
+		color: #fff;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 0;
+		margin-bottom: 10px;
+		font-size: 1.3em;
+	}
+	div.servicio-vigilancia {
+		margin-bottom: 20px;
+	}
+	div.servicio-vigilancia p.cuerpo-vigilancia {
+		text-align: left;
+		padding: 20px;
 	}	
+	div.servicio-vigilancia img.vigilancia-logo {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
 /* -------------------------------------------------------------------------------------------------------------------- */
 /* Seccion descripcion de productos */
 	section.productos {
