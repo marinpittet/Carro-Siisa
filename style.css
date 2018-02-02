@@ -1,6 +1,5 @@
 body {
 	background: url(images/pattern/spiration-light.png);
-	width: 100vw;
 }
 /* navbar total fixed position */
 	div.navbar-total {
@@ -36,9 +35,6 @@ body {
 		margin-bottom: 0;
 	}
 	@media only screen and (max-width: 450px) {
-		html.fontawesome-i2svg-active.fontawesone-i2svg-complete {
-			width: 100vw;
-		}
 		.tabli.col-12.col-sm-12 {
 			font-size: 12px;
 			padding: 0;
@@ -154,6 +150,8 @@ body {
 		right: 0;
 		height: 700px;
 		z-index: -1;
+		width: 100%;
+		margin: 0;
 	}
 	header div.back-image-2 {
 		background: url(images/background2.jpg) no-repeat center center fixed;
