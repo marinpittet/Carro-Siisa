@@ -375,7 +375,7 @@ body {
 /* -------------------------------------------------------------------------------------------------------------------- */
 /* Descripcion del carro */
 	div.descripcion-back {
-		background-color: #2E4E8E;
+		background-color: #1785A8;
 		color: #fff;
 		padding-top: 30px;
 		padding-bottom: 30px;
@@ -398,7 +398,7 @@ body {
 	}
 	.card-1 {
 		font-family: 'Open Sans', sans-serif;
-		background-color: #2E4E8E;
+		background-color: #1785A8;
 		border-radius: 10px;
 		text-align: center;
 		color: #fff;
@@ -446,7 +446,7 @@ body {
 	}
 	.card-2 {
 		font-family: 'Open Sans', sans-serif;
-		background-color: #3A63B5;
+		background-color: #1EADDB;
 		border-radius: 10px;
 		text-align: center;
 		color: #fff;
@@ -484,7 +484,7 @@ body {
 		color: #fff;
 	}
 	.cambio-seccion {
-		background-color: #2E4E8E;
+		background-color: #1785A8;
 		width: 100%;
 		border-radius: 5px;
 		margin-bottom: 20px
@@ -520,7 +520,7 @@ body {
 /* Seccion descripcion de productos */
 	section.productos {
 		margin-top:130px;
-		background: linear-gradient(to right, #4F86F4 50%, #2E4E8E 50%);
+		background: linear-gradient(to right, #62C2E1 50%, #1785A8 50%);
 	}
 	.productos.container.row {
 	  display: flex;
@@ -530,7 +530,7 @@ body {
 	  flex: 1; 
 	}
 	.persona {
-		background-color: #4F86F4;
+		background-color: #62C2E1;
 		color: #fff;
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 300;
@@ -563,13 +563,13 @@ body {
 	  	margin-bottom: 100px;
 	}
 	.empresa {
-		background-color: #3A63B5;
+		background-color: #1EADDB;
 		color: #fff;
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 300;
 	}
 	.vehiculo {
-		background-color: #2E4E8E;
+		background-color: #1785A8;
 		color: #fff;
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 300;
@@ -636,8 +636,8 @@ body {
 	section.user-bar {
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 300;
-		border: solid 2px #2E4E8E;
-		border-bottom: solid 15px #2E4E8E;
+		border: solid 2px #1785A8;
+		border-bottom: solid 15px #1785A8;
 		background-color: #fff;
 	}
 	section.user-bar li.list-group-item {
@@ -650,17 +650,17 @@ body {
 	section.user-bar div.detail,
 	section.user-bar div.pay,
 	section.user-bar div.services {
-		color: #2E4E8E;	
+		color: #1785A8;	
 		margin: 0;
 		text-align: left;
 		padding-top: 20px;
 	}
 	section.user-bar div.pay {
-		border-right: solid 2px #2E4E8E;
+		border-right: solid 2px #1785A8;
 	}
 	section.user-bar button.btn-pay {
-		background-color: #3A63B5;
-		border: solid 2px #2E4E8E;
+		background-color: #1EADDB;
+		border: solid 2px #1785A8;
 		color: #fff;
 		border-radius: 5px;
 		font-family: 'Roboto Condensed', sans-serif;
@@ -679,7 +679,7 @@ body {
 	@media only screen and (max-width: 450px) {
 		section.user-bar div.pay {
 			border-right: none;
-			border-bottom: solid 2px #2E4E8E;
+			border-bottom: solid 2px #1785A8;
 		}		
 	}	
 	@media only screen and (min-width: 451px) and (max-width: 992px) {
