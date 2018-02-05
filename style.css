@@ -125,6 +125,20 @@ body {
 		right: 0;
 		left: auto;
 	}
+	nav ul#login-dp.dropdown-menu.show button.btn-primary {
+		background-color: #1EADDB;
+	}
+	nav ul#login-dp.dropdown-menu.show div.checkbox label {
+		font-size: 10px;
+	}
+	nav ul#login-dp.dropdown-menu.show div.bottom.text-center a p {
+		font-size: 14px;
+		margin-bottom: 2px;
+		color: #1EADDB;
+	}
+	nav ul#login-dp.dropdown-menu.show div.help-block.text-right a {
+		color: #1EADDB;
+	}
 	@media only screen and (max-width: 500px) {
 		nav li span.nav-item-drop {
 			display: none;
@@ -391,7 +405,7 @@ body {
 	}
 /* Descripcion del carro */
 /* -------------------------------------------------------------------------------------------------------------------- */
-/* Productos y servicios */
+/* Productos y servicios (tarjetas de productos) */
 	section.productos-cart.container.row {
 		display: flex;
 		position: absolute;
@@ -523,7 +537,7 @@ body {
 
 	}
 /* -------------------------------------------------------------------------------------------------------------------- */
-/* Seccion descripcion de productos */
+/* Seccion descripcion de productos (seleccion de 3 vias)*/
 	section.productos {
 		margin-top:130px;
 		background: linear-gradient(to right, #62C2E1 50%, #1785A8 50%);
@@ -594,6 +608,34 @@ body {
 	button.btn-c a {
 		color: #fff;
 	}
+	button.dropdown-toggle.btn.btn-c a {
+		color: #fff;
+	}
+	button.dropdown-toggle.btn.btn-c::after {
+		display: none;
+	}
+	div#login-dp-persona.dropdown-menu.show {
+		padding: 20px;
+		width: 600px;
+		border-radius: 10px;
+	}
+	div#login-dp-persona div.help-block.text-right a {
+		color: #1EADDB;
+	}
+	div#login-dp-persona.dropdown-menu.show button.btn-primary {
+		background-color: #1EADDB;
+	}
+	div#login-dp-persona.dropdown-menu.show button.btn-secondary {
+		background-color: #fff;
+		border: solid #1EADDB 2px;
+	}
+	div#login-dp-persona.dropdown-menu.show button.btn-secondary a {
+		color: #1EADDB;
+	}
+	div#login-dp-persona.dropdown-menu.show div.texto p {
+		margin-bottom: 20px;
+		padding: 0;
+	}
 	@media only screen and (max-width: 400px) {
 		button.btn-c {
 			width: 100%;
@@ -605,6 +647,10 @@ body {
 			padding-right: 5px;
 			padding-left: 5px;
 		}
+		div#login-dp-persona.dropdown-menu.show {
+		padding: 20px;
+		max-width: 350px;
+	}
 	}
 	@media only screen and (min-width: 401px) and (max-width: 520px) {
 		button.btn-c {
