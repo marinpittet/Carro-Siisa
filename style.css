@@ -439,7 +439,7 @@ body {
 		text-align: justify;
 		padding-right: 20px;
 		padding-left: 20px;
-		height: 150px;
+		min-height: 150px;
 	}
 	a.add-cart p{
 		color: #fff;
@@ -478,7 +478,7 @@ body {
 		text-align: justify;
 		padding-right: 20px;
 		padding-left: 20px;
-		height: 150px;
+		min-height: 150px;
 	}
 	a.add-cart p{
 		color: #fff;
@@ -507,6 +507,9 @@ body {
 	div.servicio-vigilancia img.vigilancia-logo {
 		margin-top: 20px;
 		margin-bottom: 20px;
+	}
+	img.logo-vehiculo-reporte {
+		max-width: 150px;
 	}
 	@media only screen and (max-width: 450px) {
 		div.servicio-vigilancia div.dropdown-menu.show a.dropdown-item {
