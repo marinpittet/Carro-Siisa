@@ -579,7 +579,7 @@ body {
 	    background-color: rgb(0,0,0); /* Fallback color */
 	    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
 	}
-	.rptPersona {
+	.formReporte {
 		width: 600px;
 		position: fixed;
 		background-color: #fff;
