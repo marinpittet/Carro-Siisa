@@ -312,7 +312,6 @@ body {
 	    list-style-type: none;
 	    margin: 0;
 	    padding: 0;
-	    overflow: hidden;
 	    z-index: 10;
 	}
 	div.cart-bar ul.links li{
@@ -334,12 +333,47 @@ body {
 	    padding: 8px;
 	    text-decoration: none;
 	}
+	div.cart-bar ul.links li.dropdown a.menu-link.dropdown-toggle::after {
+		display: none;
+	}
+	div.cart-bar ul.links div.container.show div.dropdown-menu.show {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+		padding: 20px;
+		width: 600px;
+		border-radius: 10px;
+	}
+	
+	div.cart-bar ul.links div.container.show div.help-block.text-right a {
+		color: #1EADDB;
+	}
+	div.cart-bar ul.links div.container.show div.dropdown-menu.show button.btn-primary {
+		background-color: #1EADDB;
+	}
+	div.cart-bar ul.links div.container.show div.dropdown-menu.show button.btn-secondary {
+		background-color: #fff;
+		border: solid #1EADDB 2px;
+	}
+	div.cart-bar ul.links div.container.show div.dropdown-menu.show button.btn-secondary a {
+		color: #1EADDB;
+	}
+	div.cart-bar ul.links div.container.show div.dropdown-menu.show div.texto p {
+		margin-bottom: 20px;
+		padding: 0;
+	}
 	@media only screen and (max-width: 400px) {
 		div.cart-bar ul.links li a.menu-link {
 			font-size: 12px;
 		}
 		div.cart-bar ul.links {
 			top: 392px;
+		}
+		div.cart-bar ul.links div.container.show div.dropdown-menu.show {
+		padding: 20px;
+		max-width: 350px;
+		}
+		div.cart-bar ul.links div.container.show div.dropdown-menu.show button {
+			font-size: 12px;
 		}
 	}
 	@media only screen and (min-width: 401px) and (max-width: 992px) {
@@ -650,7 +684,10 @@ body {
 		div#login-dp-persona.dropdown-menu.show {
 		padding: 20px;
 		max-width: 350px;
-	}
+		}
+		div#login-dp-persona.dropdown-menu.show button {
+			font-size: 12px;
+		}
 	}
 	@media only screen and (min-width: 401px) and (max-width: 520px) {
 		button.btn-c {

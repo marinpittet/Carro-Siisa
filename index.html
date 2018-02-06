@@ -90,7 +90,7 @@
 											</label>
 										</div>
 									</form>
-									 <div class="dropdown-divider"></div>
+									<div class="dropdown-divider"></div>
 									<div class="bottom text-center">
 										<a href="#"><p>¿Qué es SiisaPass?</p></a> 
 										<a href="#"><p>Obtener SiisaPass</p></a>
@@ -128,7 +128,41 @@
 		<ul class="links">
 			<div class="container">
 
-				<li><a class="menu-link" href="infoPersona.html">Información de Persona</a></li>
+				<li class="dropdown" data-toggle="dropdown"><a class="menu-link dropdown-toggle" href="infoPersona.html">Información de Persona</a></li>
+				<div class="dropdown-menu">
+					<div class="row">
+						<div class="col-12">
+							<div class="texto">
+								<p>Para comprar un reporte de persona natural es necesario
+									verificar que es el titular de la información solicitada, para
+									esto ingrese su siisapass. <br>
+									Si no cuenta con un siisapass deberá obtener uno al momento
+									de pagar, de lo contrario no podrá solicitar los reportes de
+								persona natural.</p>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-6">
+							<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+								<div class="form-group">
+									<label class="sr-only" for="InputEmail">RUT</label>
+									<input type="email" class="form-control" id="InputEmail" placeholder="RUT" required>
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="InputPassword">SiisaPass</label>
+									<input type="password" class="form-control" id="InputPassword" placeholder="SiisaPass" required>
+									<div class="help-block text-right"><a href="">¿olvido su SiisaPass?</a></div>
+								</div>
+							</form>
+						</div>
+						<div class="col-6">
+							<button type="submit" class="btn btn-primary btn-block">Ingresar con SiisaPass</button>
+							<button type="submit" class="btn btn-secondary btn-block"><a href="infoPersona.html">Continuar Comprando</a></button>
+						</div>
+
+					</div>
+				</div>
 				<li><a class="menu-link" href="infoEmpresa.html">Información de Empresa</a></li>
 				<li><a class="menu-link" href="infoVehiculo.html">Vehículos Motorizados</a></li>
 
@@ -146,38 +180,38 @@
 					<h2>Información de Persona</h2>
 					<button class="dropdown-toggle btn btn-c" data-toggle="dropdown"><a>Ver Productos</a></button>
 					<div id="login-dp-persona" class="dropdown-menu">
-							<div class="row">
-								<div class="col-12">
-									<div class="texto">
-										<p>Para comprar un reporte de persona natural es necesario
-											verificar que es el titular de la información solicitada, para
-											esto ingrese su siisapass. <br>
-											Si no cuenta con un siisapass deberá obtener uno al momento
-											de pagar, de lo contrario no podrá solicitar los reportes de
-										persona natural.</p>
+						<div class="row">
+							<div class="col-12">
+								<div class="texto">
+									<p>Para comprar un reporte de persona natural es necesario
+										verificar que es el titular de la información solicitada, para
+										esto ingrese su siisapass. <br>
+										Si no cuenta con un siisapass deberá obtener uno al momento
+										de pagar, de lo contrario no podrá solicitar los reportes de
+									persona natural.</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-6">
+								<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+									<div class="form-group">
+										<label class="sr-only" for="InputEmail2">RUT</label>
+										<input type="email" class="form-control" id="InputEmail2" placeholder="RUT" required>
 									</div>
-								</div>
+									<div class="form-group">
+										<label class="sr-only" for="InputPassword2">SiisaPass</label>
+										<input type="password" class="form-control" id="InputPassword2" placeholder="SiisaPass" required>
+										<div class="help-block text-right"><a href="">¿olvido su SiisaPass?</a></div>
+									</div>
+								</form>
 							</div>
-							<div class="row">
-								<div class="col-6">
-									<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-										<div class="form-group">
-											<label class="sr-only" for="InputEmail2">RUT</label>
-											<input type="email" class="form-control" id="InputEmail2" placeholder="RUT" required>
-										</div>
-										<div class="form-group">
-											<label class="sr-only" for="InputPassword2">SiisaPass</label>
-											<input type="password" class="form-control" id="InputPassword2" placeholder="SiisaPass" required>
-											<div class="help-block text-right"><a href="">¿olvido su SiisaPass?</a></div>
-										</div>
-									</form>
-								</div>
-								<div class="col-6">
-									<button type="submit" class="btn btn-primary btn-block">Ingresar con SiisaPass</button>
-									<button type="submit" class="btn btn-secondary btn-block"><a href="infoPersona.html">Continuar Comprando</a></button>
-								</div>
-								
+							<div class="col-6">
+								<button type="submit" class="btn btn-primary btn-block">Ingresar con SiisaPass</button>
+								<button type="submit" class="btn btn-secondary btn-block"><a href="infoPersona.html">Continuar Comprando</a></button>
 							</div>
+
+						</div>
 					</div>
 					<p>Aquí podrás consultar sobre tu situación comercial, y también si tienes lagunas previsionales producto de que alguno de tus empleadores no haya pagado tus cotizaciones. Para esto deberás autenticarte con SIISApass para dar cumplimiento a lo establecido en el Art. 3° de la Ley 20.575 y en el Art. 12° de la Ley Nº 19.628.</p>
 				</div>
