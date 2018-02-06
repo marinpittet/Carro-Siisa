@@ -28,6 +28,20 @@ $( document ).ready(function() {
     }
   });
 
+  // Formulario reporte de vehiculo
+  $('#add-vehiculo').click(function() {
+    $('#add-vehiculoForm').fadeToggle();
+  })
+  $(document).mouseup(function (e) {
+    var container = $("#add-vehiculoForm");
+
+    if (container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        container.fadeOut();
+    }
+  });
+
   // Formulario verificacion de cheques
   $('#add-cheque').click(function() {
     $('#add-chequeForm').fadeToggle();
