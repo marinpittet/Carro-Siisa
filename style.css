@@ -603,8 +603,10 @@ body {
 		div.servicio-vigilancia div.dropdown-menu.show a.dropdown-item {
 			font-size: 12px;
 		}
-		.rptPersona {
+		.formReporte {
 			width: 350px;
+			max-height: 450px;
+			overflow: auto; 
 		}
 	}	
 	@media only screen and (min-width: 451px) and (max-width: 992px) {
