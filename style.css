@@ -327,9 +327,10 @@ body {
 		padding-bottom: 10px;
 	}
 	section.siisapass p.aviso {
-		color: #1EADDB;
+		color: #1785A8;
 		font-family: 'Roboto Condensed', sans-serif;
-		font-weight: 300;
+		font-weight: 400;
+		font-size: 18px;
 	}
 	section.siisapass div.vineta-titulo {
 		background-color: #1785A8;
@@ -353,6 +354,18 @@ body {
 	section.siisapass div.form-group.row input#toggle-off.radio {
 		margin-left: 20px;
 		margin-right: 10px
+	}
+	#hijos {
+		display: none;
+	}
+	.terminosycondiciones {
+		text-align: center;
+		font-size: 18px;
+		margin-top: 30px;
+		margin-bottom: 50px
+	}
+	img.pago-web {
+		max-width: 300px;
 	}
 /* Obtener SiisaPass */
 /* -------------------------------------------------------------------------------------------------------------------- */

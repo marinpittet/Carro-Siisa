@@ -112,6 +112,23 @@ $( document ).ready(function() {
     }
   });
 
+
+$('input#toggle-on.radio').click(function() {
+  if ((this).checked = true) {
+    $('#hijos').css({
+      display: 'block'
+    });
+  }
+});
+
+$('input#toggle-off.radio').click(function() {
+  if ((this).checked = true) {
+    $('#hijos').css({
+      display: 'none'
+    });
+  }
+});
   
 
+  
 });

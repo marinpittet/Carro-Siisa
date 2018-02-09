@@ -189,15 +189,62 @@
 				</div>
 				<div class="form-group row">
 					<label for="id-email-confirm" class="col-12 col-md-4 col-form-label">Hijos</label>
-					<input class="radio" type="radio" id="toggle-on" name="toggle" checked>
-					<span for="toggle-on">No</span>
-					<input class="radio" type="radio" id="toggle-off" name="toggle">
-					<span for="toggle-off">Si</span>
+					<input class="radio" type="radio" id="toggle-off" name="toggle" >
+					<span for="toggle-off">No</span>
+					<input class="radio" type="radio" id="toggle-on" name="toggle" value="1">
+					<span for="toggle-on">Si</span>
+				</div>
+
+				<div class="hijos" id="hijos">
+					<div class="form-group row">
+						<label for="id-nombres-hijo" class="col-12 col-md-4 col-form-label">Nombres de tu hijo(a) menor</label>
+						<div class="col-12 col-md-8">
+							<input type="text" class="form-control" id="id-nombres-hijo" placeholder="Nombres" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="id-apellido-hijo" class="col-12 col-md-4 col-form-label">Apellidos de tu hijo(a) menor</label>
+						<div class="col-12 col-md-8">
+							<input type="text" class="form-control" id="id-apellido-hijo" placeholder="Apellidos" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-12 col-md-4 col-form-label">Género de tu hijo(a) menor</label>
+						<div class="col-12 col-md-8">
+							<select class="custom-select" required>
+								<option selected>Seleccione una Opción</option>
+								<option value="1">Masculino</option>
+								<option value="2">Femenino</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="id-edad-hijo" class="col-12 col-md-4 col-form-label">Edad de tu hijo(a) menor</label>
+						<div class="col-1 col-md-1">
+							<input type="text" class="form-control" id="id-edad-hijo" size="2" maxlength="2" placeholder="años:" required>
+						</div>
+						<div class="col-2 col-md-2">
+							<select class="custom-select" required>
+								<option selected>Meses</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
+								<option value="6">6</option>
+								<option value="7">7</option>
+								<option value="8">8</option>
+								<option value="9">9</option>
+								<option value="10">10</option>
+								<option value="11">11</option>
+							</select>
+						</div>
+					</div>
 				</div>
 
 				<div class="form-group row">
 					<div class="col-12 col-md-12">
-						<div class="form-check">
+						<div class="form-check terminosycondiciones">
 							<input class="form-check-input" type="checkbox" id="gridCheck1" required>
 							<label class="form-check-label" for="gridCheck1">
 								He leído, acepto las condiciones generales y políticas de privacidad.
@@ -206,8 +253,19 @@
 					</div>
 				</div>
 				<div class="form-group row">
+					<label for="id-email-confirm" class="col-12 col-md-2 col-form-label">Medio de Pago</label>
+					<div class="col-4">
+					<input class="radio" type="radio" name="toggle">
+					<img class="pago-web" src="images/webpay-logo.png" alt="">
+					</div>
+					<div class="col-4">
+					<input class="radio" type="radio" name="toggle">
+					<img class="pago-web" src="images/logo_servipag.jpg" alt="">
+					</div>
+				</div>
+				<div class="form-group row">
 					<div class="col-12 col-md-12">
-						<button type="submit" class="btn-d">Agregar al Carro</button>
+						<button type="submit" class="btn-d">Verificar Identidad</button>
 					</div>
 				</div>
 			</form>
@@ -269,8 +327,12 @@
 	</footer>
 
 	<!-- carga de scripts para bootstrap y jquery -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.js"
+	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
 </body>
 </html>
