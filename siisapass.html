@@ -14,7 +14,15 @@
 <body>
 	<!-- imagen de fondo -->
 	<header>
-		<div class="back-image row"></div>
+		<div class="back-color">
+			<!-- texto hero -->
+			<div class="container">
+
+				<h1 class="siisapass-hero">Obten tu SiisaPass aquí <i class="far fa-hand-point-down"></i></h1>
+
+			</div>
+			<!-- texto hero -->
+		</div>
 	</header>
 	<!-- imagen de fondo -->
 	<!-- BARRA DE NAVEGACION GENERAL DEL SITIO -->
@@ -93,7 +101,7 @@
 									<div class="dropdown-divider"></div>
 									<div class="bottom text-center">
 										<a href="#"><p>¿Qué es SiisaPass?</p></a> 
-										<a href="siisapass.html"><p>Obtener SiisaPass</p></a>
+										<a href="#"><p>Obtener SiisaPass</p></a>
 									</div>
 								</div>
 
@@ -106,133 +114,106 @@
 		</nav>
 	</div>
 	<!-- BARRA DE NAVEGACION GENERAL DEL SITIO -->
-	<!-- texto y botones en el header -->
-	<div class="container">
-		<div class="hero-back">
-			<p class="hero-text">Recuerda que para acceder a los informes de persona natural debes contar con un <strong>SiisaPass</strong></p>
-		</div>
-		<div class="row botones-Siisa">
-			<div class="empty-column col-md-2 col-lg-3 col-xl-3"></div>
-			<div class="botones col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-				<a href="siisapass.html"><button class="btn btn-a">Obtener mi SiisaPass</button></a>
-			</div>
-			<div class="botones col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
-				<button class="btn btn-b">¿Qué es SiisaPass?</button>
-			</div>
-			<div class="empty-column col-md-2 col-lg-3 col-xl-3"></div>
-		</div>
-	</div>
-	<!-- texto y botones en el header -->
-	<!-- navegacion carro -->
-	<div class="cart-bar">
-		<ul class="links">
+	
+	<section class="siisapass">
+		<div class="back-white">
 			<div class="container">
+				<p class="aviso">Estimado Sr(a). usuario <br> 
 
-				<li class="dropdown" data-toggle="dropdown"><a class="menu-link dropdown-toggle" href="infoPersona.html">Información de Persona</a></li>
-				<div class="dropdown-menu">
-					<div class="row">
-						<div class="col-12">
-							<div class="texto">
-								<p>Para comprar un reporte de persona natural es necesario
-									verificar que es el titular de la información solicitada, para
-									esto ingrese su siisapass. <br>
-									Si no cuenta con un siisapass deberá obtener uno al momento
-									de pagar, de lo contrario no podrá solicitar los reportes de
-								persona natural.</p>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-6">
-							<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-								<div class="form-group">
-											<label class="sr-only" for="InputRut">RUT</label>
-											<input type="text" class="form-control" id="InputRut" placeholder="RUT" required>
-										</div>
-								<div class="form-group">
-									<label class="sr-only" for="InputPassword">SiisaPass</label>
-									<input type="password" class="form-control" id="InputPassword" placeholder="SiisaPass" required>
-									<div class="help-block text-right"><a href="">¿olvido su SiisaPass?</a></div>
-								</div>
-							</form>
-						</div>
-						<div class="col-6">
-							<button type="submit" class="btn btn-primary btn-block">Ingresar con SiisaPass</button>
-							<button type="submit" class="btn btn-secondary btn-block"><a href="infoPersona.html">Continuar Comprando</a></button>
-						</div>
-
-					</div>
-				</div>
-				<li><a class="menu-link" href="infoEmpresa.html">Información de Empresa</a></li>
-				<li><a class="menu-link" href="infoVehiculo.html">Vehículos Motorizados</a></li>
-
+				Para proceder a generar exitosamente su SIISApass, es imprescindible que sus datos se encuentren debidamente registrados en el Servicio de Registro Civil e Identificación por lo que, si es usted extranjero y no se encuentra inscrito en dicho servicio, no podrá obtener su SIISApass por éste medio. En tal caso, puede obtenerlo en forma presencial en nuestras oficinas comerciales, ubicadas en Málaga 89, Las Condes, Santiago.</p>
 			</div>
-		</ul>	
-	</div>
-	<!-- navegacion carro -->
-	<!-- triple seccion de productos -->
-	<section class="productos">
-		<div class="container">
-			<div class="row">
+		</div>
+		<div class="vineta-titulo">
+			<h2>Verifica tus Datos</h2>
+		</div>
+		<div class="container back-white">
+			<p>Ingresa tus datos tal cual salen en tu Cédula de Identidad.</p>
+			<form class="col-12 col-md-12">
+				<div class="form-group row">
+					<label for="id-rut" class="col-12 col-md-4 col-form-label">RUT:</label>
+					<div class="col-12 col-md-8">
+						<input type="text" class="form-control" id="id-rut" placeholder="Ingrese su RUT aquí" required>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-12 col-md-4 col-form-label">Número de Serie:</label>
+					<div class="col-12 col-md-8">
+						<input type="text" class="form-control" id="id-nserie" placeholder="Ingrese el nº de serie de su cedula aquí" required>
+					</div>
+				</div>
+				<div class="row">
+					<img src="images/ejemplo-nroserie.png" alt="" class="imagen-ejemplo offset-md-4 col-md-4">
+				</div>
+				<div class="form-group row">
+					<label for="id-nombres" class="col-12 col-md-4 col-form-label">Nombres</label>
+					<div class="col-12 col-md-8">
+						<input type="text" class="form-control" id="id-nombres" placeholder="Nombres" required>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="id-apellido-p" class="col-12 col-md-4 col-form-label">Apellido Paterno</label>
+					<div class="col-12 col-md-8">
+						<input type="text" class="form-control" id="id-apellido-p" placeholder="Apellido Paterno" required>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="id-apellido-m" class="col-12 col-md-4 col-form-label">Apellido Materno</label>
+					<div class="col-12 col-md-8">
+						<input type="text" class="form-control" id="id-apellido-m" placeholder="Apellido Materno" required>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="id-email" class="col-12 col-md-4 col-form-label">Email</label>
+					<div class="col-12 col-md-8">
+						<input type="email" class="form-control" id="id-email" placeholder="ejemplo@ejemplo.com" required>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="id-email-confirm" class="col-12 col-md-4 col-form-label">Confirmar Email</label>
+					<div class="col-12 col-md-8">
+						<input type="email" class="form-control" id="id-email-confirm" placeholder="ejemplo@ejemplo.com" required>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label class="col-12 col-md-4 col-form-label">Estado Civil</label>
+					<div class="col-12 col-md-8">
+						<select class="custom-select" required>
+							<option selected>Seleccione una Opción</option>
+							<option value="1">Soltero</option>
+							<option value="2">Casado</option>
+							<option value="3">Viudo</option>
+							<option value="4">Divorciado</option>
+							<option value="5">Conviviente Civil</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="id-email-confirm" class="col-12 col-md-4 col-form-label">Hijos</label>
+					<input class="radio" type="radio" id="toggle-on" name="toggle" checked>
+					<span for="toggle-on">No</span>
+					<input class="radio" type="radio" id="toggle-off" name="toggle">
+					<span for="toggle-off">Si</span>
+				</div>
 
-				<div class="persona col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-					<img src="images/persona.svg" alt="logo persona">
-					<h2>Información de Persona</h2>
-					<button class="dropdown-toggle btn btn-c" data-toggle="dropdown"><a>Ver Productos</a></button>
-					<div id="login-dp-persona" class="dropdown-menu">
-						<div class="row">
-							<div class="col-12">
-								<div class="texto">
-									<p>Para comprar un reporte de persona natural es necesario
-										verificar que es el titular de la información solicitada, para
-										esto ingrese su siisapass. <br>
-										Si no cuenta con un siisapass deberá obtener uno al momento
-										de pagar, de lo contrario no podrá solicitar los reportes de
-									persona natural.</p>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-6">
-								<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
-									<div class="form-group">
-											<label class="sr-only" for="InputRut">RUT</label>
-											<input type="text" class="form-control" id="InputRut" placeholder="RUT" required>
-										</div>
-									<div class="form-group">
-										<label class="sr-only" for="InputPassword2">SiisaPass</label>
-										<input type="password" class="form-control" id="InputPassword2" placeholder="SiisaPass" required>
-										<div class="help-block text-right"><a href="">¿olvido su SiisaPass?</a></div>
-									</div>
-								</form>
-							</div>
-							<div class="col-6">
-								<button type="submit" class="btn btn-primary btn-block">Ingresar con SiisaPass</button>
-								<button type="submit" class="btn btn-secondary btn-block"><a href="infoPersona.html">Continuar Comprando</a></button>
-							</div>
-
+				<div class="form-group row">
+					<div class="col-12 col-md-12">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck1" required>
+							<label class="form-check-label" for="gridCheck1">
+								He leído, acepto las condiciones generales y políticas de privacidad.
+							</label>
 						</div>
 					</div>
-					<p>Aquí podrás consultar sobre tu situación comercial, y también si tienes lagunas previsionales producto de que alguno de tus empleadores no haya pagado tus cotizaciones. Para esto deberás autenticarte con SIISApass para dar cumplimiento a lo establecido en el Art. 3° de la Ley 20.575 y en el Art. 12° de la Ley Nº 19.628.</p>
 				</div>
-
-				<div class="empresa col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-					<img src="images/empresa.svg" alt="logo empresa">
-					<h2>Información de Empresa</h2>
-					<button class="btn btn-c"><a href="infoEmpresa.html">Ver Productos</a></button>
-					<p>Te entregamos las herramientas para que puedas tener un panorama amplio sobre la situación comercial de terceros que sean personas jurídicas, y así tomar decisiones inteligentes y seguras.</p>
+				<div class="form-group row">
+					<div class="col-12 col-md-12">
+						<button type="submit" class="btn-d">Agregar al Carro</button>
+					</div>
 				</div>
-
-				<div class="vehiculo col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-					<img src="images/vehiculo.svg" alt="logo vehiculo">
-					<h2>Vehículos Motorizados</h2>
-					<button class="btn btn-c"><a href="infoVehiculo.html">Ver Productos</a></button>
-					<p>Aquí podrá consultar las anotaciones vigentes de un vehículo y validar los datos de propiedad del mismo a partir de los datos básicos del propietario y la placa patente.</p>
-				</div>
-
-			</div>
+			</form>
 		</div>
 	</section>
+
 
 	<footer>
 		<div class="container">
@@ -272,7 +253,7 @@
 					<a href="">Reportes de Crédito</a> <br>
 					<a href="">Seguimiento y Control de Cartera de Clientes</a>
 					<p></p> 
-					
+
 					<p class="f-titulo">Aviso Legal</p>
 					<a href="">Condiciones de uso del sitio web</a> <br>
 					<a href="">Política de privacidad en sitio web </a>
