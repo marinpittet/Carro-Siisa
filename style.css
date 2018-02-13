@@ -139,6 +139,32 @@ body {
 	nav ul#login-dp.dropdown-menu.show div.help-block.text-right a {
 		color: #1EADDB;
 	}
+	a.que-es-siisapass:hover{
+		position: relative;
+	}
+	a.que-es-siisapass:hover:after {
+		position: fixed;
+		content: url(images/que-es-siisapass.svg); 
+    	display: inline-block;
+    	width: 350px;
+    	top: 100px;
+    	left: 50%;
+    	transform: translateX(-50%);
+    	z-index: 1000;
+   	}
+   	button.que-es-siisapass:hover{
+		position: relative;
+	}
+	button.que-es-siisapass:hover:after {
+		position: fixed;
+		content: url(images/que-es-siisapass.svg); 
+    	display: inline-block;
+    	width: 350px;
+    	top: 100px;
+    	left: 50%;
+    	transform: translateX(-50%);
+    	z-index: 1000;
+   	}
 	@media only screen and (max-width: 500px) {
 		nav li span.nav-item-drop {
 			display: none;
