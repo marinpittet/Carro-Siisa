@@ -113,7 +113,7 @@ $( document ).ready(function() {
     }
   });
 
-  // Visibilidad de campos de formulario en el caso de hijos o no
+  // Visibilidad de campos de formulario en el caso de hijos o 
   $('input#toggle-on.radio').click(function() {
     if ((this).checked = true) {
       $('#hijos').css({

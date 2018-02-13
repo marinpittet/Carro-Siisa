@@ -127,17 +127,15 @@
 			<h2>Verifica tus Datos</h2>
 		</div>
 		<div class="container back-white">
-			<p>Ingresa tus datos tal cual salen en tu Cédula de Identidad.</p>
+			<h4 class="col-8 offset-2">Ingresa tus datos tal cual salen en tu Cédula de Identidad.</h4>
 			<form class="col-12 col-md-12">
 				<div class="form-group row">
-					<label for="id-rut" class="col-12 col-md-4 col-form-label">RUT:</label>
-					<div class="col-12 col-md-8">
+					<div class="col-12 col-md-8 offset-md-2">
 						<input type="text" class="form-control" id="id-rut" placeholder="Ingrese su RUT aquí" required>
 					</div>
 				</div>
 				<div class="form-group row">
-					<label class="col-12 col-md-4 col-form-label">Número de Serie:</label>
-					<div class="col-12 col-md-8">
+					<div class="col-12 col-md-8 offset-md-2">
 						<input type="text" class="form-control" id="id-nserie" placeholder="Ingrese el nº de serie de su cedula aquí" required>
 					</div>
 				</div>
@@ -145,40 +143,34 @@
 					<img src="images/ejemplo-nroserie.png" alt="" class="imagen-ejemplo offset-md-4 col-md-4">
 				</div>
 				<div class="form-group row">
-					<label for="id-nombres" class="col-12 col-md-4 col-form-label">Nombres</label>
-					<div class="col-12 col-md-8">
+					<div class="col-12 col-md-8 offset-md-2">
 						<input type="text" class="form-control" id="id-nombres" placeholder="Nombres" required>
 					</div>
 				</div>
 				<div class="form-group row">
-					<label for="id-apellido-p" class="col-12 col-md-4 col-form-label">Apellido Paterno</label>
-					<div class="col-12 col-md-8">
+					<div class="col-12 col-md-8 offset-md-2">
 						<input type="text" class="form-control" id="id-apellido-p" placeholder="Apellido Paterno" required>
 					</div>
 				</div>
 				<div class="form-group row">
-					<label for="id-apellido-m" class="col-12 col-md-4 col-form-label">Apellido Materno</label>
-					<div class="col-12 col-md-8">
+					<div class="col-12 col-md-8 offset-md-2">
 						<input type="text" class="form-control" id="id-apellido-m" placeholder="Apellido Materno" required>
 					</div>
 				</div>
 				<div class="form-group row">
-					<label for="id-email" class="col-12 col-md-4 col-form-label">Email</label>
-					<div class="col-12 col-md-8">
-						<input type="email" class="form-control" id="id-email" placeholder="ejemplo@ejemplo.com" required>
+					<div class="col-12 col-md-8 offset-md-2">
+						<input type="email" class="form-control" id="id-email" placeholder="Ingresa tu email ejemplo@ejemplo.com" required>
 					</div>
 				</div>
 				<div class="form-group row">
-					<label for="id-email-confirm" class="col-12 col-md-4 col-form-label">Confirmar Email</label>
-					<div class="col-12 col-md-8">
-						<input type="email" class="form-control" id="id-email-confirm" placeholder="ejemplo@ejemplo.com" required>
+					<div class="col-12 col-md-8 offset-md-2">
+						<input type="email" class="form-control" id="id-email-confirm" placeholder="Confirma tu email ejemplo@ejemplo.com" required>
 					</div>
 				</div>
 				<div class="form-group row">
-					<label class="col-12 col-md-4 col-form-label">Estado Civil</label>
-					<div class="col-12 col-md-8">
+					<div class="col-12 col-md-8 offset-md-2">
 						<select class="custom-select" required>
-							<option selected>Seleccione una Opción</option>
+							<option selected>Seleccione su Estado Civil</option>
 							<option value="1">Soltero</option>
 							<option value="2">Casado</option>
 							<option value="3">Viudo</option>
@@ -187,40 +179,40 @@
 						</select>
 					</div>
 				</div>
+
 				<div class="form-group row">
-					<label class="col-12 col-md-4 col-form-label">Hijos</label>
+					<div class="col-12 col-md-4 offset-md-2">
+					<label>¿Tiene Hijos?</label>
 					<input class="radio" type="radio" id="toggle-off" name="toggle" >
 					<span for="toggle-off">No</span>
-					<input class="radio" type="radio" id="toggle-on" name="toggle" value="1">
+					<input class="radio" type="radio" id="toggle-on" name="toggle" value="hijos">
 					<span for="toggle-on">Si</span>
+					</div>
 				</div>
 
 				<div class="hijos" id="hijos">
 					<div class="form-group row">
-						<label for="id-nombres-hijo" class="col-12 col-md-4 col-form-label">Nombres de tu hijo(a) menor</label>
-						<div class="col-12 col-md-8">
-							<input type="text" class="form-control" id="id-nombres-hijo" placeholder="Nombres" required>
+						<div class="col-12 col-md-8 offset-md-2">
+							<input type="text" class="form-control" id="id-nombres-hijo" placeholder="Nombres de tu hijo(a) menor" required>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="id-apellido-hijo" class="col-12 col-md-4 col-form-label">Apellidos de tu hijo(a) menor</label>
-						<div class="col-12 col-md-8">
-							<input type="text" class="form-control" id="id-apellido-hijo" placeholder="Apellidos" required>
+						<div class="col-12 col-md-8 offset-md-2">
+							<input type="text" class="form-control" id="id-apellido-hijo" placeholder="Apellidos de tu hijo(a) menor" required>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label class="col-12 col-md-4 col-form-label">Género de tu hijo(a) menor</label>
-						<div class="col-12 col-md-8">
+						<div class="col-12 col-md-8 offset-md-2">
 							<select class="custom-select" required>
-								<option selected>Seleccione una Opción</option>
+								<option selected>Seleccione el género de tu hijo(a) menor</option>
 								<option value="1">Masculino</option>
 								<option value="2">Femenino</option>
 							</select>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="id-edad-hijo" class="col-12 col-md-4 col-form-label">Edad de tu hijo(a) menor</label>
-						<div class="col-6 col-md-1">
+						<label for="id-edad-hijo" class="col-12 col-md-4 offset-md-2 col-form-label">Edad de tu hijo(a) menor</label>
+						<div class="col-6 col-md-2">
 							<input type="text" class="form-control" id="id-edad-hijo" size="2" maxlength="2" placeholder="años:" required>
 						</div>
 						<div class="col-6 col-md-2">
@@ -274,47 +266,39 @@
 				</div>
 				<div class="factura" id="factura">
 					<div class="form-group row">
-						<label for="id-rut" class="col-12 col-md-4 col-form-label">RUT:</label>
-						<div class="col-12 col-md-8">
+						<div class="col-12 col-md-8 offset-md-2">
 							<input type="text" class="form-control" id="id-rut" placeholder="Ingrese su RUT aquí" required>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="razon" class="col-12 col-md-4 col-form-label">Razón Social:</label>
-						<div class="col-12 col-md-8">
-							<input type="text" class="form-control" id="razon" placeholder="" required>
+						<div class="col-12 col-md-8 offset-md-2">
+							<input type="text" class="form-control" id="razon" placeholder="Razón Social:" required>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="direccion" class="col-12 col-md-2 col-form-label">Dirección:</label>
-						<div class="col-12 col-md-4">
-							<input type="text" class="form-control" id="direccion" placeholder="" required>
+						<div class="col-12 col-md-4 offset-md-2">
+							<input type="text" class="form-control" id="direccion" placeholder="Dirección:" required>
 						</div>
-						<label for="comuna" class="col-12 col-md-2 col-form-label">Comuna:</label>
 						<div class="col-12 col-md-4">
-							<input type="text" class="form-control" id="comuna" placeholder="" required>
+							<input type="text" class="form-control" id="comuna" placeholder="Comuna:" required>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label class="col-12 col-md-2 col-form-label">Teléfono:</label>
-						<div class="col-12 col-md-4">
-							<input type="tel" name="usrtel" class="form-control" required>
+						<div class="col-12 col-md-4 offset-md-2">
+							<input type="tel" name="usrtel" class="form-control" placeholder="Teléfono:" required>
 						</div>
-						<label class="col-12 col-md-2 col-form-label">Fax:</label>
 						<div class="col-12 col-md-4">
-							<input type="tel" name="usrfax" class="form-control">
+							<input type="tel" name="usrfax" placeholder="Fax:" class="form-control">
 						</div>
 					</div>
 					<div class="form-group row">
-						<label class="col-12 col-md-4 col-form-label">Nombre de Contacto:</label>
-						<div class="col-12 col-md-8">
-							<input type="text" class="form-control" required>
+						<div class="col-12 col-md-8 offset-md-2">
+							<input type="text" class="form-control" placeholder="Nombre de Contacto:" required>
 						</div>
 					</div>
 					<div class="form-group row">
-						<label for="id-email" class="col-12 col-md-4 col-form-label">Email de Contacto:</label>
-						<div class="col-12 col-md-4">
-							<input type="email" class="form-control" id="id-email" placeholder="ejemplo@ejemplo.com" required>
+						<div class="col-12 col-md-4 offset-md-2">
+							<input type="email" class="form-control" id="id-email" placeholder="Email de Contacto: ejemplo@ejemplo.com" required>
 						</div>
 						<div class="col-12 col-md-4">
 							<div class="form-check facturaMail">
@@ -326,8 +310,7 @@
 						</div>
 					</div>
 					<div class="form-group row">
-						<label class="col-12 col-md-4 col-form-label">Giro Comercial:</label>
-						<div class="col-12 col-md-8">
+						<div class="col-12 col-md-8 offset-md-2">
 							<select class="custom-select" name="giro" id="combo">
 								<option value="0" id="0012">Seleccione un Giro Comercial</option>
 								<option value="171200">ACABADO DE PRODUCTOS TEXTIL    </option>
