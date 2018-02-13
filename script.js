@@ -112,23 +112,38 @@ $( document ).ready(function() {
     }
   });
 
+  // Visibilidad de campos de formulario en el caso de hijos o no
+  $('input#toggle-on.radio').click(function() {
+    if ((this).checked = true) {
+      $('#hijos').css({
+        display: 'block'
+      });
+    }
+  });
 
-$('input#toggle-on.radio').click(function() {
-  if ((this).checked = true) {
-    $('#hijos').css({
-      display: 'block'
-    });
-  }
-});
+  $('input#toggle-off.radio').click(function() {
+    if ((this).checked = true) {
+      $('#hijos').css({
+        display: 'none'
+      });
+    }
+  });
+    
+  // Visibilidad de campos de formulario en el caso de hijos o no
+  $('input#factura-toggle-on.radio').click(function() {
+    if ((this).checked = true) {
+      $('#factura').css({
+        display: 'block'
+      });
+    }
+  });
 
-$('input#toggle-off.radio').click(function() {
-  if ((this).checked = true) {
-    $('#hijos').css({
-      display: 'none'
-    });
-  }
-});
-  
-
+  $('input#factura-toggle-off.radio').click(function() {
+    if ((this).checked = true) {
+      $('#factura').css({
+        display: 'none'
+      });
+    }
+  });
   
 });

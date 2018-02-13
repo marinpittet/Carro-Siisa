@@ -372,6 +372,71 @@ body {
 	}
 	img.pago-web {
 		max-width: 300px;
+		margin-top: 20px;
+		margin-bottom: 30px;
+	}
+	section.siisapass div.form-group.row input#factura-toggle-on.radio {
+		margin-left: 20px;
+		margin-right: 10px
+	}
+	section.siisapass div.form-group.row input#factura-toggle-off.radio {
+		margin-left: 20px;
+		margin-right: 10px
+	} 
+	#factura {
+		display: none;
+	}
+	.pie-form p {
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	.condiciones p {
+		color: #1785A8;
+		font-size: 12px;
+	}
+	.boton-final button {
+		width: 100%;
+		height: 50px;
+		margin-top: 50px;
+	}
+	.politicas-privacidad h2 {
+		text-align: center;
+		background-color: #1785A8;
+		color: #fff;
+		margin-bottom: 20px;
+		margin-top: 60px;
+	}
+	.politicas-privacidad div.text-box {
+		max-height: 350px;
+		overflow-y: scroll;
+		border: solid 1px #1785A8;
+	}
+	.condiciones-de-uso h2 {
+		text-align: center;
+		background-color: #1785A8;
+		color: #fff;
+		margin-bottom: 20px;
+		margin-top: 60px;
+	}
+	.condiciones-de-uso div.text-box {
+		max-height: 350px;
+		overflow-y: scroll;
+		border: solid 1px #1785A8;
+	}
+	.text-box p.condiciones {
+		color: #555;
+		font-size: 12px;
+		text-align: justify;
+		padding-right: 30px;
+		margin-left: 20px;
+		margin-top: 30px;
+	}
+	.text-box ol li {
+		color: #555;
+		font-size: 12px;
+		text-align: justify;
+		padding-right: 30px;
+		margin-left: 20px
 	}
 /* Obtener SiisaPass */
 /* -------------------------------------------------------------------------------------------------------------------- */

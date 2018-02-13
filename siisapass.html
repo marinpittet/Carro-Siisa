@@ -188,7 +188,7 @@
 					</div>
 				</div>
 				<div class="form-group row">
-					<label for="id-email-confirm" class="col-12 col-md-4 col-form-label">Hijos</label>
+					<label class="col-12 col-md-4 col-form-label">Hijos</label>
 					<input class="radio" type="radio" id="toggle-off" name="toggle" >
 					<span for="toggle-off">No</span>
 					<input class="radio" type="radio" id="toggle-on" name="toggle" value="1">
@@ -247,92 +247,1152 @@
 						<div class="form-check terminosycondiciones">
 							<input class="form-check-input" type="checkbox" id="gridCheck1" required>
 							<label class="form-check-label" for="gridCheck1">
-								He leído, acepto las condiciones generales y políticas de privacidad.
+								He leído, acepto las <a href="#condiciones-de-uso">condiciones generales</a> y <a href="#politicas-privacidad">políticas de privacidad.</a>
 							</label>
 						</div>
 					</div>
 				</div>
+				<!-- MEDIO DE PAGO TRANSBANK, SERVIPAG -->
 				<div class="form-group row">
 					<label class="col-12 col-md-12 col-form-label medio-pago">Medio de Pago</label>
 					<div class="col-6 col-md-4 offset-md-2">
-					<input class="radio" type="radio" name="toggle">
-					<img class="pago-web" src="images/webpay-logo.png" alt="">
+						<input class="radio" type="radio" name="toggle">
+						<img class="pago-web" src="images/webpay-logo.png" alt="">
 					</div>
 					<div class="col-6 col-md-4">
-					<input class="radio" type="radio" name="toggle">
-					<img class="pago-web" src="images/logo_servipag.jpg" alt="">
+						<input class="radio" type="radio" name="toggle">
+						<img class="pago-web" src="images/logo_servipag.jpg" alt="">
 					</div>
 				</div>
-				<div class="form-group row">
-					<div class="col-12 col-md-12">
-						<button type="submit" class="btn-d">Verificar Identidad</button>
+				<!-- MEDIO DE PAGO TRANSBANK, SERVIPAG -->
+				<div class="form-group row factura col-12 col-md-6 offset-md-3">
+					<span>¿Quiere recibir Factura? (válida sólo en Chile)</span>
+					<input class="radio" type="radio" id="factura-toggle-off" name="toggle" >
+					<span for="toggle-off">No</span>
+					<input class="radio" type="radio" id="factura-toggle-on" name="toggle" value="1">
+					<span for="toggle-on">Si</span>
+				</div>
+				<div class="factura" id="factura">
+					<div class="form-group row">
+						<label for="id-rut" class="col-12 col-md-4 col-form-label">RUT:</label>
+						<div class="col-12 col-md-8">
+							<input type="text" class="form-control" id="id-rut" placeholder="Ingrese su RUT aquí" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="razon" class="col-12 col-md-4 col-form-label">Razón Social:</label>
+						<div class="col-12 col-md-8">
+							<input type="text" class="form-control" id="razon" placeholder="" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="direccion" class="col-3 col-md-2 col-form-label">Dirección:</label>
+						<div class="col-3 col-md-4">
+							<input type="text" class="form-control" id="direccion" placeholder="" required>
+						</div>
+						<label for="comuna" class="col-3 col-md-2 col-form-label">Comuna:</label>
+						<div class="col-3 col-md-4">
+							<input type="text" class="form-control" id="comuna" placeholder="" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-3 col-md-2 col-form-label">Teléfono:</label>
+						<div class="col-3 col-md-4">
+							<input type="tel" name="usrtel" class="form-control" required>
+						</div>
+						<label class="col-3 col-md-2 col-form-label">Fax:</label>
+						<div class="col-3 col-md-4">
+							<input type="tel" name="usrfax" class="form-control">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-12 col-md-4 col-form-label">Nombre de Contacto:</label>
+						<div class="col-12 col-md-8">
+							<input type="text" class="form-control" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label for="id-email" class="col-12 col-md-4 col-form-label">Email de Contacto:</label>
+						<div class="col-12 col-md-4">
+							<input type="email" class="form-control" id="id-email" placeholder="ejemplo@ejemplo.com" required>
+						</div>
+						<div class="col-12 col-md-4">
+							<div class="form-check facturaMail">
+								<input class="form-check-input" type="checkbox" id="gridCheck2" required>
+								<label class="form-check-label" for="gridCheck2">
+									recibir factura vía mail?
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-12 col-md-4 col-form-label">Giro Comercial:</label>
+						<div class="col-12 col-md-8">
+							<select class="custom-select" name="giro" id="combo">
+								<option value="0" id="0012">Seleccione un Giro Comercial</option>
+								<option value="171200">ACABADO DE PRODUCTOS TEXTIL    </option>
+								<option value="453000">ACONDICIONAMIENTO DE EDIFICIOS </option>
+								<option value="921430">ACT. ARTISTICAS: FUNCIONES DE ARTISTAS (MUSICOS, CONFERENCISTAS)  </option>
+								<option value="921420">ACT. DE ARTISTAS: AUTORES, PINTORES, CIAS TEATRO, ORQUESTAS, OTROS     </option>
+								<option value="112000">ACT. DE SERVICIOS RELACIONADAS CON LA EXTRACCION DE PETROLEO Y GAS     </option>
+								<option value="749931">ACT. DE TAQUIGRAFIA, REPRODUCCION, DESPACHO DE CORRESPONDENCIA    </option>
+								<option value="702000">ACT. INMOB. REALIZADAS A CAMBIO DE UNA RETRIBUCION O POR CONTRATA </option>
+								<option value="52020">ACTIVIDAD PESQUERA DE BARCOS FACTORIAS   </option>
+								<option value="630400">ACTIVIDADES AGENCIAS DE VIAJES; ACT. DE ASISTENCIA A TURISTAS N.C.P.   </option>
+								<option value="922000">ACTIVIDADES DE AGENCIAS DE NOTICIAS </option>
+								<option value="741400">ACTIVIDADES DE ASESORAMIENTO EMPRESARIAL Y EN MATERIA DE GESTION  </option>
+								<option value="923100">ACTIVIDADES DE BIBLIOTECAS Y ARCHIVOS    </option>
+								<option value="924920">ACTIVIDADES DE CASINO DE JUEGOS     </option>
+								<option value="852010">ACTIVIDADES DE CLINICAS VETERINARIAS     </option>
+								<option value="924120">ACTIVIDADES DE CLUBES DE DEPORTES Y ESTADIOS  </option>
+								<option value="741200">ACTIVIDADES DE CONTABILIDAD, TENEDURIA DE LIBROS Y AUDITORIA </option>
+								<option value="641200">ACTIVIDADES DE CORREO DISTINTAS DE LAS ACTIVIDADES POSTALES NACIONALES </option>
+								<option value="752200">ACTIVIDADES DE DEFENSA    </option>
+								<option value="921912">ACTIVIDADES DE DISCOTECAS, CABARET, SALAS DE BAILE Y SIMILARES    </option>
+								<option value="749402">ACTIVIDADES DE FOTOGRAFIA PUBLICITARIA   </option>
+								<option value="222101">ACTIVIDADES DE IMPRESION PRINCIPALMENTE DE LIBROS  </option>
+								<option value="749210">ACTIVIDADES DE INVESTIGACION   </option>
+								<option value="923300">ACTIVIDADES DE JARDINES BOTANICOS, ZOOLOGICOS Y DE PARQUES NACIONALES  </option>
+								<option value="749310">ACTIVIDADES DE LIMPIEZA DE EDIFICIOS RESIDENCIALES Y NO RESIDENCIALES  </option>
+								<option value="752300">ACTIVIDADES DE MANTENIMIENTO DEL ORDEN PUBLICO Y DE SEGURIDAD     </option>
+								<option value="930910">ACTIVIDADES DE MANTENIMIENTO FISICO CORPORAL (BANOS, TURCOS, SAUNAS)   </option>
+								<option value="153120">ACTIVIDADES DE MOLIENDA DE ARROZ    </option>
+								<option value="923200">ACTIVIDADES DE MUSEOS Y PRESERVACION DE LUGARES Y EDIFICIOS HISTORICOS </option>
+								<option value="911100">ACTIVIDADES DE ORGANIZACIONES EMPRESARIALES Y DE EMPLEADORES </option>
+								<option value="919200">ACTIVIDADES DE ORGANIZACIONES POLITICAS  </option>
+								<option value="919100">ACTIVIDADES DE ORGANIZACIONES RELIGIOSAS </option>
+								<option value="919990">ACTIVIDADES DE OTRAS ASOCIACIONES N.C.P. </option>
+								<option value="911290">ACTIVIDADES DE OTRAS ORGANIZACIONES PROFESIONALES  </option>
+								<option value="921920">ACTIVIDADES DE PARQUES DE ATRACCIONES Y CENTROS SIMILARES    </option>
+								<option value="921320">ACTIVIDADES DE RADIO </option>
+								<option value="749229">ACTIVIDADES DE SEGURIDAD N.C.P.     </option>
+								<option value="222200">ACTIVIDADES DE SERVICIO RELACIONADA CON LA IMPRESION .  </option>
+								<option value="912000">ACTIVIDADES DE SINDICATOS </option>
+								<option value="749950">ACTIVIDADES DE SUBASTA (MARTILLEROS)     </option>
+								<option value="921310">ACTIVIDADES DE TELEVISION </option>
+								<option value="751200">ACTIVIDADES DEL PODER JUDICIAL </option>
+								<option value="751300">ACTIVIDADES DEL PODER LEGISLATIVO   </option>
+								<option value="641100">ACTIVIDADES POSTALES NACIONALES     </option>
+								<option value="724000">ACTIVIDADES RELACIONADAS CON BASES DE DATOS   </option>
+								<option value="671100">ADMINISTRACION DE MERCADOS FINANCIEROS   </option>
+								<option value="671921">ADMINISTRADORA DE TARJETAS DE CREDITO    </option>
+								<option value="659913">ADMINISTRADORAS DE FICES (FONDOS DE INVERSION DE CAPITAL EXTRANJERO)   </option>
+								<option value="659911">ADMINISTRADORAS DE FONDOS DE INVERSION   </option>
+								<option value="660200">ADMINISTRADORAS DE FONDOS DE PENSIONES (AFP)  </option>
+								<option value="659912">ADMINISTRADORAS DE FONDOS MUTUOS    </option>
+								<option value="659914">ADMINISTRADORAS DE FONDOS PARA LA VIVIENDA    </option>
+								<option value="659915">ADMINISTRADORAS DE FONDOS PARA OTROS FINES Y/O GENERALES     </option>
+								<option value="182000">ADOBO Y TENIDOS DE PIELES; FABRICACION DE ARTICULOS DE PIEL  </option>
+								<option value="630910">AGENCIAS DE ADUANAS  </option>
+								<option value="749940">AGENCIAS DE CONTRATACION DE ACTORES </option>
+								<option value="630920">AGENCIAS DE TRANSPORTE    </option>
+								<option value="921490">AGENCIAS DE VENTA DE BILLETES DE TEATRO, SALAS DE CONCIERTO Y TEATRO   </option>
+								<option value="671220">AGENTES DE VALORES   </option>
+								<option value="455000">ALQUILER DE  EQUIPO DE CONSTRUCCION O DEMOLICION DOTADO DE OPERARIOS   </option>
+								<option value="711101">ALQUILER DE AUTOS Y CAMIONETAS SIN CHOFER     </option>
+								<option value="713010">ALQUILER DE BICICLETAS Y ARTICULOS PARA DEPORTES   </option>
+								<option value="711300">ALQUILER DE EQUIPO DE TRANSPORTE POR VIA AEREA SIN TRIPULANTES    </option>
+								<option value="712100">ALQUILER DE MAQUINARIA Y EQUIPO AGROPECUARIO  </option>
+								<option value="712200">ALQUILER DE MAQUINARIA Y EQUIPO DE CONSTRUCCION E INGENIERIA CIVIL     </option>
+								<option value="712300">ALQUILER DE MAQUINARIA Y EQUIPO DE OFICINA    </option>
+								<option value="713030">ALQUILER DE MOBILIARIO PARA EVENTOS (SILLAS, MESAS, VAJILLAS, TOLDOS)  </option>
+								<option value="713090">ALQUILER DE OTROS EFECTOS PERSONALES Y ENSERES DOMESTICOS N.C.P.  </option>
+								<option value="711102">ALQUILER DE OTROS EQUIPOS DE TRANSPORTE POR VIA TERRESTRE S/OPERARIOS  </option>
+								<option value="712900">ALQUILER DE OTROS TIPOS DE MAQUINARIAS Y EQUIPOS N.C.P. </option>
+								<option value="711200">ALQUILER DE TRANSPORTE POR VIA ACUATICA SIN TRIPULACION </option>
+								<option value="12240">APICULTURA </option>
+								<option value="741190">ARBITRAJES, SINDICOS, PERITOS Y OTROS    </option>
+								<option value="701001">ARRIENDO DE INMUEBLES AMOBLADOS O CON EQUIPOS Y MAQUINARIAS  </option>
+								<option value="713020">ARRIENDO DE VIDEOS, JUEGOS DE VIDEO, Y EQUIPOS DE VIDEO, MUSICA   </option>
+								<option value="201000">ASERRADO Y ACEPILLADURA DE MADERAS  </option>
+								<option value="749913">ASESORIAS EN LA GESTION DE LA COMPRA O VENTA DE PEQ. Y MED. EMPRESAS   </option>
+								<option value="651100">BANCA CENTRAL   </option>
+								<option value="651910">BANCOS     </option>
+								<option value="900020">BARRIDO DE EXTERIORES     </option>
+								<option value="753020">CAJAS DE COMPENSACION     </option>
+								<option value="671910">CAMARA DE COMPENSACION    </option>
+								<option value="410000">CAPTACION, DEPURACION Y DISTRIBUCION DE AGUA  </option>
+								<option value="671940">CASAS DE CAMBIO Y OPERADORES DE DIVISA   </option>
+								<option value="552030">CASINOS Y CLUBES SOCIALES </option>
+								<option value="15010">CAZA DE MAMIFEROS MARINOS; EXCEPTO BALLENAS   </option>
+								<option value="15090">CAZA ORDINARIA Y MEDIANTE TRAMPAS, Y ACT. DE SERVICIOS CONEXAS    </option>
+								<option value="642062">CENTROS DE ACCESO A INTERNET   </option>
+								<option value="851222">CENTROS DE ATENCION ODONTOLOGICA    </option>
+								<option value="642061">CENTROS DE LLAMADOS; INCLUYE ENVIO DE FAX     </option>
+								<option value="919910">CENTROS DE MADRES Y UNIDADES VECINALES Y COMUNALES </option>
+								<option value="671930">CLASIFICADORES DE RIESGOS </option>
+								<option value="851120">CLINICAS PSIQUIATRICAS, CENTROS DE REHABILITACION, CLINICAS DE REPOSO  </option>
+								<option value="919920">CLUBES SOCIALES </option>
+								<option value="911210">COLEGIOS PROFESIONALES    </option>
+								<option value="524010">COMERCIO AL POR MENOR DE ANTIG\EDADES    </option>
+								<option value="523941">COMERCIO AL POR MENOR DE ARMERIAS, ARTICULOS DE CAZA Y PESCA </option>
+								<option value="523943">COMERCIO AL POR MENOR DE ARTICULOS DEPORTIVOS </option>
+								<option value="523911">COMERCIO AL POR MENOR DE ARTICULOS FOTOGRAFICOS    </option>
+								<option value="523912">COMERCIO AL POR MENOR DE ARTICULOS OPTICOS    </option>
+								<option value="523991">COMERCIO AL POR MENOR DE ARTICULOS TIPICOS (ARTESANIAS) </option>
+								<option value="524090">COMERCIO AL POR MENOR DE ARTICULOS Y ARTEFACTOS USADOS N.C.P.     </option>
+								<option value="523942">COMERCIO AL POR MENOR DE BICICLETAS Y SUS REPUESTOS     </option>
+								<option value="523930">COMERCIO AL POR MENOR DE COMPUTADORAS, SOFTWARES Y SUMINISTROS    </option>
+								<option value="523922">COMERCIO AL POR MENOR DE LIBROS     </option>
+								<option value="523430">COMERCIO AL POR MENOR DE PRODUCTOS DE VIDRIO  </option>
+								<option value="523923">COMERCIO AL POR MENOR DE REVISTAS Y DIARIOS   </option>
+								<option value="524020">COMERCIO AL POR MENOR DE ROPA USADA </option>
+								<option value="522030">COMERCIO AL POR MENOR DE VERDURAS Y FRUTAS (VERDULERIA) </option>
+								<option value="523924">COMERCIO DE ARTICULOS DE SUMINISTROS DE OFICINAS Y ART. DE ESCRITORIO  </option>
+								<option value="523950">COMERCIO POR MENOR DE ARTICULOS  DE JOYERIA, FANTASIAS Y RELOJERIAS    </option>
+								<option value="523921">COMERCIO POR MENOR DE JUGUETES </option>
+								<option value="523290">COMERCIO POR MENOR TEXTILES PARA EL HOGAR Y OTROS PROD. TEXT. N.C.P.   </option>
+								<option value="950002">CONSEJO DE ADMINISTRACION DE EDIFICIOS Y CONDOMINIOS    </option>
+								<option value="151120">CONSERVACION DE CARNES ROJAS (FRIGORIFICOS)   </option>
+								<option value="741130">CONSERVADOR DE BIENES RAICES   </option>
+								<option value="351210">CONSTRUCCION  DE EMBARCACIONES DE RECREO Y DEPORTE </option>
+								<option value="351110">CONSTRUCCION  Y REPARACION DE BUQUES; ASTILLEROS   </option>
+								<option value="452010">CONSTRUCCION DE EDIFICIOS COMPLETOS O DE PARTES DE EDIFICIOS </option>
+								<option value="351120">CONSTRUCCION DE EMBARCACIONES MENORES    </option>
+								<option value="721000">CONSULTORES EN EQUIPOS DE INFORMATICA (HARDWARE)   </option>
+								<option value="722000">CONSULTORES EN PROGRAMAS DE INFORMATICA (INCLUYE SUMINISTRO) </option>
+								<option value="924940">CONTRATACION DE ACTORES PARA CINE, TV, Y TEATRO    </option>
+								<option value="671210">CORREDORES DE BOLSA  </option>
+								<option value="672010">CORREDORES DE SEGUROS     </option>
+								<option value="511020">CORRETAJE DE GANADO (FERIAS DE GANADO)   </option>
+								<option value="511010">CORRETAJE DE PRODUCTOS AGRICOLAS    </option>
+								<option value="269600">CORTE, TALLADO Y ACABADO DE LA PIEDRA    </option>
+								<option value="14015">COSECHA, PODA, AMARRE Y LABORES DE ADECUACION DE LA PLANTA U OTRAS     </option>
+								<option value="12230">CRIA DE ANIMALES DOMESTICOS; PERROS Y GATOS   </option>
+								<option value="12221">CRIA DE AVES DE CORRAL PARA LA PRODUCCION DE CARNE </option>
+								<option value="12222">CRIA DE AVES DE CORRAL PARA LA PRODUCCION DE HUEVOS     </option>
+								<option value="12223">CRIA DE AVES FINAS O NO TRADICIONALES    </option>
+								<option value="12130">CRIA DE EQUINOS (CABALLARES, MULARES)    </option>
+								<option value="12111">CRIA DE GANADO BOVINO PARA LA PRODUCCION LECHERA   </option>
+								<option value="12120">CRIA DE GANADO OVINO Y/O EXPLOTACION LANERA   </option>
+								<option value="12112">CRIA DE GANADO PARA PRODUCCION DE CARNE, O COMO GANADO REPRODUCTOR     </option>
+								<option value="12210">CRIA DE PORCINOS     </option>
+								<option value="11250">CULT. Y REC. DE HONGOS, TRUFAS Y SAVIA; PROD. DE JARABE DE AZUCAR </option>
+								<option value="11114">CULTIVO DE ARROZ     </option>
+								<option value="11113">CULTIVO DE AVENA     </option>
+								<option value="11142">CULTIVO DE CAMOTES O BATATAS   </option>
+								<option value="11115">CULTIVO DE CEBADA    </option>
+								<option value="11340">CULTIVO DE ESPECIAS  </option>
+								<option value="51010">CULTIVO DE ESPECIES ACUATICAS EN CUERPO DE AGUA DULCE   </option>
+								<option value="11193">CULTIVO DE FIBRAS VEGETALES INDUSTRIALES </option>
+								<option value="11321">CULTIVO DE FRUTALES EN ARBOLES/ARBUSTOS (CICLO VIDA MAYOR A UNA TEMP)  </option>
+								<option value="11322">CULTIVO DE FRUTALES MENORES EN PLANTAS CON CICLO VIDA DE UNA TEMP.     </option>
+								<option value="11212">CULTIVO DE HORTALIZAS EN INVERNADEROS Y CULTIVOS HIDROPONICOS     </option>
+								<option value="11112">CULTIVO DE MAIZ </option>
+								<option value="11152">CULTIVO DE MARAVILLA </option>
+								<option value="11139">CULTIVO DE OTRAS LEGUMBRES     </option>
+								<option value="11159">CULTIVO DE OTRAS OLEAGINOSAS N.C.P. </option>
+								<option value="11119">CULTIVO DE OTROS CEREALES </option>
+								<option value="11149">CULTIVO DE OTROS TUBERCULOS N.C.P   </option>
+								<option value="11141">CULTIVO DE PAPAS     </option>
+								<option value="11194">CULTIVO DE PLANTAS AROMATICAS O MEDICINALES   </option>
+								<option value="11330">CULTIVO DE PLANTAS UTILIZADAS PARA PREPARAR BEBIDAS     </option>
+								<option value="11220">CULTIVO DE PLANTAS VIVAS Y PRODUCTOS DE LA FLORICULTURA </option>
+								<option value="11131">CULTIVO DE POROTOS O FRIJOL    </option>
+								<option value="11151">CULTIVO DE RAPS </option>
+								<option value="11191">CULTIVO DE REMOLACHA </option>
+								<option value="11192">CULTIVO DE TABACO    </option>
+								<option value="11111">CULTIVO DE TRIGO     </option>
+								<option value="11313">CULTIVO DE UVA DE MESA    </option>
+								<option value="11311">CULTIVO DE UVA DESTINADA A PRODUCCION DE PISCO Y AGUARDIENTE </option>
+								<option value="11312">CULTIVO DE UVA DESTINADA A PRODUCCION DE VINO </option>
+								<option value="11122">CULTIVO FORRAJEROS EN PRADERAS MEJORADAS O SEMBRADAS    </option>
+								<option value="11121">CULTIVO FORRAJEROS EN PRADERAS NATURALES </option>
+								<option value="11213">CULTIVO ORGANICO DE HORTALIZAS </option>
+								<option value="11211">CULTIVO TRADICIONAL DE HORTALIZAS FRESCAS     </option>
+								<option value="11132">CULTIVO, PRODUCCION DE LUPINO  </option>
+								<option value="51030">CULTIVO, REPRODUCCION Y CRECIMIENTOS DE VEGETALES ACUATICOS  </option>
+								<option value="191100">CURTIDO Y ADOBO DE CUEROS </option>
+								<option value="749320">DESRATIZACION Y FUMIGACION NO AGRICOLA   </option>
+								<option value="14014">DESTRUCCION DE PLAGAS; PULVERIZACIONES, FUMIGACIONES U OTRAS </option>
+								<option value="659220">DIRECCION GENERAL DE CREDITO PRENDARIO   </option>
+								<option value="749922">DISENADORES DE INTERIORES </option>
+								<option value="749921">DISENADORES DE VESTUARIO  </option>
+								<option value="401030">DISTRIBUCION DE ENERGIA ELECTRICA   </option>
+								<option value="921120">DISTRIBUIDORA CINEMATOGRAFICAS </option>
+								<option value="221109">EDICION DE FOLLETOS, PARTITURAS Y OTRAS PUBLICACIONES   </option>
+								<option value="221300">EDICION DE GRABACIONES    </option>
+								<option value="221200">EDICION DE PERIODICOS, REVISTAS Y PUBLICACIONES PERIODICAS   </option>
+								<option value="221101">EDICION PRINCIPALMENTE DE LIBROS    </option>
+								<option value="809041">EDUCACION A DISTANCIA POR INTERNET (E-LEARNING)    </option>
+								<option value="809030">EDUCACION EXTRAESCOLAR (ESCUELA DE CONDUCCION, MUSICA, MODELAJE, ETC)  </option>
+								<option value="269510">ELAB. DE HORMIGON, ART. HORMIGON Y MORTERO (MEZCLA PARA CONSTRUCCION)  </option>
+								<option value="153190">ELABORACION DE  OTRAS MOLINERAS Y ALIMENTOS A BASE DE CEREALES    </option>
+								<option value="151420">ELABORACION DE ACEITES Y GRASAS DE ORIGEN ANIMAL   </option>
+								<option value="151430">ELABORACION DE ACEITES Y GRASAS DE ORIGEN MARINO   </option>
+								<option value="151410">ELABORACION DE ACEITES Y GRASAS DE ORIGEN VEGETAL  </option>
+								<option value="153300">ELABORACION DE ALIMENTOS PREPARADOS PARA ANIMALES  </option>
+								<option value="153210">ELABORACION DE ALMIDONES Y PRODUCTOS DERIVADOS DEL ALMIDON   </option>
+								<option value="154200">ELABORACION DE AZUCAR DE REMOLACHA O CANA     </option>
+								<option value="155120">ELABORACION DE BEBIDAS ALCOHOLICAS Y DE ALCOHOL ETILICO </option>
+								<option value="155300">ELABORACION DE BEBIDAS MALTEADAS, CERVEZAS Y MALTAS     </option>
+								<option value="155410">ELABORACION DE BEBIDAS NO ALCOHOLICAS    </option>
+								<option value="154310">ELABORACION DE CACAO Y CHOCOLATES   </option>
+								<option value="151140">ELABORACION DE CECINAS, EMBUTIDOS Y CARNES EN CONSERVA. </option>
+								<option value="233000">ELABORACION DE COMBUSTIBLE NUCLEAR  </option>
+								<option value="151222">ELABORACION DE CONGELADOS DE PESCADOS Y MARISCOS   </option>
+								<option value="153220">ELABORACION DE GLUCOSA Y OTROS AZUCARES DIFERENTES DE LA REMOLACHA     </option>
+								<option value="153110">ELABORACION DE HARINAS DE TRIGO     </option>
+								<option value="155430">ELABORACION DE HIELO </option>
+								<option value="152010">ELABORACION DE LECHE, MANTEQUILLA, PRODUCTOS LACTEOS Y DERIVADOS  </option>
+								<option value="154920">ELABORACION DE LEVADURAS NATURALES O ARTIFICIALES  </option>
+								<option value="154400">ELABORACION DE MACARRONES, FIDEOS, ALCUZCUZ Y PRODUCTOS SIMILARES </option>
+								<option value="154990">ELABORACION DE OTROS PRODUCTOS ALIMENTICIOS N.C.P. </option>
+								<option value="155110">ELABORACION DE PISCOS (INDUSTRIAS PISQUERAS)  </option>
+								<option value="151223">ELABORACION DE PRODUCTOS AHUMADOS, SALADOS, DESHIDRATADOS Y SIMILARES  </option>
+								<option value="272020">ELABORACION DE PRODUCTOS DE ALUMINIO EN FORMAS PRIMARIAS     </option>
+								<option value="272010">ELABORACION DE PRODUCTOS DE COBRE EN FORMAS PRIMARIAS.  </option>
+								<option value="151230">ELABORACION DE PRODUCTOS EN BASE A VEGETALES ACUATICOS  </option>
+								<option value="152020">ELABORACION DE QUESOS     </option>
+								<option value="154910">ELABORACION DE TE, CAFE, INFUSIONES </option>
+								<option value="154930">ELABORACION DE VINAGRES, MOSTAZAS, MAYONESAS Y CONDIMENTOS EN GENERAL  </option>
+								<option value="155200">ELABORACION DE VINOS </option>
+								<option value="151300">ELABORACION Y CONSERVACION DE FRUTAS, LEGUMBRES Y HORTALIZAS </option>
+								<option value="671929">EMPRESAS DE ASESORIA, CONSULTORIA FINANCIERA Y DE APOYO AL GIRO   </option>
+								<option value="803010">ENSENANZA EN UNIVERSIDADES     </option>
+								<option value="801010">ENSENANZA PREESCOLAR </option>
+								<option value="809020">ENSENANZA PREUNIVERSITARIA     </option>
+								<option value="801020">ENSENANZA PRIMARIA   </option>
+								<option value="809010">ENSENANZA PRIMARIA Y SECUNDARIA PARA ADULTOS  </option>
+								<option value="802100">ENSENANZA SECUNDARIA DE FORMACION GENERAL     </option>
+								<option value="802200">ENSENANZA SECUNDARIA DE FORMACION TECNICA Y PROFESIONAL </option>
+								<option value="803030">ENSENANZAS EN CENTROS DE FORMACION TECNICA    </option>
+								<option value="803020">ENSENANZAS EN INSTITUTOS PROFESIONALES   </option>
+								<option value="155420">ENVASADO DE AGUA MINERAL NATURAL, DE MANANTIAL Y POTABLE PREPARADA     </option>
+								<option value="924160">ESCUELAS PARA DEPORTES    </option>
+								<option value="921930">ESPECTACULOS CIRCENSES, DE TITERES U OTROS SIMILARES    </option>
+								<option value="552020">ESTABLECIMIENTOS DE COMIDA RAPIDA (BARES, FUENTES DE SODA, PIZZERIAS)  </option>
+								<option value="851212">ESTABLECIMIENTOS MEDICOS DE ATENCION AMBULATORIA (CENTROS MEDICOS)     </option>
+								<option value="630320">ESTACIONAMIENTO DE VEHICULOS Y PARQUIMETROS   </option>
+								<option value="749912">EVALUACION Y CALIFICACION DEL GRADO DE SOLVENCIA   </option>
+								<option value="921200">EXHIBICION DE FILMES Y VIDEOCINTAS  </option>
+								<option value="20010">EXPLOTACION DE BOSQUES    </option>
+								<option value="924110">EXPLOTACION DE INSTALACIONES ESPECIALIZADAS PARA PRACTICAS DEPORTIVAS  </option>
+								<option value="142900">EXPLOTACION DE OTRAS MINAS Y CANTERAS N.C.P.  </option>
+								<option value="20030">EXPLOTACION DE VIVEROS DE ESPECIES FORESTALES </option>
+								<option value="13000">EXPLOTACION MIXTA    </option>
+								<option value="133000">EXTRACCION DE COBRE  </option>
+								<option value="142300">EXTRACCION DE LITIO Y CLORUROS, EXCEPTO SAL   </option>
+								<option value="132030">EXTRACCION DE MANGANESO   </option>
+								<option value="131000">EXTRACCION DE MINERALES DE HIERRO   </option>
+								<option value="120000">EXTRACCION DE MINERALES DE URANIO Y TORIO     </option>
+								<option value="142100">EXTRACCION DE NITRATOS Y YODO  </option>
+								<option value="132010">EXTRACCION DE ORO Y PLATA </option>
+								<option value="132090">EXTRACCION DE OTROS MINERALES METALIFEROS NO FERROSOS N.C.P. </option>
+								<option value="111000">EXTRACCION DE PETROLEO CRUDO Y GAS NATURAL   </option>
+								<option value="141000">EXTRACCION DE PIEDRA, ARENA Y ARCILLA    </option>
+								<option value="142200">EXTRACCION DE SAL    </option>
+								<option value="132020">EXTRACCION DE ZINC Y PLOMO     </option>
+								<option value="100000">EXTRACCION, AGLOMERACION DE CARBON DE PIEDRA, LIGNITO Y TURBA     </option>
+								<option value="342000">FAB. CARROCERIAS PARA VEHICULOS AUTOMOTORES (INCLUYE REMOLQUES)   </option>
+								<option value="291210">FAB. DE BOMBAS, GRIFOS, VALVULAS, COMPRESORES, SIST. HIDRAULICOS  </option>
+								<option value="291310">FAB. DE COJINETES, ENGRANAJES, TRENES DE ENGRANAJES Y PZAS TRANSMISION </option>
+								<option value="352000">FAB. DE LOCOMOTORAS Y DE MATERIAL RODANTE PARA FERROCARRILES </option>
+								<option value="292510">FAB. DE MAQ. PARA LA ELABORACION DE ALIMENTOS, BEBIDAS Y TABACOS  </option>
+								<option value="343000">FAB. DE PARTES Y ACCESORIOS PARA VEHICULOS AUTOMOTORES Y SUS MOTORES   </option>
+								<option value="152030">FAB. DE POSTRES A BASE DE LECHE (HELADOS, SORBETES Y OTROS SIMILARES)  </option>
+								<option value="331210">FAB. INSTRUMENTOS Y APARATOS PARA MEDIR, VERIFICAR, ENSAYAR, NAVEGAR   </option>
+								<option value="269101">FAB. PROD. CERAMICA NO REFRACTARIA (USO NO ESTRUC, FINES ORNAMENTALES) </option>
+								<option value="269109">FAB. PROD. CERAMICA NO REFRACTARIA (USO NO ESTRUCTURAL N.C.P.)    </option>
+								<option value="269300">FAB. PROD. DE ARCILLA Y CERAMICAS NO REFRACTARIAS (USO ESTRUCTURAL)    </option>
+								<option value="272090">FAB. PROD. PRIMARIOS DE MET. PRECIOSOS Y OTROS MET. NO FERROSOS N.C.P. </option>
+								<option value="323000">FAB. RECEPTORES (RADIO Y TV APARATOS DE GRABACION Y REPRODUCCION) </option>
+								<option value="293000">FABRICACION  DE APARATOS DE USO DOMESTICO N.C.P.   </option>
+								<option value="241200">FABRICACION DE ABONOS Y COMPUESTOS DE NITROGENO    </option>
+								<option value="181030">FABRICACION DE ACCESORIOS DE VESTIR </option>
+								<option value="314000">FABRICACION DE ACUMULADORES DE PILAS Y BATERIAS  PRIMARIAS   </option>
+								<option value="353010">FABRICACION DE AERONAVES Y NAVES ESPACIALES   </option>
+								<option value="312010">FABRICACION DE APARATOS DE DISTRIBUCION Y CONTROL  </option>
+								<option value="292710">FABRICACION DE ARMAS Y MUNICIONES   </option>
+								<option value="172100">FABRICACION DE ARTICULOS CONFECCIONADOS DE MATERIAS TEXTILES </option>
+								<option value="269590">FABRICACION DE ARTICULOS DE CEMENTO Y YESO N.C.P.  </option>
+								<option value="289310">FABRICACION DE ARTICULOS DE CUCHILLERIA  </option>
+								<option value="369300">FABRICACION DE ARTICULOS DE DEPORTE </option>
+								<option value="369990">FABRICACION DE ARTICULOS DE OTRAS INDUSTRIAS N.C.P.     </option>
+								<option value="261090">FABRICACION DE ARTICULOS DE VIDRIO N.C.P.     </option>
+								<option value="359200">FABRICACION DE BICICLETAS Y DE SILLONES DE RUEDAS PARA INVALIDOS  </option>
+								<option value="369920">FABRICACION DE BROCHAS, ESCOBAS Y CEPILLOS    </option>
+								<option value="289910">FABRICACION DE CABLES, ALAMBRES Y PRODUCTOS DE ALAMBRE  </option>
+								<option value="192000">FABRICACION DE CALZADO    </option>
+								<option value="241110">FABRICACION DE CARBON VEGETAL, Y BRIQUETAS DE CARBON VEGETAL </option>
+								<option value="210110">FABRICACION DE CELULOSA Y OTRAS PASTAS DE MADERA   </option>
+								<option value="269400">FABRICACION DE CEMENTO, CAL Y YESO  </option>
+								<option value="160010">FABRICACION DE CIGARROS Y CIGARRILLOS    </option>
+								<option value="321010">FABRICACION DE COMPONENTES ELECTRONICOS  </option>
+								<option value="251110">FABRICACION DE CUBIERTAS Y CAMARAS DE CAUCHO  </option>
+								<option value="172300">FABRICACION DE CUERDAS, CORDELES, BRAMANTES Y REDES     </option>
+								<option value="291510">FABRICACION DE EQUIPO DE ELEVACION Y MANIPULACION  </option>
+								<option value="331110">FABRICACION DE EQUIPO MEDICO Y QUIRURGICO, Y DE APARATOS ORTOPEDICOS   </option>
+								<option value="331310">FABRICACION DE EQUIPOS DE CONTROL DE PROCESOS INDUSTRIALES   </option>
+								<option value="242910">FABRICACION DE EXPLOSIVOS  Y PRODUCTOS DE PIROTECNIA    </option>
+								<option value="261030">FABRICACION DE FIBRAS DE VIDRIO     </option>
+								<option value="243000">FABRICACION DE FIBRAS MANUFACTURADAS     </option>
+								<option value="369930">FABRICACION DE FOSFOROS   </option>
+								<option value="154120">FABRICACION DE GALLETAS   </option>
+								<option value="402000">FABRICACION DE GAS; DISTRIBUCION DE COMBUSTIBLES GASEOSOS POR TUBERIAS </option>
+								<option value="281310">FABRICACION DE GENERADORES DE VAPOR </option>
+								<option value="289320">FABRICACION DE HERRAMIENTAS DE MANO Y ARTICULOS DE FERRETERIA     </option>
+								<option value="313000">FABRICACION DE HILOS Y CABLES AISLADOS   </option>
+								<option value="291410">FABRICACION DE HORNOS, HOGARES Y QUEMADORES   </option>
+								<option value="369200">FABRICACION DE INSTRUMENTOS DE MUSICA    </option>
+								<option value="332020">FABRICACION DE INSTRUMENTOS DE OPTICA N.C.P. Y EQUIPOS FOTOGRAFICOS    </option>
+								<option value="369100">FABRICACION DE JOYAS Y PRODUCTOS CONEXOS </option>
+								<option value="369400">FABRICACION DE JUEGOS Y JUGUETES    </option>
+								<option value="315010">FABRICACION DE LAMPARAS Y EQUIPO DE ILUMINACION    </option>
+								<option value="191200">FABRICACION DE MALETAS, BOLSOS DE MANO Y SIMILARES </option>
+								<option value="292110">FABRICACION DE MAQUINARIA AGROPECUARIA Y FORESTAL  </option>
+								<option value="300020">FABRICACION DE MAQUINARIA DE OFICINA, CONTABILIDAD, N.C.P.   </option>
+								<option value="292310">FABRICACION DE MAQUINARIA METALURGICA    </option>
+								<option value="292610">FABRICACION DE MAQUINARIA PARA LA ELABORACION DE PRENDAS TEXTILES </option>
+								<option value="292411">FABRICACION DE MAQUINARIA PARA MINAS, CANTERAS Y OBRAS DE CONSTRUCCION </option>
+								<option value="292210">FABRICACION DE MAQUINAS HERRAMIENTAS     </option>
+								<option value="269910">FABRICACION DE MEZCLAS BITUMINOSAS A BASE DE ASFALTO Y PROD. SIMILARES </option>
+								<option value="359100">FABRICACION DE MOTOCICLETAS    </option>
+								<option value="291110">FABRICACION DE MOTORES Y  TURBINAS  </option>
+								<option value="311010">FABRICACION DE MOTORES, GENERADORES Y TRANSFORMADORES ELECTRICOS  </option>
+								<option value="361010">FABRICACION DE MUEBLES PRINCIPALMENTE DE MADERA    </option>
+								<option value="291910">FABRICACION DE OTRO TIPO DE MAQUINARIAS DE USO GENERAL  </option>
+								<option value="210900">FABRICACION DE OTROS ARTICULOS DE PAPEL Y CARTON   </option>
+								<option value="252090">FABRICACION DE OTROS ARTICULOS DE PLASTICO    </option>
+								<option value="359900">FABRICACION DE OTROS EQUIPOS DE TRANSPORTE N.C.P.  </option>
+								<option value="361020">FABRICACION DE OTROS MUEBLES N.C.P., INCLUSO COLCHONES  </option>
+								<option value="202900">FABRICACION DE OTROS PROD. DE MADERA (CORCHO, PAJA Y MAT. TRENZABLES)  </option>
+								<option value="251900">FABRICACION DE OTROS PRODUCTOS DE CAUCHO </option>
+								<option value="160090">FABRICACION DE OTROS PRODUCTOS DEL TABACO     </option>
+								<option value="289990">FABRICACION DE OTROS PRODUCTOS ELABORADOS DE METAL N.C.P.    </option>
+								<option value="269990">FABRICACION DE OTROS PRODUCTOS MINERALES NO METALICOS N.C.P  </option>
+								<option value="242990">FABRICACION DE OTROS PRODUCTOS QUIMICOS N.C.P.     </option>
+								<option value="172990">FABRICACION DE OTROS PRODUCTOS TEXTILES N.C.P.     </option>
+								<option value="319010">FABRICACION DE OTROS TIPOS DE EQUIPO ELECTRICO N.C.P.   </option>
+								<option value="292910">FABRICACION DE OTROS TIPOS DE MAQUINARIAS DE USO ESPECIAL    </option>
+								<option value="154110">FABRICACION DE PAN, PRODUCTOS DE PANADERIA Y PASTELERIA </option>
+								<option value="269530">FABRICACION DE PANELES DE YESO PARA LA CONSTRUCCION     </option>
+								<option value="210121">FABRICACION DE PAPEL DE PERIODICO   </option>
+								<option value="210129">FABRICACION DE PAPEL Y CARTON N.C.P.     </option>
+								<option value="210200">FABRICACION DE PAPEL Y CARTON ONDULADO Y DE ENVASES DE PAPEL Y CARTON  </option>
+								<option value="292412">FABRICACION DE PARTES PARA MAQUINAS DE SONDEO O PERFORACION  </option>
+								<option value="202200">FABRICACION DE PARTES Y PIEZAS DE CARPINTERIA PARA CONSTRUCCIONES </option>
+								<option value="242200">FABRICACION DE PINTURAS, BARNICES Y PROD. DE REVESTIMIENTO SIMILARES   </option>
+								<option value="242100">FABRICACION DE PLAGUICIDAS Y OTROS PROD. QUIMICOS DE USO AGROPECUARIO  </option>
+								<option value="252010">FABRICACION DE PLANCHAS, LAMINAS, CINTAS, TIRAS DE PLASTICO  </option>
+								<option value="241300">FABRICACION DE PLASTICOS EN FORMAS PRIMARIAS Y DE CAUCHO SINTETICO     </option>
+								<option value="369910">FABRICACION DE PLUMAS Y LAPICES; ARTICULOS DE ESCRITORIO EN GENERAL    </option>
+								<option value="181020">FABRICACION DE PRENDAS DE VESTIR DE CUERO NATURAL/ARTIFICIAL, PLASTICO </option>
+								<option value="181010">FABRICACION DE PRENDAS DE VESTIR TEXTILES Y SIMILARES   </option>
+								<option value="242300">FABRICACION DE PROD. FARMACEUTICOS, SUSTANCIAS QUIMICAS MEDICINALES    </option>
+								<option value="269200">FABRICACION DE PRODUCTOS DE CERAMICAS REFRACTARIA  </option>
+								<option value="154320">FABRICACION DE PRODUCTOS DE CONFITERIA   </option>
+								<option value="269520">FABRICACION DE PRODUCTOS DE FIBROCEMENTO Y ASBESTOCEMENTO    </option>
+								<option value="231000">FABRICACION DE PRODUCTOS DE HORNOS COQUE </option>
+								<option value="232000">FABRICACION DE PRODUCTOS DE REFINACION DE PETROLEO </option>
+								<option value="151221">FABRICACION DE PRODUCTOS ENLATADOS DE PESCADO Y MARISCOS     </option>
+								<option value="281100">FABRICACION DE PRODUCTOS METALICOS DE USO ESTRUCTURAL   </option>
+								<option value="281211">FABRICACION DE RECIPIENTES DE GAS COMPRIMIDO O LICUADO  </option>
+								<option value="202300">FABRICACION DE RECIPIENTES DE MADERA     </option>
+								<option value="333000">FABRICACION DE RELOJES    </option>
+								<option value="181040">FABRICACION DE ROPA DE TRABAJO </option>
+								<option value="241190">FABRICACION DE SUST. QUIMICAS BASICAS, EXCEPTO COMPUESTOS DE NITROGENO </option>
+								<option value="202100">FABRICACION DE TABLEROS, PANELES Y HOJAS DE MADERA PARA ENCHAPADO </option>
+								<option value="281219">FABRICACION DE TANQUES, DEPOSITOS Y RECIPIENTES DE METAL N.C.P.   </option>
+								<option value="172200">FABRICACION DE TAPICES Y ALFOMBRA   </option>
+								<option value="173000">FABRICACION DE TEJIDOS DE PUNTO     </option>
+								<option value="172910">FABRICACION DE TEJIDOS DE USO INDUSTRIAL </option>
+								<option value="322010">FABRICACION DE TRANSMISORES DE RADIO Y TELEVISION  </option>
+								<option value="252020">FABRICACION DE TUBOS, MANGUERAS PARA LA CONSTRUCCION    </option>
+								<option value="341000">FABRICACION DE VEHICULOS AUTOMOTORES     </option>
+								<option value="261020">FABRICACION DE VIDRIO HUECO    </option>
+								<option value="300010">FABRICACION Y ARMADO DE COMPUTADORES Y HARDWARE EN GENERAL   </option>
+								<option value="332010">FABRICACION Y/O REPARACION DE LENTES Y ARTICULOS OFTALMOLOGICOS   </option>
+								<option value="261010">FABRICACION, MANIPULADO Y TRANSFORMACION  DE VIDRIO PLANO    </option>
+								<option value="242400">FABRICACIONES DE JABONES, DETERGENTES, PERFUMES    </option>
+								<option value="659231">FACTORING  </option>
+								<option value="523111">FARMACIAS - PERTENECIENTES A CADENA DE ESTABLECIMIENTOS </option>
+								<option value="523112">FARMACIAS INDEPENDIENTES  </option>
+								<option value="749962">FERIAS DE EXPOSICIONES CON FINES EMPRESARIALES     </option>
+								<option value="659210">FINANCIAMIENTO DEL FOMENTO DE LA PRODUCCION   </option>
+								<option value="651920">FINANCIERAS     </option>
+								<option value="289100">FORJA, PRENSADO, ESTAMPADO, LAMINADO DE METAL; INCLUYE PULVIMETALURGIA </option>
+								<option value="273100">FUNDICION DE HIERRO Y ACERO    </option>
+								<option value="273200">FUNDICION DE METALES NO FERROSOS    </option>
+								<option value="924132">FUTBOL AMATEUR  </option>
+								<option value="924131">FUTBOL PROFESIONAL   </option>
+								<option value="749961">GALERIAS DE ARTE     </option>
+								<option value="401012">GENERACION EN CENTRALES TERMOELECTRICA DE CICLOS COMBINADOS  </option>
+								<option value="401019">GENERACION EN OTRAS CENTRALES N.C.P.     </option>
+								<option value="401013">GENERACION EN OTRAS CENTRALES TERMOELECTRICAS </option>
+								<option value="401011">GENERACION HIDROELECTRICA </option>
+								<option value="751110">GOBIERNO CENTRAL     </option>
+								<option value="521111">GRANDES ESTABLECIMIENTOS; HIPERMERCADOS  </option>
+								<option value="521200">GRANDES TIENDAS POR DEPARTAMENTOS DE PRODUCTOS DE FERRETERIA Y HOGAR   </option>
+								<option value="521300">GRANDES TIENDAS, TIENDAS POR DEPTOS. DE VESTUARIO Y PRODUCTOS HOGAR    </option>
+								<option value="924140">HIPODROMOS </option>
+								<option value="950001">HOGARES PRIVADOS INDIVIDUALES CON SERVICIO DOMESTICO    </option>
+								<option value="851110">HOSPITALES Y CLINICAS     </option>
+								<option value="551010">HOTELES    </option>
+								<option value="271000">INDUSTRIAS BASICAS DE HIERRO Y ACERO     </option>
+								<option value="921911">INSTRUCTORES DE DANZA     </option>
+								<option value="741300">INVESTIGACION DE MERCADOS Y REALIZACION ENCUESTAS DE OPINION PUBLICA   </option>
+								<option value="731000">INVESTIGACIONES Y DESARROLLO EXPERIMENTAL - CS NATURALES E INGENIERIA  </option>
+								<option value="732000">INVESTIGACIONES Y DESARROLLO EXPERIMENTAL - CS SOCIALES Y HUMANIDADES  </option>
+								<option value="660400">ISAPRES    </option>
+								<option value="851910">LABORATORIOS CLINICOS; INCLUYE BANCOS DE SANGRE    </option>
+								<option value="331120">LABORATORIOS DENTALES     </option>
+								<option value="930100">LAVADO Y LIMPIEZA DE PRENDAS DE TELA Y PIEL, INCLUSO LIMPIEZAS EN SECO </option>
+								<option value="659110">LEASING FINANCIERO   </option>
+								<option value="659120">LEASING HABITACIONAL </option>
+								<option value="672020">LIQUIDADORES DE SEGUROS   </option>
+								<option value="630100">MANIPULACION DE LA CARGA  </option>
+								<option value="725000">MANTENIMIENTO Y REP. DE MAQ. DE OFICINA, CONTABILIDAD E INFORMATICA    </option>
+								<option value="502080">MANTENIMIENTO Y REPARACION DE VEHICULOS AUTOMOTORES     </option>
+								<option value="525920">MAQUINAS EXPENDEDORAS     </option>
+								<option value="512210">MAYORISTA DE FRUTAS Y VERDURAS </option>
+								<option value="512220">MAYORISTAS DE CARNES </option>
+								<option value="512230">MAYORISTAS DE PRODUCTOS DEL MAR (PESCADO, MARISCOS, ALGAS)   </option>
+								<option value="512240">MAYORISTAS DE VINOS Y BEBIDAS ALCOHOLICAS Y DE FANTASIA </option>
+								<option value="521112">MEDIANOS Y PEQUENOS ESTABLECIMIENTOS; SUPERMERCADOS, MINIMARKETS  </option>
+								<option value="551020">MOTELES    </option>
+								<option value="751120">MUNICIPALIDADES </option>
+								<option value="452020">OBRAS DE INGENIERIA  </option>
+								<option value="454000">OBRAS MENORES CONSTRUCCION (CONTRATISTAS, ALBANILES, CARPINTEROS) </option>
+								<option value="990000">ORGANIZACIONES Y ORGANOS EXTRATERRITORIALES   </option>
+								<option value="672090">OTRAS ACT. AUX. DE FINANCIACION DE PLANES DE SEG. Y DE PENS. N.C.P.    </option>
+								<option value="753090">OTRAS ACT. DE PLANES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA     </option>
+								<option value="671990">OTRAS ACTIVIDADES AUXILIARES DE LA INTERMEDIACION FINANCIERA N.C.P.    </option>
+								<option value="630390">OTRAS ACTIVIDADES CONEXAS AL TRANSPORTE N.C.P.     </option>
+								<option value="221900">OTRAS ACTIVIDADES DE EDICION.  </option>
+								<option value="921990">OTRAS ACTIVIDADES DE ENTRETENIMIENTO N.C.P.   </option>
+								<option value="749409">OTRAS ACTIVIDADES DE FOTOGRAFIA N.C.P.   </option>
+								<option value="222109">OTRAS ACTIVIDADES DE IMPRESION N.C.P.    </option>
+								<option value="729000">OTRAS ACTIVIDADES DE INFORMATICA    </option>
+								<option value="900090">OTRAS ACTIVIDADES DE MANEJO DE DESPERDICIOS   </option>
+								<option value="20049">OTRAS ACTIVIDADES DE SERVICIOS CONEXAS A LA SILVICULTURA N.C.P.   </option>
+								<option value="930390">OTRAS ACTIVIDADES DE SERVICIOS FUNERARIOS Y OTRAS ACTIVIDADES CONEXAS  </option>
+								<option value="930990">OTRAS ACTIVIDADES DE SERVICIOS PERSONALES N.C.P.   </option>
+								<option value="749990">OTRAS ACTIVIDADES EMPRESARIALES N.C.P.   </option>
+								<option value="924190">OTRAS ACTIVIDADES RELACIONADAS AL DEPORTE  N.C.P.  </option>
+								<option value="851990">OTRAS ACTIVIDADES RELACIONADAS CON LA SALUD HUMANA </option>
+								<option value="12290">OTRAS EXPLOTACIONES DE ANIMALES N.C.P. (INCLUIDO SUS SUBPRODUCTOS)     </option>
+								<option value="526090">OTRAS REPARACIONES DE EFECTOS PERSONALES Y ENSERES DOMESTICOS N.C.P.   </option>
+								<option value="11199">OTROS CULTIVOS N.C.P.     </option>
+								<option value="749929">OTROS DISENADORES N.C.P.  </option>
+								<option value="659290">OTROS INSTITUCIONES FINANCIERAS N.C.P.   </option>
+								<option value="521900">OTROS PRODUCTOS EN PEQUENOS ALMACENES NO ESPECIALIZADOS </option>
+								<option value="851920">OTROS PROFESIONALES DE LA SALUD     </option>
+								<option value="14019">OTROS SERVICIOS AGRICOLAS N.C.P.    </option>
+								<option value="671290">OTROS SERVICIOS DE CORRETAJE   </option>
+								<option value="924990">OTROS SERVICIOS DE DIVERSION Y ESPARCIMIENTOS N.C.P.    </option>
+								<option value="742290">OTROS SERVICIOS DE ENSAYOS Y ANALISIS TECNICOS     </option>
+								<option value="642090">OTROS SERVICIOS DE TELECOMUNICACIONES N.C.P.  </option>
+								<option value="742190">OTROS SERVICIOS TECNICOS RELACIONADOS N.C.P.  </option>
+								<option value="511030">OTROS TIPOS DE CORRETAJES O REMATES N.C.P. (NO INCLUYE MARTILLEROS)    </option>
+								<option value="809049">OTROS TIPOS DE EDUCACION A DISTANCIA, Y OTRAS N.C.P.    </option>
+								<option value="551090">OTROS TIPOS DE HOSPEDAJE TEMPORAL (CAMPING, ALBERGUES, POSADAS)   </option>
+								<option value="651990">OTROS TIPOS DE INTERMEDIACION MONETARIA N.C.P.     </option>
+								<option value="602290">OTROS TIPOS DE TRANSPORTE NO REGULAR DE PASAJEROS N.C.P.     </option>
+								<option value="602190">OTROS TIPOS DE TRANSPORTE REG. DE PASAJEROS POR VIA TERRESTRE N.C.P.   </option>
+								<option value="525990">OTROS TIPOS DE VENTA AL POR MENOR NO REALIZADA EN ALMACENES N.C.P.     </option>
+								<option value="930200">PELUQUERIAS Y SALONES DE BELLEZA    </option>
+								<option value="521120">PEQUENOS ALMACENES NO ESPECIALIZADOS (PRINCIPALMENTE DE ALIMENTOS)     </option>
+								<option value="52030">PESCA ARTESANAL. EXTRACCION DE RECURSOS ACUATICOS EN GENERAL </option>
+								<option value="52010">PESCA INDUSTRIAL     </option>
+								<option value="660102">PLANES DE REASEGUROS DE VIDA   </option>
+								<option value="660302">PLANES DE REASEGUROS GENERALES </option>
+								<option value="753010">PLANES DE SEGURIDAD SOCIAL DE AFILIACION OBLIGATORIA (SALUD) </option>
+								<option value="660101">PLANES DE SEGURO DE VIDA  </option>
+								<option value="660301">PLANES DE SEGUROS GENERALES    </option>
+								<option value="642030">PORTADORES TELEFONICOS (LARGA DISTANCIA NACIONAL E INTERNACIONAL) </option>
+								<option value="171100">PREPARACION DE HILATURA DE FIBRAS TEXTILES; TEJEDURA PROD. TEXTILES    </option>
+								<option value="451010">PREPARACION DEL TERRENO, EXCAVACIONES Y MOVIMIENTOS DE TIERRAS    </option>
+								<option value="723000">PROCESAMIENTO DE DATOS    </option>
+								<option value="151130">PROD, PROCESAMIENTO  Y CONSERVACION DE CARNES DE AVE Y OTRAS N.C.P.    </option>
+								<option value="151210">PRODUCCION DE HARINA DE PESCADO     </option>
+								<option value="921110">PRODUCCION DE PELICULAS CINEMATOGRAFICAS </option>
+								<option value="11160">PRODUCCION DE SEMILLAS DE CEREALES, LEGUMBRES, OLEAGINOSAS   </option>
+								<option value="11230">PRODUCCION DE SEMILLAS DE FLORES, PRADOS, FRUTAS Y HORTALIZAS     </option>
+								<option value="11240">PRODUCCION EN VIVEROS; EXCEPTO ESPECIES FORESTALES </option>
+								<option value="151110">PRODUCCION, PROCESAMIENTODE CARNES ROJAS Y PRODUCTOS CARNICOS     </option>
+								<option value="924150">PROMOCION Y ORGANIZACION DE ESPECTACULOS DEPORTIVOS     </option>
+								<option value="642050">PROVEEDORES DE INTERNET   </option>
+								<option value="743000">PUBLICIDAD </option>
+								<option value="630330">PUERTOS Y AEROPUERTOS     </option>
+								<option value="12250">RANICULTURA, HELICULTURA U OTRA ACTIVIDAD CON ANIMALES MENORES    </option>
+								<option value="251120">RECAUCHADO Y RENOVACION DE CUBIERTAS DE CAUCHO     </option>
+								<option value="741140">RECEPTORES JUDICIALES     </option>
+								<option value="371000">RECICLAMIENTO DE DESPERDICIOS Y DESECHOS METALICOS </option>
+								<option value="372090">RECICLAMIENTO DE OTROS DESPERDICIOS Y DESECHOS NO METALICOS N.C.P.     </option>
+								<option value="372010">RECICLAMIENTO DE PAPEL    </option>
+								<option value="372020">RECICLAMIENTO DE VIDRIO   </option>
+								<option value="900030">RECOGIDA Y ELIMINACION DE DESECHOS  </option>
+								<option value="52040">RECOLECCION DE PROD. MARINOS, COMO PERLAS, ESPONJAS, CORALES Y ALGAS   </option>
+								<option value="20020">RECOLECCION DE PRODUCTOS FORESTALES SILVESTRES     </option>
+								<option value="752100">RELACIONES EXTERIORES     </option>
+								<option value="291280">REP. BOMBAS,  COMPRESORES, SIST. HIDRAULICOS, VALVULAS Y ART. GRIFERIA </option>
+								<option value="291380">REP. DE COJINETES, ENGRANAJES, TRENES DE ENGRANAJES Y PZAS TRANSMISION </option>
+								<option value="292480">REP. DE MAQ. PARA PETROLEO, MINAS, CANTERAS, Y OBRAS DE CONSTRUCCION   </option>
+								<option value="331280">REP. INSTRUMENTOS Y APARATOS PARA MEDIR, VERIFICAR, ENSAYAR, NAVEGAR   </option>
+								<option value="353080">REPARACION DE AERONAVES Y NAVES ESPACIALES    </option>
+								<option value="312080">REPARACION DE APARATOS DE DISTRIBUCION Y CONTROL   </option>
+								<option value="292780">REPARACION DE ARMAS  </option>
+								<option value="526010">REPARACION DE CALZADO Y OTROS ARTICULOS DE CUERO   </option>
+								<option value="321080">REPARACION DE COMPONENTES ELECTRONICOS   </option>
+								<option value="351280">REPARACION DE EMBARCACIONES DE RECREO Y DEPORTES   </option>
+								<option value="351180">REPARACION DE EMBARCACIONES MENORES </option>
+								<option value="291580">REPARACION DE EQUIPO DE ELEVACION Y MANIPULACION   </option>
+								<option value="315080">REPARACION DE EQUIPO DE ILUMINACION </option>
+								<option value="331180">REPARACION DE EQUIPO MEDICO Y QUIRURGICO, Y DE APARATOS ORTOPEDICOS    </option>
+								<option value="331380">REPARACION DE EQUIPOS DE CONTROL DE PROCESOS INDUSTRIALES    </option>
+								<option value="281380">REPARACION DE GENERADORES DE VAPOR  </option>
+								<option value="291480">REPARACION DE HORNOS, HOGARES Y QUEMADORES    </option>
+								<option value="332080">REPARACION DE INSTRUMENTOS DE OPTICA N.C.P Y EQUIPO FOTOGRAFICOS  </option>
+								<option value="292180">REPARACION DE MAQUINARIA AGROPECUARIA Y FORESTAL   </option>
+								<option value="292580">REPARACION DE MAQUINARIA PARA LA ELAB. DE ALIMENTOS, BEBIDAS Y TABACOS </option>
+								<option value="292380">REPARACION DE MAQUINARIA PARA LA INDUSTRIA METALURGICA  </option>
+								<option value="292680">REPARACION DE MAQUINARIA PARA LA INDUSTRIA TEXTIL  </option>
+								<option value="292280">REPARACION DE MAQUINAS HERRAMIENTAS </option>
+								<option value="504080">REPARACION DE MOTOCICLETAS     </option>
+								<option value="291180">REPARACION DE MOTORES Y TURBINAS    </option>
+								<option value="311080">REPARACION DE MOTORES, GENERADORES Y TRANSFORMADORES ELECTRICOS   </option>
+								<option value="319080">REPARACION DE OTROS TIPOS DE EQUIPO ELECTRICO N.C.P.    </option>
+								<option value="292980">REPARACION DE OTROS TIPOS DE MAQUINARIA DE USO ESPECIAL </option>
+								<option value="526030">REPARACION DE RELOJES Y JOYAS  </option>
+								<option value="281280">REPARACION DE TANQUES,  DEPOSITOS Y RECIPIENTES DE METAL     </option>
+								<option value="322080">REPARACION DE TRANSMISORES DE RADIO Y TELEVISION   </option>
+								<option value="291980">REPARACION OTROS TIPOS DE MAQUINARIA Y EQUIPOS DE USO GENERAL     </option>
+								<option value="526020">REPARACIONES ELECTRICAS Y ELECTRONICAS   </option>
+								<option value="223000">REPRODUCCION DE GRABACIONES    </option>
+								<option value="51040">REPRODUCCION Y CRIA DE MOLUSCOS Y CRUSTACEOS. </option>
+								<option value="51020">REPRODUCCION Y CRIANZAS DE PECES MARINOS </option>
+								<option value="551030">RESIDENCIALES   </option>
+								<option value="552010">RESTAURANTES    </option>
+								<option value="924930">SALAS DE BILLAR, BOWLING,  POOL Y JUEGOS ELECTRONICOS   </option>
+								<option value="659232">SECURITIZADORAS </option>
+								<option value="14011">SERVICIO DE CORTE Y ENFARDADO DE FORRAJE </option>
+								<option value="502010">SERVICIO DE LAVADO DE VEHICULOS AUTOMOTORES   </option>
+								<option value="14012">SERVICIO DE RECOLECCION, EMPACADO, TRILLA, DESGRANE, Y SIMILARES  </option>
+								<option value="742210">SERVICIO DE REVISION TECNICA DE VEHICULOS AUTOMOTORES   </option>
+								<option value="14013">SERVICIO DE ROTURACION SIEMBRA Y SIMILARES    </option>
+								<option value="741120">SERVICIO NOTARIAL    </option>
+								<option value="14021">SERVICIOS DE ADIESTRAMIENTO, GUARDERIA Y CUIDADOS DE MASCOTAS     </option>
+								<option value="630200">SERVICIOS DE ALMACENAMIENTO Y DEPOSITO   </option>
+								<option value="742110">SERVICIOS DE ARQUITECTURA Y TECNICO RELACIONADO    </option>
+								<option value="552050">SERVICIOS DE BANQUETES, BODAS  Y OTRAS CELEBRACIONES    </option>
+								<option value="749911">SERVICIOS DE COBRANZA DE CUENTAS    </option>
+								<option value="552040">SERVICIOS DE COMIDA PREPARADA EN FORMA INDUSTRIAL  </option>
+								<option value="749970">SERVICIOS DE CONTESTACION DE LLAMADAS (CALL CENTER)     </option>
+								<option value="20043">SERVICIOS DE CONTROL DE INCENDIOS FORESTALES  </option>
+								<option value="20042">SERVICIOS DE CORTA DE MADERA   </option>
+								<option value="451020">SERVICIOS DE DEMOLICION Y EL DERRIBO DE EDIFICIOS Y OTRAS ESTRUCTURAS  </option>
+								<option value="749500">SERVICIOS DE ENVASADO Y EMPAQUE     </option>
+								<option value="900040">SERVICIOS DE EVACUACION DE RILES Y AGUAS SERVIDAS  </option>
+								<option value="20041">SERVICIOS DE FORESTACION  </option>
+								<option value="749934">SERVICIOS DE FOTOCOPIAS   </option>
+								<option value="742140">SERVICIOS DE INGENIERIA N.C.P. </option>
+								<option value="919930">SERVICIOS DE INSTITUTOS DE ESTUDIOS - FUND. Y CORP. DE DESARROLLO </option>
+								<option value="851211">SERVICIOS DE MEDICOS EN FORMA INDEPENDIENTE   </option>
+								<option value="852021">SERVICIOS DE MEDICOS VETERINARIOS EN FORMA INDEPENDIENTE     </option>
+								<option value="851221">SERVICIOS DE ODONTOLOGOS EN FORMA INDEPENDIENTE    </option>
+								<option value="552090">SERVICIOS DE OTROS ESTABLECIMIENTOS QUE EXPENDEN COMIDAS Y BEBIDAS     </option>
+								<option value="852029">SERVICIOS DE OTROS PROFESIONALES INDEPENDIENTES EN AREA VETERINARIA    </option>
+								<option value="921411">SERVICIOS DE PRODUCCION DE RECITALES Y OTROS EVENTOS MUSICALES MASIVOS </option>
+								<option value="921419">SERVICIOS DE PRODUCCION TEATRAL Y OTROS N.C.P.     </option>
+								<option value="749190">SERVICIOS DE RECLUTAMIENTO DE PERSONAL   </option>
+								<option value="749932">SERVICIOS DE REDACCION    </option>
+								<option value="502020">SERVICIOS DE REMOLQUE DE VEHICULOS (GRUAS)    </option>
+								<option value="749401">SERVICIOS DE REVELADO, IMPRESION, AMPLIACION DE FOTOGRAFIAS  </option>
+								<option value="749110">SERVICIOS DE SUMINISTRO DE PERSONAL POR SUBCONTRATA     </option>
+								<option value="642010">SERVICIOS DE TELEFONIA FIJA    </option>
+								<option value="642020">SERVICIOS DE TELEFONIA MOVIL   </option>
+								<option value="642040">SERVICIOS DE TELEVISION NO ABIERTA  </option>
+								<option value="742130">SERVICIOS DE TOPOGRAFIA Y AGRIMENSURA    </option>
+								<option value="749933">SERVICIOS DE TRADUCCION E INTERPRETACION </option>
+								<option value="602220">SERVICIOS DE TRANSPORTE A TURISTAS  </option>
+								<option value="602160">SERVICIOS DE TRANSPORTE DE TRABAJADORES  </option>
+								<option value="602150">SERVICIOS DE TRANSPORTE ESCOLAR     </option>
+								<option value="900050">SERVICIOS DE TRATAMIENTO DE RILES Y AGUAS SERVIDAS </option>
+								<option value="900010">SERVICIOS DE VERTEDEROS   </option>
+								<option value="930320">SERVICIOS EN CEMENTERIOS  </option>
+								<option value="930310">SERVICIOS FUNERARIOS </option>
+								<option value="14022">SERVICIOS GANADEROS, EXCEPTO ACTIVIDADES VETERINARIAS   </option>
+								<option value="742120">SERVICIOS GEOLOGICOS Y DE PROSPECCION    </option>
+								<option value="726000">SERVICIOS INTEGRALES DE INFORMATICA </option>
+								<option value="749221">SERVICIOS INTEGRALES DE SEGURIDAD   </option>
+								<option value="741110">SERVICIOS JURIDICOS  </option>
+								<option value="630340">SERVICIOS PRESTADOS POR CONCESIONARIOS DE CARRETERAS    </option>
+								<option value="51090">SERVICIOS RELACIONADOS CON LA ACUICULTURA     </option>
+								<option value="52050">SERVICIOS RELACIONADOS CON LA PESCA </option>
+								<option value="853100">SERVICIOS SOCIALES CON ALOJAMIENTO  </option>
+								<option value="853200">SERVICIOS SOCIALES SIN ALOJAMIENTO  </option>
+								<option value="924910">SISTEMAS DE JUEGOS DE AZAR MASIVOS. </option>
+								<option value="659920">SOC. DE INVERSION Y RENTISTAS DE CAPITALES MOBILIARIOS EN GENERAL </option>
+								<option value="403000">SUMINISTRO DE VAPOR Y AGUA CALIENTE </option>
+								<option value="630310">TERMINALES TERRESTRES DE PASAJEROS  </option>
+								<option value="401020">TRANSMISION DE ENERGIA ELECTRICA    </option>
+								<option value="602300">TRANSPORTE DE CARGA POR CARRETERA   </option>
+								<option value="601002">TRANSPORTE DE CARGA POR FERROCARRILES    </option>
+								<option value="612002">TRANSPORTE DE CARGA POR VIAS DE NAVEGACION INTERIORES   </option>
+								<option value="602230">TRANSPORTE DE PASAJEROS EN VEHICULOS DE TRACCION HUMANA Y ANIMAL  </option>
+								<option value="612001">TRANSPORTE DE PASAJEROS POR VIAS DE NAVEGACION INTERIORES    </option>
+								<option value="749222">TRANSPORTE DE VALORES     </option>
+								<option value="601001">TRANSPORTE INTERURBANO DE PASAJEROS POR FERROCARRILES   </option>
+								<option value="602130">TRANSPORTE INTERURBANO DE PASAJEROS VIA AUTOBUS    </option>
+								<option value="611002">TRANSPORTE MARITIMO Y DE CABOTAJE DE CARGA    </option>
+								<option value="611001">TRANSPORTE MARITIMO Y DE CABOTAJE DE PASAJEROS     </option>
+								<option value="622002">TRANSPORTE NO REGULAR POR VIA AEREA DE CARGA  </option>
+								<option value="622001">TRANSPORTE NO REGULAR POR VIA AEREA DE PASAJEROS   </option>
+								<option value="603000">TRANSPORTE POR TUBERIAS   </option>
+								<option value="621020">TRANSPORTE REGULAR POR VIA AEREA DE CARGA     </option>
+								<option value="621010">TRANSPORTE REGULAR POR VIA AEREA DE PASAJEROS </option>
+								<option value="602120">TRANSPORTE URBANO DE PASAJEROS VIA AUTOBUS (LOCOMOCION COLECTIVA) </option>
+								<option value="602110">TRANSPORTE URBANO DE PASAJEROS VIA FERROCARRIL (INCLUYE METRO)    </option>
+								<option value="602140">TRANSPORTE URBANO DE PASAJEROS VIA TAXI COLECTIVO  </option>
+								<option value="602210">TRANSPORTES POR TAXIS LIBRES Y RADIOTAXIS     </option>
+								<option value="289200">TRATAMIENTOS Y REVESTIMIENTOS DE METALES; OBRAS DE ING. MECANICA  </option>
+								<option value="525910">VENDEDORES A DOMICILIO    </option>
+								<option value="522060">VENTA  AL POR MENOR DE ALIMENTOS  PARA MASCOTAS Y ANIMALES EN GENERAL  </option>
+								<option value="515007">VENTA AL POR MAYOR  DE MAQUINAS Y EQUIPOS DE OFICINA    </option>
+								<option value="513951">VENTA AL POR MAYOR DE  LIBROS  </option>
+								<option value="512110">VENTA AL POR MAYOR DE ANIMALES VIVOS     </option>
+								<option value="513930">VENTA AL POR MAYOR DE ART. DE PERFUMERIA, COSMETICOS Y PROD. LIMPIEZA  </option>
+								<option value="513920">VENTA AL POR MAYOR DE ART. ELECTRICOS Y ELECTRONICOS PARA EL HOGAR     </option>
+								<option value="514130">VENTA AL POR MAYOR DE COMBUSTIBLES GASEOSOS   </option>
+								<option value="514110">VENTA AL POR MAYOR DE COMBUSTIBLES LIQUIDOS   </option>
+								<option value="514120">VENTA AL POR MAYOR DE COMBUSTIBLES SOLIDOS    </option>
+								<option value="512250">VENTA AL POR MAYOR DE CONFITES </option>
+								<option value="514920">VENTA AL POR MAYOR DE DESECHOS METALICOS (CHATARRA)     </option>
+								<option value="512290">VENTA AL POR MAYOR DE HUEVOS, LECHE, ABARROTES, Y OTROS N.C.P.    </option>
+								<option value="513970">VENTA AL POR MAYOR DE INSTRUMENTOS CIENTIFICOS Y QUIRURGICOS </option>
+								<option value="514930">VENTA AL POR MAYOR DE INSUMOS VETERINARIOS    </option>
+								<option value="514310">VENTA AL POR MAYOR DE MADERA NO TRABAJADA Y SUS PRODUCTOS RESULTANTES  </option>
+								<option value="515005">VENTA AL POR MAYOR DE MAQ. PARA LA ELAB. DE ALIMENTOS, BEBIDAS, TABACO </option>
+								<option value="515001">VENTA AL POR MAYOR DE MAQUINARIA AGRICOLA Y FORESTAL    </option>
+								<option value="515002">VENTA AL POR MAYOR DE MAQUINARIA METALURGICA  </option>
+								<option value="515004">VENTA AL POR MAYOR DE MAQUINARIA PARA LA CONSTRUCCION   </option>
+								<option value="515003">VENTA AL POR MAYOR DE MAQUINARIA PARA LA MINERIA   </option>
+								<option value="515006">VENTA AL POR MAYOR DE MAQUINARIA PARA TEXTILES Y CUEROS </option>
+								<option value="515008">VENTA AL POR MAYOR DE MAQUINARIA Y EQUIPO DE TRANSPORTE </option>
+								<option value="515009">VENTA AL POR MAYOR DE MAQUINARIA, HERRAMIENTAS Y MATERIALES N.C.P.     </option>
+								<option value="514320">VENTA AL POR MAYOR DE MATERIALES DE CONSTRUCCION, ART. DE FERRETERIA   </option>
+								<option value="512130">VENTA AL POR MAYOR DE MATERIAS PRIMAS AGRICOLAS    </option>
+								<option value="514200">VENTA AL POR MAYOR DE METALES Y MINERALES METALIFEROS   </option>
+								<option value="513910">VENTA AL POR MAYOR DE MUEBLES  </option>
+								<option value="513990">VENTA AL POR MAYOR DE OTROS ENSERES DOMESTICOS N.C.P.   </option>
+								<option value="514990">VENTA AL POR MAYOR DE OTROS PROD. INTERMEDIOS Y DESECHOS N.C.P.   </option>
+								<option value="519000">VENTA AL POR MAYOR DE OTROS PRODUCTOS N.C.P.  </option>
+								<option value="513940">VENTA AL POR MAYOR DE PAPEL Y CARTON     </option>
+								<option value="514140">VENTA AL POR MAYOR DE PRODUCTOS CONEXOS A LOS COMBUSTIBLES   </option>
+								<option value="513960">VENTA AL POR MAYOR DE PRODUCTOS FARMACEUTICOS </option>
+								<option value="512120">VENTA AL POR MAYOR DE PRODUCTOS PECUARIOS; EXCEPTO ALIMENTOS </option>
+								<option value="514910">VENTA AL POR MAYOR DE PRODUCTOS QUIMICOS </option>
+								<option value="513100">VENTA AL POR MAYOR DE PRODUCTOS TEXTILES, PRENDAS DE VESTIR Y CALZADO  </option>
+								<option value="513952">VENTA AL POR MAYOR DE REVISTAS Y PERIODICOS   </option>
+								<option value="512260">VENTA AL POR MAYOR DE TABACO Y PRODUCTOS DERIVADOS </option>
+								<option value="501010">VENTA AL POR MAYOR DE VEHICULOS AUTOMOTORES EXCEPTO MOTOCICLETAS  </option>
+								<option value="525930">VENTA AL POR MENOR A CAMBIO DE UNA RETRIBUCION O POR CONTRATA     </option>
+								<option value="523310">VENTA AL POR MENOR ART. ELECTRODOMESTICOS Y ELECTRONICOS PARA EL HOGAR </option>
+								<option value="523390">VENTA AL POR MENOR DE APARATOS, ART, EQUIPO DE USO DOMESTICO N.C.P.    </option>
+								<option value="523410">VENTA AL POR MENOR DE ART. DE FERRETERIA Y MATERIALES DE CONSTRUCCION  </option>
+								<option value="523140">VENTA AL POR MENOR DE ARTICULOS DE TOCADOR Y COSMETICOS </option>
+								<option value="523130">VENTA AL POR MENOR DE ARTICULOS ORTOPEDICOS   </option>
+								<option value="522070">VENTA AL POR MENOR DE AVES Y HUEVOS </option>
+								<option value="522010">VENTA AL POR MENOR DE BEBIDAS Y LICORES (BOTILLERIAS)   </option>
+								<option value="523210">VENTA AL POR MENOR DE CALZADO  </option>
+								<option value="523969">VENTA AL POR MENOR DE CARBON, LENA Y OTROS COMBUSTIBLES USO DOMESTICO  </option>
+								<option value="522020">VENTA AL POR MENOR DE CARNES, PRODUCTOS CARNICOS Y SIMILARES </option>
+								<option value="505000">VENTA AL POR MENOR DE COMBUSTIBLE PARA AUTOMOTORES </option>
+								<option value="523320">VENTA AL POR MENOR DE CRISTALES, LOZAS, PORCELANA, MENAJE    </option>
+								<option value="523350">VENTA AL POR MENOR DE DISCOS, CASSETTES, DVD Y VIDEOS   </option>
+								<option value="523992">VENTA AL POR MENOR DE FLORES, PLANTAS, ARBOLES, SEMILLAS, ABONOS  </option>
+								<option value="523961">VENTA AL POR MENOR DE GAS LICUADO EN BOMBONAS </option>
+								<option value="523340">VENTA AL POR MENOR DE INSTRUMENTOS MUSICALES (CASA DE MUSICA)     </option>
+								<option value="523360">VENTA AL POR MENOR DE LAMPARAS, APLIQUES Y SIMILARES    </option>
+								<option value="523230">VENTA AL POR MENOR DE LANAS, HILOS Y SIMILARES     </option>
+								<option value="523240">VENTA AL POR MENOR DE MALETERIAS, TALABARTERIAS Y ARTICULOS DE CUERO   </option>
+								<option value="523993">VENTA AL POR MENOR DE MASCOTAS Y ACCESORIOS   </option>
+								<option value="523330">VENTA AL POR MENOR DE MUEBLES; INCLUYE COLCHONES   </option>
+								<option value="522040">VENTA AL POR MENOR DE PESCADOS, MARISCOS Y PRODUCTOS CONEXOS </option>
+								<option value="523420">VENTA AL POR MENOR DE PINTURAS, BARNICES Y LACAS   </option>
+								<option value="523220">VENTA AL POR MENOR DE PRENDAS DE VESTIR EN GENERAL, INCLUYE ACCESORIOS </option>
+								<option value="522090">VENTA AL POR MENOR DE PRODUCTOS DE CONFITERIAS, CIGARRILLOS, Y OTROS   </option>
+								<option value="522050">VENTA AL POR MENOR DE PRODUCTOS DE PANADERIA Y PASTELERIA    </option>
+								<option value="523120">VENTA AL POR MENOR DE PRODUCTOS MEDICINALES   </option>
+								<option value="523250">VENTA AL POR MENOR DE ROPA INTERIOR Y PRENDAS DE USO PERSONAL     </option>
+								<option value="525110">VENTA AL POR MENOR EN EMPRESAS DE VENTA A DISTANCIA POR CORREO    </option>
+								<option value="525130">VENTA AL POR MENOR EN EMPRESAS DE VENTA A DISTANCIA VIA INTERNET  </option>
+								<option value="525120">VENTA AL POR MENOR EN EMPRESAS DE VENTA A DISTANCIA VIA TELEFONICA     </option>
+								<option value="525200">VENTA AL POR MENOR EN PUESTOS DE VENTA Y MERCADOS  </option>
+								<option value="504010">VENTA DE MOTOCICLETAS     </option>
+								<option value="503000">VENTA DE PARTES, PIEZAS Y ACCESORIOS DE VEHICULOS AUTOMOTORES     </option>
+								<option value="504020">VENTA DE PIEZAS Y ACCESORIOS DE MOTOCICLETAS  </option>
+								<option value="501020">VENTA O COMPRAVENTA POR MENOR VEH. AUTOMOTORES; EXCEPTO MOTOCICLETAS   </option>
+								<option value="701009">VENTA-ARRIENDO INMUEBLES PROPIOS NO AMOBLADOS N.C.P.    </option>		
+								<option value="523999">VENTAS AL POR MENOR DE OTROS PROD. EN ALMACENES ESPECIALIZADOS N.C.P.  </option>
+							</select>
+						</div>
 					</div>
 				</div>
-			</form>
-		</div>
-	</section>
-
-
-	<footer>
-		<div class="container">
-			<div class="row">
-				<div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-					<p class="f-titulo">Nuestras Sucursales</p>
-					<p class="f-subtitulo">Casa matriz</p>
-					<p>Asturias 280, piso 8º, Las Condes <br>
-						Teléfono Mesa Central (+56 2) 2353 3000 <br>
-					Call Center (+56 2) 2353 3050</p>
-
-					<p class="f-subtitulo">Sucursal Málaga</p>
-					<P>Málaga Nº 89, Piso 2, Oficina 21, Las Condes <br>
-					Call Center (+56 2) 2353 3050 </P>
-
-					<p class="f-subtitulo">Correo Electrónico</p>
-					<p>comercial@siisa.com</p>
+			</select>
+			<div class="form-group row">
+				<div class="col-4 col-md-4 boton-final">
+					<button type="submit" class="btn-d">Volver</button>
 				</div>
-				<div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-					<p class="f-titulo">Mapa del Sitio</p>
-					<a href="">Inicio</a> <br>
-					<a href="">Empresa</a> <br>
-					<a href="">Marco Legal</a> <br>
-					<a href="">Glosario</a> <br>
-					<a href="">FAQ</a> <br>
-					<a href="">Contacto</a> <br>
-					<ul>
-						<li><a href="">-Contacto Comercial</a></li>
-						<li><a href="">-Solicitud de Rectificación de información - Art. 12</a></li>
-						<li><a href="">-Ley 19-628</a></li>
-					</ul>
+				<div class="col-4 col-md-4 boton-final">
+					<button type="submit" class="btn-d">Limpiar</button>
 				</div>
-				<div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-					<p class="f-titulo">Sistemas Integrados</p>
-					<a href="">Modelos de Análisis de Riesgo - Desarrollo de Scoring</a> <br>
-					<a href="">Soluciones Propias y a Medida</a> <br>
-					<a href="">Reportes de Crédito</a> <br>
-					<a href="">Seguimiento y Control de Cartera de Clientes</a>
-					<p></p> 
-
-					<p class="f-titulo">Aviso Legal</p>
-					<a href="">Condiciones de uso del sitio web</a> <br>
-					<a href="">Política de privacidad en sitio web </a>
+				<div class="col-4 col-md-4 boton-final">
+					<button type="submit" class="btn-d">Verificar Identidad</button>
 				</div>
 			</div>
+		</form>
+		<div class="pie-form">
+			<p>Todos los antecedentes ingresados serán utilizados única y exclusivamente para validar la identidad y correspondencia del solicitante con los datos ingresados los cuales serán eliminados una vez finalizada la validación.</p>
 		</div>
-		<div class="fin">
-			<div class="container">
-				<p class="copyright">Para mayor información acerca de nuestros servicios y soluciones comuníquese a nuestro call center 23533050 o si prefiere escribanos a comercial@siisa.com <br>
-				© CopyRight Servicios Integrados de Información S.A. 2011, todos los derechos reservados.</p>
-			</div>
+		<div class="condiciones">
+			<p>* Para efecto de dar cumplimiento a lo establecido en la ley 20.575, al momento de efectuar la compra de su propio reporte, se procederá a la verificación de la identidad del adquirente ante el SRCeI, para lo cual se efectuará un cargo de $ 1.200 en el medio de pago, los cuales serán descontados del monto final de la compra. Los antecedentes solicitados a continuación solo serán utilizados para los fines antes señalados.</p>
+			<p>* Como consecuencia del proceso de verificación de la identidad del adquiriente y solo en el evento de haber resultado positivo este proceso de validación, para efectos de futuras compras en este site, SIISA generará una clave de uso personal, confidencial, intransferible y de exclusiva responsabilidad del titular en su manejo, denominada SIISApass, la que se hará llegar al e-mail de contacto señalado por este.</p>
+			<p>* Declaro conocer que si el proceso de verificación no resultare exitoso como consecuencia que la información ingresada por el solicitante para los efectos no es la correcta tras 3 intentos, SIISA NO procederá a la devolución del monto cargado en el respectivo medio de pago.</p>
+			<p>* En la eventualidad que el proceso de verificación no resultare exitoso como consecuencia de causas no imputables al solicitante, y distintas de la señalada precedentemente, SIISA generará en su favor un crédito por $1.200, el cual estará disponible por 30 días para que el titular proceda a la obtención del SIISApass, en la opción disponible en el site de compras online https://www.siisa.com/CarroSIISA.asp, sin cargo alguno en dicho período.</p>
+			<p>* Para vuestra seguridad en su calidad de titular de los datos, esta clave tendrá una vigencia de 6 meses contados a partir de su fecha de emisión, fecha a partir de la cual deberá ser renovada.</p>
 		</div>
-	</footer>
 
-	<!-- carga de scripts para bootstrap y jquery -->
-	<script
-	src="https://code.jquery.com/jquery-3.3.1.js"
-	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-	crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="script.js"></script>
-</body>
-</html>
+		<div id="politicas-privacidad" class="politicas-privacidad">
+			<h2>Política de Privacidad</h2>
+			<div class="text-box">
+				<p class="condiciones">La presente política se aplica al Sitio Web cuyo titular es SERVICIOS INTEGRADOS DE INFORMACIÓN S.A. y cuya URL es http://www.SIISA.com, (en adelante el “Sitio Web” o el “Sitio Web SIISA) y a todos sus subdominios, incluyendo además y eventualmente todo otro Sitio Web que, por cualquier causa, se encuentre expresamente adherido a los servicios prestados o a prestarse en, desde y/o a través este Sitio Web y/o a la presente Política de Privacidad. <br>
+
+					<ol>
+						<li>Objeto de la presente Política de Privacidad</li> <br>
+						<ol>
+							<li>
+							SERVICIOS INTEGRADOS DE INFORMACIÓN S.A., en adelante e indistintamente “SIISA” o la “Empresa”, conciente del valor e importancia de su privacidad, sea como Visitante casual de este Sitio o como Usuario de los servicios proveídos en, desde y/o a través de este Sitio Web (en adelante los “Servicios SIISA”), dispone de una Política de Privacidad de normas claras y precisas –y que es la que consta en esta página-, cuyo objeto es que Ud. tenga cabal conocimiento del o de los posibles usos de la información que Ud. provea y/o de aquella que sea recolectada por medio de recursos tecnológicos que son o pueden ser usados en, a través o desde este Sitio Web.</li> <br>
+						</ol>
+
+						<li>Remisión de consultas, inquietudes o reclamos</li> <br>
+						<ol>
+							<li>Todas las consultas, inquietudes y/o reclamos de los Visitantes y Usuarios con relación a esta Política de Privacidad podrá ser dirigidas a la Empresa mediante alguno cualquiera de estos medios:</li> <br>
+						</ol>
+						<ol>
+							<li>A la casilla de correo electrónico comercial@siisa.com</li> <br>
+
+							<li>Telefónicamente a los fonos 02-3533050 </li><br>
+
+							<li>Por carta remitida a la Empresa a la dirección indicada en el HomePage de este Sitio.</li> <br>
+						</ol>
+
+
+						<li>Aceptación de la Presente Política de Privacidad</li> <br>
+						<ol>
+							<li>Por el sólo hecho de acceder al Sitio Web y navegar a través de sus páginas, se haga o no uso de su contenido, información y/o servicios, se entenderá por parte del Usuario o Visitante, siempre y en todo caso, la plena e irrestricta aceptación de esta Política de Privacidad.</li> <br>
+
+							<li>Si Ud. no está de acuerdo con la presente Política, sus términos y disposiciones, le rogamos se sirva no acceder a este Sitio Web y/o hacer uso de los servicios proveídos en, desde y/o a través de él.</li> <br>
+						</ol>
+
+
+						<li>Sujetos de esta Política de Privacidad</li> <br>
+						<ol>
+							<li>Para efectos de la presente Política de Privacidad, se entenderá por:</li> <br>
+
+							<ol>
+								<li>Usuario, toda persona que se encuentra registrada en el Sitio Web SIISA, que ha celebrado con la Empresa un contrato que le confiere el derecho a usar de ciertos servicios proporcionados por ésta, conforme los términos de dicho contrato y respecto de la cual el contrato celebrado se encuentra vigente a la fecha de aplicación de la presente Política de Privacidad.</li> <br>
+
+								<li>Visitante, toda persona que habiendo accedido al Sitio Web, no tiene o no reúne todas o algunas de las calidades señaladas precedentemente para ser considerado Usuario.</li> <br>
+							</ol>
+							<li>La presente Política de Privacidad se aplicará a toda y cualquier persona que reúna alguna o ambas de las calidades anotadas, salvas las excepciones expresas que se señalen o aquellas que puedan derivarse del texto de la provisión de que se trate</li> <br>
+						</ol>
+
+						<li>Requerimiento de Información Personal y Definición</li> <br>
+						<ol>
+							<li>En general, podrá ser requerido a Visitantes y Usuarios proveer ciertas especies de información personal, propia o de terceros, como condición para el acceso y uso del Sitio Web y/o para la provisión de los Servicios prestados en, desde y/o a través de dicho Sitio.</li> <br>
+
+							<li>Se entenderá por datos personales o información personal aquella así definida en la Ley Nº 19.628 de la República de Chile.</li> <br>
+						</ol>
+
+						<li>Objetivos de la Recolección de Información Personal</li> <br>
+						<ol>
+							<li>La Empresa podrá recolectar, procesar y/o comunicar información personal del Visitante o del Usuario para los siguientes fines:</li>
+						</ol> <br>
+						<ol>
+							<li>Para personalizar la visita al Sitio Web SIISA;</li> <br>
+
+							<li>Para efectos estadísticos, y/o;</li> <br>
+
+							<li>Como condición previa a la prestación de los servicios SIISA.</li> <br>
+						</ol>
+
+						<li>Formas e Hipótesis de Recolección de Información</li> <br>
+						<ol>
+							<li>La sola visita al Sitio Web SIISA no supondrá la recolección de información personal alguna del Visitante. En consecuencia, todo Visitante podrá recorrer las diferentes secciones y páginas contenidas en este Sitio Web sin que dichas acciones puedan ser vinculadas a persona alguna.</li> <br>
+
+							<li>Sin embargo, la sola visita al Sitio Web y en todo caso el uso de los Servicios SIISA importará o podrá importar el registro de la visita en un Registro de Acceso que se mantiene en el sistema SIISA y/o el despacho al sistema del Visitante de una “Cookie”, que es un archivo remitido desde el sistema SIISA hasta el sistema del Visitante y cuyo objeto preciso y único es recolectar información técnica y/o estadística relativa a, sin limitarse a, la Dirección IP del sistema del Visitante o Usuario o del Firewall que use, el tipo de Browser (navegador) usado por el Visitante o Usuario, su resolución de pantalla, si tiene o no habilitado en su sistema Java y/o Java Script, si su visita es la primera al Sitio y si no, el número de su visita, las posibles adecuaciones (personalizaciones) que hubiera introducido el Visitante o Usuario al Sitio Web SIISA (cuando ello sea procedente) y/o aquella necesaria para reconocer al Usuario, conforme la información que haya proveído previamente y en forma expresa, cada vez que visite el Sitio SIISA.</li> <br>
+
+							<li>La Empresa declara expresamente que la Cookie despachada al sistema del Visitante o Usuario no recolecta ni puede recolectar información personal, sensible o confidencial, sea sobre el Visitante o Usuario, sea sobre cualquier otra persona.</li> <br>
+
+							<li>En cualquier caso, el Visitante o Usuario puede configurar su Browser de modo de rechazar la Cookie que le sea despachada o que dicho programa, al tiempo de la recepción, le pregunte qué acción adoptar.</li> <br>
+
+							<li>Sin embargo, la Empresa hace presente que el rechazar la Cookie remitida puede impedir el acceso a ciertas secciones y páginas de este Sitio Web y/o su no funcionamiento o la prestación de sus funcionalidades, motivo de lo cual se recomienda en todos los casos que el Visitante o Usuario acepte la o las Cookies remitidas.</li> <br>
+
+							<li>En todo caso, el Visitante y Usuario podrá en cualquier momento remover la o las Cookies almacenadas en su sistema, sea manualmente (para lo cual le sugerimos seguir las instrucciones de su Browser y/o sistema operativo) o automáticamente (haciendo uso de los programas que existen en el mercado que cumplen esta función).</li> <br>
+
+							<li>Por otro lado, todo Visitante y Usuario debe tener presente que no todas las secciones y páginas de este Sitio Web pueden ser accedidas sin que previamente provea algunas especies de información. Una vez hecho ello, las acciones desplegadas por el Visitante o Usuario podrán o serán vinculadas a la persona que las hace y, eventualmente, si el Visitante opta por requerir o contratar alguno de los servicios SIISA, otras piezas de información le podrán ser requeridas, pasando a tener la calidad de Usuario de los Servicios SIISA.</li> <br>
+
+							<li>En los distintos formularios dispuestos en este Sitio Web existirán campos obligatorios y otros opcionales, indicándose en cada caso –de alguna forma que resulte evidente- la naturaleza de cada cual. La Información requerida en los campos obligatorios deberá ser proveída por el Visitante o Usuario como condición para el acceso al Sitio Web y/o a sus secciones y páginas y/o para el requerimiento o prestación de los Servicios SIISA.</li> <br>
+
+							<li>Con todo, el hecho de que un Visitante o Usuario provea ciertas especies de información no obliga a la Empresa a permitir el acceso a algunas o a todas las secciones y páginas de este Sitio Web como tampoco a proveer lo servicios que hayan sido requeridos. El acceso y uso de las secciones y páginas de este Sitio Web y/o la prestación de los servicios SIISA se regula conforme la Condiciones Generales de Uso del Sitio Web SIISA y/o los contratos particulares que regulan cada uno de los Servicios SIISA.</li> <br>
+						</ol>
+
+						<li>Confirmación de edad del Usuario</li> <br>
+						<ol>
+							<li>Considerando la naturaleza de los servicios SIISA, estos no serán proveídos a menores de edad. En consecuencia, todo requirente de dichos servicios deberá proporcionar la información determinada por la Empresa que acredite su mayoría de edad.</li>
+						</ol><br>
+
+						<li>Confirmación de la Nacionalidad del Usuario</li> <br>
+						<ol>
+							<li>Considerando la naturaleza de los Servicios SIISA, estos sólo serán proveídos a personas que tengan la nacionalidad chilena (exclusivamente o en conjunción válida a otra) y a extranjeros que tengan residencia definitiva o temporal en Chile. En consecuencia, todo requirente de los Servicios deberá proporcionar la información determinada por la Empresa que acredite alguna de dichas circunstancias.</li> <br>
+						</ol>
+
+						<li>Procesos a aplicar a la Información recolectada e Hipótesis de Revelación de Información </li><br>
+						<ol>
+							<li>La información recolectada en este Sitio Web (personal o de otro orden) será o podrá ser objeto de diversos procesos, incluyendo pero sin limitarse a, su ordenación, su inserción en bases de datos –cuyo único responsable es y será la Empresa, salvo que medie noticia distinta y sin perjuicio de lo previsto en esta misma Política-, y su revelación, comunicación y/o transmisión a terceros, en general cuando la naturaleza de los servicios requeridos o contratados suponga tal proceso y/o cuando ello sea procedente conforme los términos de esta Política. </li><br>
+
+							<li>Específicamente, la Empresa podrá transferir, comunicar y/o transmitir dicha información a terceros con quienes haya contratado servicios de variada índole y naturaleza pero necesarios para la provisión de los servicios requeridos o contratados por el Usuario, incluyendo, pero sin limitarse a, servicios de procesamiento de datos, de provisión de información de terceros y de autenticación de personas y de transacciones comerciales usando medios de pago como tarjetas de crédito o débito.</li> <br>
+
+							<li>A este respecto, la Empresa no puede garantizar que dichas otras empresas disponen o que dispondrán de políticas de privacidad o de instrumentos similares, análogos o coincidentes con la habida en este Sitio Web.</li> <br>
+
+							<li>La Empresa hace presente que la información de todo orden proveída por los Visitantes y Usuarios podrá ser revelada, comunicada y/o transmitida a las autoridades administrativas o judiciales chilenas, a requerimiento de éstas, actuando dentro de su competencia. La Empresa para proceder a revelar, comunicar y/o transmitir la referida información, no estará en ningún caso obligada a examinar o investigar si la autoridad requirente está actuando dentro de su competencia y/o conforme las normas legales que la rijan, como tampoco a requerir o determinar los motivos o causas del requerimiento. Es estos casos, en la medida de lo posible y en cualquier caso al solo arbitrio de la Empresa, ésta comunicará al Visitante o Usuario del hecho de la revelación, comunicación y/o transmisión. </li><br>
+
+							<li>La información estadística que sea proveída por los Visitantes y Usuarios y/o que pueda extraerse o concluirse a partir de sus actividades en el Sitio Web SIISA, podrá ser revelada, comunicada y/o transmitida a las empresas de terceros que provean servicios de asesoría mediática, de marketing, publicidad y similares, para efectos de analizar las tendencias de mercado, estudiar mejoras al Sitio Web y/o a los Servicios SIISA y/o preparar y disponer campañas publicitarias o de orden similar y/o que provean servicios de telecomunicaciones a la Empresa, para efectos de determinar o acreditar los requerimientos técnicos y/o tecnológicos de la Empresa para la provisión de sus servicios y/o la mantención del Sitio Web SIISA y/o para determinar las condiciones comerciales de los contratos con ellas celebrados o a celebrar.</li> <br>
+
+							<li>La Empresa NO venderá, cederá, revelará, comunicará y/o transmitirá, a ningún título, la información personal de Visitantes, Usuarios y/o de terceros que sea recolectada en este Sitio Web. Hace excepción a esta regla la revelación, comunicación y/o transmisión de información personal que sea consecuencia de requerimiento de autoridad administrativa o judicial, aquella que debe ser transmitida para efectos de proveer los servicios SIISA y/o la requerida por las empresa emisoras de medios de pago para los fines previstos por éstas cuando el Usuario haga uso de los Servicios SIISA.</li> <br>
+
+							<li>La Empresa compartirá o podrá compartir la información del Visitante o Usuario (personal y de todo otro orden) con otras empresas relacionadas suyas, sean matrices, filiales o coligadas. En estos casos, la Empresa garantiza al visitante o usuario que dichas otras empresas observarán iguales o superiores estándares que los previstos en esta Política.</li> <br>
+						</ol>
+
+						<li>Información de Terceros Proveída por el Usuario</li> <br>
+						<ol>
+							<li>Considerando la naturaleza de los servicios SIISA, el Usuario podrá proveer información personal o de toda otra especie perteneciente o que se repute pertenecer a terceros. Cuando así ocurra, la provisión de dicha información por el Usuario será bajo su total, entera y exclusiva responsabilidad.</li> <br>
+						</ol>
+
+						<li>Recolección de Información Financiera o Comercial</li> <br>
+						<ol>
+							<li>Eventualmente, podrá la Empresa requerir información financiera y/o comercial del Usuario (datos de tarjetas de crédito o débito y/o de cualquier otro medio de pago previsto en el Sitio Web SIISA) para efectos de pagar la prestación de servicios que haya sido contratada por dicho Usuario.</li> <br>
+
+							<li>En tales casos, la Empresa deja constancia que dicha información será procesada conforme los estándares de seguridad previstos para estos efectos por las empresas emisoras de dichos medios de pago, remitiéndose dicha información a la plataforma de éstas para su procesamiento.</li> <br>
+
+							<li>La Empresa recomienda encarecidamente que el Usuario se informe directamente con dichas empresas emisoras acerca de las condiciones y características de los procesos que aplican a su información, haciendo presente que la Empresa no conoce ni está obligada a conocer dichas características.</li> <br>
+						</ol>
+
+						<li>Obligación de los Visitantes y Usuarios</li> <br>
+						<ol>
+							<li>Los Visitantes del Sitio Web y los Usuarios de los Servicios SIISA se obligan a proveer, cada vez que les sea requerida, información exacta, completa, actual, verídica y verificable. El no cumplimiento de cualquiera de estas condiciones dejará al infractor responsable de los perjuicios que se causen a la Empresa como a terceros y habilitará a la Empresa, en el caso de los Usuarios de los Servicios SIISA, a terminar unilateralmente los contratos con ellos celebrados y/o a suspender de inmediato la prestación del servicio de que se trate. </li>
+						</ol>
+						<br>
+						Derechos Legales de todo Visitante y Usuario <br>
+						Todo Visitante y Usuario tiene los derechos que le confiere la Ley Nº 19.628, por lo cual recomendamos encarecidamente la lectura de dicho cuerpo legal, el cual se puede encontrar en distintos Sitios Web gubernamentales (SERNAC, SBIF, etc.). <br>
+						<br>
+						<li>Derecho a Modificar la Presente Política de Privacidad</li> <br>
+						<ol>
+							<li>SIISA se reserva el derecho de modificar, en cualquier tiempo, sin previo aviso y sin expresión de causa, la presente Política de Privacidad.</li> <br>
+
+							<li>Si por cualquier causa, alguna de las prescripciones y/o provisiones contenidas en estas Condiciones Generales fuera declarada nula, inoponible o sujeta a cualquier otra medida de ineficacia jurídica por sentencia ejecutoriada dictada por Tribunales de la República de Chile, continuarán siendo aplicables aquellas no alcanzadas por dicha declaración.</li> <br>
+						</ol>
+
+						<li>Jurisdicción aplicable, Domicilio y Prórroga de Competencia</li> <br>
+						<ol>
+							<li>La información proveída en este Sitio Web y aquella proporcionada por sus Visitantes y Usuarios se entenderá prestada en el territorio de la República de Chile</li> <br>
+
+							<li>Esta Política de Privacidad se regulará e interpretará de conformidad a las Leyes de la República de Chile, sometiéndose las partes a la jurisdicción de sus Tribunales Ordinarios de Justicia y domiciliándose, para dichos efectos, en la ciudad y comuna de Santiago, Región Metropolitana, República de Chile, y prorrogando competencia a dichos Tribunales.</li> <br>
+
+							<li>En ningún caso se aplicarán las normas legales, sustantivas o de procedimiento, pertenecientes a otras jurisdicciones, como tampoco aquellas que resuelvan conflictos de Leyes o de Jurisdicciones, si el Usuario o Visitante es de otra nacionalidad distinta de la chilena, o si tiene otra nacionalidad además de la chilena, o si reside o tiene su domicilio fuera del territorio de la República de Chile.</li> <br>
+						</ol>
+						<li>Versión y Entrada en Vigencia de la Política de Privacidad</li> <br>
+						<ol>
+							<li>La versión de la presente Política de Privacidad es la 1.0. y ha entrado en vigencia con fecha 01 de Agosto del año 2011.</li>
+						</ol><br>
+					</p>
+				</div>
+			</div>
+
+			<div id="condiciones-de-uso" class="condiciones-de-uso">
+				<h2>Condiciones generales de uso</h2>
+				<div class="text-box">
+					<p class="condiciones">
+						Las presentes Condiciones Generales de Uso se aplican al Sitio Web cuyo titular es SERVICIOS INTEGRADOS DE INFORMACIÓN S.A. y cuya URL es http://www.SIISA.com, (en adelante el “Sitio Web” o el “Sitio Web SIISA) y a todos sus subdominios, incluyendo además y eventualmente todo otro Sitio Web que, por cualquier causa, se encuentre expresamente adherido a los servicios prestados o a prestarse en, desde y/o a través este Sitio Web y/o a estas Condiciones Generales de Uso. <br>
+
+
+						Cualquier consulta o duda que tenga con relación a estas Condiciones Generales de Uso sírvase comunicarla a la casilla de correo comercial@siisa.com, la cual será contestada a la brevedad. <br>
+						<ol>
+							<li>Descripción General</li> <br>
+							<ol>
+								<li>www.SIISA.com es un Sitio Web mantenido por y de propiedad de la Sociedad SERVICIOS INTEGRADOS DE INFORMACIÓN S.A., sociedad chilena, domiciliada en calle Asturias Nº 280, Piso 8º, Comuna de Las Condes, Región Metropolitana, República de Chile, RUT 96.629.630-5, en adelante e indistintamente “SIISA” o la “Empresa”.</li> <br>
+								<li>El diseño, contenido, imágenes, gráfico, texto, código computacional, sea HTML u otro, CGI Scripts, código Java, Java Script y cualquier otro, el o los Nombres de Dominio, de cualquier nivel, bajo los cuales opera este Sitio Web, y el Nombre y Marca “SIISA” son propiedades de SERVICIOS INTEGRADOS DE INFORMACIÓN S.A. o han sido válidamente licenciadas a ella.</li> <br>
+								<li>Cualquier otra marca, nombre comercial, diseño, imagen, logo y/o código computacional que aparezca actualmente o en el futuro en este sitio o sea usado en, a través o desde él, se presumirá ser de propiedad de SIISA o del dominio público</li> <br>
+								<li>En caso de que se advierta alguna propiedad protegida, intelectual o industrial, sírvase comunicarlo a SIISA, a fin de dar el correspondiente crédito o removerla del Sitio Web.</li> <br>
+								<li>Sin perjuicio de lo anterior, en este sitio puede encontrarse material y contenido suministrado por terceros, quienes son y se reputan ser los dueños y titulares de tales.</li> <br>
+							</ol>
+							<li>Sujetos de estas Condiciones Generales</li> <br>
+							<ol>
+								<li>Para efectos de las presentes Condiciones Generales de Uso del Sitio Web SIISA, se entenderá por:</li> <br>
+								<ol>
+									<li>Usuario, toda persona que se encuentra registrada en el Sitio Web SIISA, que ha celebrado con la Empresa un contrato que le confiere el derecho a usar de ciertos servicios proporcionados por ésta (los “Servicios” o los “Servicios SIISA”), conforme los términos de dicho contrato y respecto de la cual el contrato celebrado se encuentra vigente a la fecha de aplicación de las presentes Condiciones Generales.</li> <br>
+									<li>Visitante, toda persona que habiendo accedido al Sitio Web, no tiene o no reúne todas o algunas de las calidades señaladas precedentemente para ser considerado Usuario.</li> <br>
+								</ol>
+								<li>Las presentes Condiciones Generales se aplicarán a toda y cualquier persona que reúna alguna o ambas de las calidades anotadas, salvas las excepciones expresas que se señalen o aquellas que puedan derivarse del texto de la provisión de que se trate.</li> <br>
+							</ol>
+							<li>Prohibiciones Generales</li> <br>
+							<ol>
+								<li>Está prohibido, sin previa autorización expresa de SIISA, el uso, reproducción, copia, edición, resumen, compilación, recopilación, distribución y comercialización del contenido del Sitio Web y de las páginas o secciones que contenga, el y/o los nombres y marcas usadas, su diseño, logos, textos, imágenes, gráficos, código HTML, CGI Scripts, código Java, Java Script y cualquier otro componente o elemento contenido en dicho Sitio Web, en todo o en parte. Se prohíbe expresamente la creación de obras derivadas a partir de dicho contenido y su traducción a cualquier idioma y a lenguaje humano, tratándose del código existente.</li> <br>
+								<li>Excepcional, expresa y eventualmente, todas o algunas de las acciones señaladas en el Párrafo 3.1. anterior podrán autorizarse a quienes tengan la calidad de Usuario, sin perjuicio de otras condiciones y requisitos que señale la Empresa a dicho efecto, caso en el cual los derechos y facultades de dichas personas, la extensión de esos derechos y facultades y las obligaciones y prohibiciones a que se encuentren sujetas, se regularán en el o los contratos respectivos que se extiendan o puedan extenderse para dichos efectos.</li> <br>
+								<li>Se prohíbe todo uso del Sitio Web, su contenido, información y servicios, que sea contrario a la Ley o que sea destinado el Sitio Web, su contenido, información y servicios, a fines ilegales o que supongan propósitos ilegales, obre o no ello en conocimiento del Usuario o Visitante. Para estos efectos se entiende que el usuario declara conocer a plenitud la Ley 19.628 sobre Protección a la Vida Privada de la Personas y demás cuerpos legales que regulan la materia.</li> <br>
+								<li>Se prohíbe todo uso, incluido, pero no limitándose a, la copia, reproducción, edición, transmisión y/o comunicación, de los nombres y marcas comerciales usadas en este sitio, diseños, logos, frases comerciales y nombres de dominio y en general toda otra especie de propiedad industrial o que sea asimilable a ella, sin previa autorización expresa de la Empresa.</li> <br>
+								<li>Se prohíbe, sin excepción alguna, hacer framing con el Sitio Web, ya fuera que el framing llevase a la página principal o Homepage de este sitio o a cualquier otra.</li> <br>
+								<li>Podrá vincularse libremente este Sitio Web, pero sólo en la medida que el vínculo tenga como destino la URL correspondiente a la página principal o Homepage del mismo. En cualquier caso, SIISA se reserva el derecho a solicitar la anulación del respectivo vínculo, a su arbitrio y sin expresión de causa.</li> <br>
+							</ol>
+							<li>Existencia de Vínculos. Exención de Responsabilidad</li> <br>
+							<ol>
+								<li>En este Sitio puede haber vínculos hacia otros sitios web de otras personas, distintas de la Empresa. Salvo que así sea anotado expresamente, dichos vínculos no significan o importan relación contractual entre la Empresa y los titulares o propietarios de esos otros Sitios.</li> <br>
+								<li>En ningún caso, SIISA será responsable por los daños y perjuicios que sufra el Usuario o Visitante con ocasión del seguimiento de dichos vínculos.</li> <br>
+							</ol>
+							<li>Existencia y Uso de Ciertos Servicios</li> <br>
+							<ol>
+								<li>La Empresa ha dispuesto, puede o podrá disponer para sus Usuarios o Visitantes ciertos servicios a los que se puede o se podrá acceder en, desde y/o a través del Sitio Web, cuyo uso se regulará expresamente en el o los contratos que las partes expresamente extiendan y/o en las disposiciones contenidas en el Sitio Web.</li> <br>
+								<li>La presente provisión no significa o importa, ni significará o importará, promesa por parte de la Empresa u obligación para ella de proporcionar dichos servicios. Siempre y en todo caso, la entrega de dichos servicios será de la exclusiva decisión de la Empresa como también la determinación de sus prestaciones, funcionalidades y características administrativas y/o técnicas.</li> <br>
+							</ol>
+							<li>Archivos Dispuestos para Ser Descargados</li> <br>
+							<ol>
+								<li>Con relación a los archivos que eventualmente se dispongan para ser descargados (downloading), y por el sólo hecho de haber bajado el Usuario o Visitante dichos archivos, la Empresa le confiere al Usuario o Visitante una licencia no exclusiva, revocable, intransferible, temporal y eventualmente gratuita, de uso de dicho o dichos archivos, que lo habilita única, expresa y exclusivamente, para cargar dicho o dichos archivos en su sistema computacional, para su uso personal y siempre y cuando dicho uso no sea comercial, licencia la cual consta de las siguientes provisiones:</li> <br>
+							</ol>
+							<ol>
+								<li>En ningún caso podrá el Usuario o Visitante copiar, reproducir, editar, cambiar, modificar, compilar, recopilar, transmitir y/o comunicar el o los archivos bajados, su contenido, nombre y/o formato y en general cualquier otra característica que le otorgue individualidad al archivo o archivos de que se trate, como tampoco podrá realizar obras derivadas a partir de dicho o dichos archivos.</li> <br>
+								<li>Se autoriza expresamente la copia del archivo o archivos descargados en la memoria RAM del sistema computacional del Usuario o Visitante, con plena sujeción a lo previsto en este Párrafo, como asimismo su copia para fines de respaldo.</li> <br>
+								<li>En ningún caso, se podrá acceder al o los archivos licenciados por más de un sistema computacional de manera concurrente, importe ello o no copia del archivo, sea en disco duro, memoria RAM o Cache.</li> <br>
+								<li>La presente licencia obliga al Usuario o Visitante a respetar íntegramente las señales y noticias de Derecho de Autor, Propiedad Intelectual, Copyrights y/o de Propiedad Industrial que estén o puedan estar contenidas en dicho o dichos archivos.</li> <br>
+								<li>En cualquier tiempo, esta licencia podrá ser revocada por la Empresa, a su solo arbitrio y sin previo aviso. En tal caso, deberá el visitante de inmediato eliminar sin posibilidad de recuperación futura el o los archivos objeto de la presente licencia.</li> <br>
+								<li>Tratándose de Usuarios de los Servicios SIISA, el término por cualquier causa del respectivo contrato celebrado, importará, sin necesidad de formalidad especial, la revocación de la licencia de que trata este Párrafo.</li> <br>
+							</ol>
+							<li>Reglas sobre el Uso de los Servicios Disponibles en el Sitio Web</li> <br>
+							<ol>
+								<li>En ningún caso podrán usarse los Servicios que SIISA provee en, desde y/o a través de su Sitio Web para trasmitir mensajes cuyo contenido, forma y/o demás particularidades:</li> <br>
+								<ol>
+									<li>Exalten, inciten y/o promuevan toda y cualquier forma de fobias u odiosidades o atenten o se entiendan atentatorias a la dignidad de una persona determinada o de un grupo de personas, o exalten la superioridad de personas o grupos de personas sobre otra u otras. Particularmente, caen dentro de estas designaciones los contenidos xenófobos y/o misóginos.</li> <br>
+									<li>Constituya, suponga o contenga amenazas, provocaciones, defenestraciones y ofensas a persona o personas determinadas o innominadas.</li> <br>
+									<li>En general, constituya, suponga o contenga la transmisión y/o comunicación de material ilegal.</li> <br>
+									<li>Infrinja o viole o se repute infringir o violar los derechos de terceros, particularmente los de propiedad intelectual, Copyrights, propiedad industrial o cualquier otra especie de propiedades especiales o que supongan los medios o la información para infringir o violar dichos derechos o que inciten a dichas infracciones o violaciones.</li> <br>
+									<li>Corresponda o contenga programas o rutinas computacionales que puedan, siquiera potencialmente, causar daño a terceros, particularmente el caso de virus computacionales, que afecten de cualquier forma a sistemas y/o programas, cualquiera sea su denominación o funcionalidad particular, o que enseñen o instruyan sobre el desarrollo de esos programas y rutinas o que inciten a su desarrollo y/o propagación.</li> <br>
+									<li>Corresponda o contenga publicidad de cualquier tipo, sin excepción alguna y sea que la conducta suponga o no spamming, incluyéndose, pero no limitándose a, toda forma de marketing directo, cadenas y pirámides, oferta de bienes y servicios, apuestas y juegos de azar y, en general, cualquier y toda otra forma de publicidad y promoción.</li> <br>
+									<li>Se encuentre, en todo o parte, encriptado o sellado, en términos que sólo pueda ser descifrado –leído, utilizado o que sólo por ese medio pueda prestar su funcionalidad- mediante la aplicación de tratamientos analógicos y/o digitales, por quienes participen del método o sistema de encriptación.</li> <br>
+								</ol>
+								<li>Como regla general, no se considerará para efectos de categorizar los mensajes en cualquiera de las especies vistas, el formato del mensaje o si el contenido trasgresor está constituido sólo por texto o sólo por imágenes o por la combinación de unos u otros elementos, o si se encuentra encriptado o deba ser objeto de alguna forma de tratamiento analógico y/o digital a fin de poder tener acceso a dicho contenido.</li> <br>
+								<li>Todo lo dicho precedentemente se aplicará, sin restricción alguna a los archivos que se adjunten o acompañen a los mensajes despachados y/o recibidos a través de los sistemas de la Empresa, en cuanto el Sitio Web proporcione esa función.</li> <br>
+								<li>El Usuario o Visitante por el solo hecho de usar todos o algunos de lo servicios proveídos en, desde y/o a través el Sitio Web confiere a la Empresa una licencia de uso irrevocable, transferible, indefinida, permanente, mundial y gratuita (royalty free) sobre los mensajes, contenidos y archivos que postee y/o transmita haciendo uso de los mencionados servicios, quedando SIISA expresamente autorizada para copiar, reproducir, editar, resumir, extractar, compilar, recopilar, transmitir y/o comunicar dichos mensajes, contenidos y/o archivos, sin ninguna restricción.</li> <br>
+							</ol>
+							<li>Ausencia de Garantías y Limitaciones y/o Exenciones de Responsabilidad</li> <br>
+							<ol>
+								<li>SIISA no será responsable, en ningún caso, de los perjuicios que se irroguen al Usuario o Visitante a consecuencia de, pero no limitándose a, los siguientes hechos:</li> <br>
+								<ol>
+									<li>La visita a este sitio Web, sus páginas y secciones, su carga, su vínculo, la descarga de los archivos o información dispuesta para dichos efectos, si acaso aplicable, el uso de la información contenida en este sitio Web y de los archivos dispuestos para ser bajados, en cuanto procedente, el uso de los servicios generales abiertos a toda persona que se prestan o puedan prestarse en el Sitio Web y, específicamente, los mensajes y contenidos que sean transmitidos y/o recibidos por Usuarios, Visitantes y terceros;</li> <br>
+									<li>La ejecución, voluntaria o no y/o necesaria o no para la funcionalidad del Sitio Web, de los programas, subprogramas, rutinas y/o códigos ejecutables o potencialmente ejecutables contenidos en él, y que pueden o deben ejecutarse por el solo hecho de acceder al Sitio Web, cualquiera que sea el lenguaje o código utilizado, y/o;</li> <br>
+									<li>La contratación de los servicios que se prestan a través del Sitio Web, y en general todo otro hecho, cualquiera que sea su naturaleza, entidad o calidad.</li> <br>
+								</ol>
+								<li>Se deja constancia que dicha información y los servicios que se proporcionan en, desde y/o a través de este Sitio Web son entregados en el estado en que se encuentran, “tal como son”, “tal como están disponibles” y “en la fecha en que están disponibles”, sujetándose aquellos Usuarios o Visitantes que hagan uso de los servicios generales que se entregan en el Sitio Web y/o que se suscriban al o a los Servicios SIISA, a las prescripciones contenidas en estas Condiciones Generales y/o en el o los contratos existentes o que existan para dichos efectos.</li> <br>
+								<li>Asimismo, SIISA no será responsable de los perjuicios que pueda causar al Visitante la recolección y el uso de la información recolectada en este Sitio Web por causa de su visita. Se deja especial constancia que dichas materias se regulan específicamente en la Política de Privacidad del Sitio Web.</li> <br>
+								<li>De los mensajes, su contenido y archivos transmitidos o recibidos por los Usuarios, Visitantes y terceros, a consecuencia del uso por tales personas de los servicios generales que se proporcionan en este Sitio Web, y de los daños y perjuicios, actuales o potenciales, sufridos o que puedan sufrir los Usuarios, Visitantes y terceros a consecuencia del uso de dichos servicios, serán exclusivamente responsables los autores de dichos mensajes, contenidos y/o archivos, limitándose la responsabilidad de SIISA a remover, en cuanto sea advertida por comunicación a ella despachada en los términos señalados en el Párrafo 12. siguiente, el mensaje, contenido y/o archivo trasgresor, quedando en todo caso entregado al juicio privativo de SIISA la consideración de haber infringido un mensaje, contenido y/o archivo las normas contenidas en estas Condiciones Generales. En general, los mensajes despachados por y a través de los Sistemas de la Empresa, no podrán ser considerados o interpretados, en ningún caso y sin excepción, como fuente de obligaciones para la Empresa, sin perjuicio de lo que estipulen expresamente los contratos celebrados por SIISA con los Usuarios de sus servicios.</li> <br>
+								<li>Se deja especial constancia que SIISA no se encuentra obligada a monitorear y/o interceptar los mensajes, contenidos y/o archivos que sean despachados y/o recibidos a través de sus sistemas, como tampoco tiene la obligación de editarlos previo a su posteo o despacho.</li> <br>
+								<li>El Usuario o Visitante renuncia, de la manera más amplia posible, a toda acción y/o excepción que tenga o pueda tener por objeto, directa o indirectamente, hacer o pretender hacer efectiva responsabilidad atribuible o que pueda atribuirse a SIISA, reclamar de los eventuales daños y perjuicios, sean patrimoniales o extrapatrimoniales, que las situaciones y hechos en este Párrafo descritos –o cualquiera otros- le cause o provoque, y/o exigir o pretender el pago de indemnizaciones por dichos perjuicios, sean presentes o futuros, actuales o potenciales. En consecuencia, SIISA no asume ninguna responsabilidad por dichos perjuicios, sean patrimoniales o extrapatrimoniales, directos o indirectos, previstos o imprevistos y menos aun por aquellos derivados de fuerza mayor o caso fortuito.</li> <br>
+							</ol>
+							<li>Derecho a Modificar el Sitio Web y las Presentes Condiciones Generales</li> <br>
+							<ol>
+								<li>SIISA se reserva el derecho de modificar, en cualquier tiempo, sin previo aviso y sin expresión de causa, el contenido, información y/o servicios contenidos o proporcionados en, desde y/o a través del Sitio Web y/o las condiciones en que se prestan o proporcionan dichos contenidos, información y/o servicios.</li> <br>
+								<li>Asimismo, SIISA se reserva el derecho de modificar, en cualquier tiempo, sin previo aviso y sin necesidad de expresión de causa, las presentes Condiciones Generales. Si por cualquier causa, alguna de las prescripciones y/o provisiones contenidas en estas Condiciones Generales fuera declarada nula, inoponible o sujeta a cualquier otra medida de ineficacia jurídica por sentencia ejecutoriada dictada por Tribunales de la República de Chile, continuarán siendo aplicables aquellas no alcanzadas por dicha declaración.</li> <br>
+							</ol>
+							<li>Ámbito de Aplicación Subsidiario de estas Condiciones Generales</li> <br>
+							<ol>
+								<li>Los servicios que SIISA presta en, desde y/o a través del Sitio Web se regularán por las prescripciones particulares de los respectivos contratos que se celebren para dichos efectos, sólo aplicándose las estipulaciones contenidas en estas Condiciones Generales de manera subsidiaria, en defecto de norma expresa contenida en dichos contratos y/o en los casos y materias que no hayan sido expresamente regulados por dichos contratos.</li> <br>
+							</ol>
+							<li>Calidad Legal de estas Condiciones Generales</li> <br>
+							<ol>
+								<li>Estas Condiciones Generales se aplicarán a todo Usuario o Visitante del Sitio Web, teniendo la calidad de contrato válidamente celebrado entre el Usuario o Visitante del Sitio Web y SIISA.</li> <br>
+								<li>Por el sólo hecho de acceder al Sitio Web y navegar a través de sus páginas, se haga o no uso de su contenido, información y/o servicios, se entenderá por parte del Usuario o Visitante, siempre y en todo caso, la plena e irrestricta aceptación de estas Condiciones Generales y su sujeción a ellas.</li> <br>
+							</ol>
+							<li>Comunicaciones</li> <br>
+							<ol>
+								<li>Las comunicaciones entre el Usuario o Visitante y SIISA se harán preferentemente mediante correo electrónico.</li> <br>
+								<li>Para estos efectos, las comunicaciones de los Usuarios y Visitantes deberán despacharse a la casilla: comercial@siisa.com</li> <br>
+							</ol>
+							<li>Jurisdicción aplicable, Domicilio y Prórroga de Competencia</li> <br>
+							<ol>
+								<li>Para todos los efectos legales, el Sitio Web SIISA se tendrá por domiciliado en la República de Chile, en la ciudad de Santiago. Asimismo, la información y servicios que se prestan a través de ese sitio se entenderán prestados en el territorio de la República de Chile.</li> <br>
+								<li>Estas Condiciones Generales se regularán e interpretarán de conformidad a las Leyes de la República de Chile, sometiéndose las partes a la jurisdicción de sus Tribunales Ordinarios de Justicia y domiciliándose, para dichos efectos, en la ciudad y comuna de Santiago, Región Metropolitana, República de Chile, y prorrogando competencia a dichos Tribunales.</li> <br>
+								<li>En ningún caso se aplicarán las normas legales, sustantivas o de procedimiento, pertenecientes a otras jurisdicciones, como tampoco aquellas que resuelvan conflictos de Leyes o de Jurisdicciones, si el Usuario o Visitante es de otra nacionalidad distinta de la chilena, o si tiene otra nacionalidad además de la chilena, o si reside o tiene su domicilio fuera del territorio de la República de Chile.</li> <br>
+							</ol>
+							<li>Versión y Entrada en Vigencia de las Condiciones Generales</li> <br>
+							<ol>
+								<li>La versión de las presentes Condiciones Generales es la 1.0. y ha entrado en vigencia con fecha 01 de Agosto del año 2011.</li> <br>
+							</ol>
+						</ol>
+					</p>
+				</div>
+			</section>
+
+
+			<footer>
+				<div class="container">
+					<div class="row">
+						<div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+							<p class="f-titulo">Nuestras Sucursales</p>
+							<p class="f-subtitulo">Casa matriz</p>
+							<p>Asturias 280, piso 8º, Las Condes <br>
+								Teléfono Mesa Central (+56 2) 2353 3000 <br>
+							Call Center (+56 2) 2353 3050</p>
+
+							<p class="f-subtitulo">Sucursal Málaga</p>
+							<P>Málaga Nº 89, Piso 2, Oficina 21, Las Condes <br>
+							Call Center (+56 2) 2353 3050 </P>
+
+							<p class="f-subtitulo">Correo Electrónico</p>
+							<p>comercial@siisa.com</p>
+						</div>
+						<div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+							<p class="f-titulo">Mapa del Sitio</p>
+							<a href="">Inicio</a> <br>
+							<a href="">Empresa</a> <br>
+							<a href="">Marco Legal</a> <br>
+							<a href="">Glosario</a> <br>
+							<a href="">FAQ</a> <br>
+							<a href="">Contacto</a> <br>
+							<ul>
+								<li><a href="">-Contacto Comercial</a></li> 
+								<li><a href="">-Solicitud de Rectificación de información - Art. 12</a></li> 
+								<li><a href="">-Ley 19-628</a></li>
+							</ul>
+						</div>
+						<div class="col col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+							<p class="f-titulo">Sistemas Integrados</p>
+							<a href="">Modelos de Análisis de Riesgo - Desarrollo de Scoring</a> <br>
+							<a href="">Soluciones Propias y a Medida</a> <br>
+							<a href="">Reportes de Crédito</a> <br>
+							<a href="">Seguimiento y Control de Cartera de Clientes</a>
+							<p></p> 
+
+							<p class="f-titulo">Aviso Legal</p>
+							<a href="">Condiciones de uso del sitio web</a> <br>
+							<a href="">Política de privacidad en sitio web </a>
+						</div>
+					</div>
+				</div>
+				<div class="fin">
+					<div class="container">
+						<p class="copyright">Para mayor información acerca de nuestros servicios y soluciones comuníquese a nuestro call center 23533050 o si prefiere escribanos a comercial@siisa.com <br>
+						© CopyRight Servicios Integrados de Información S.A. 2011, todos los derechos reservados.</p>
+					</div>
+				</div>
+			</footer>
+
+			<!-- carga de scripts para bootstrap y jquery -->
+			<script
+			src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			crossorigin="anonymous"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+			<script src="script.js"></script>
+		</body>
+		</html>
