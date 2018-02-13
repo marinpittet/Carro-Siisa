@@ -506,10 +506,10 @@ body {
 		width: 600px;
 		border-radius: 10px;
 	}
-	
-	div.cart-bar ul.links div.container.show div.help-block.text-right a {
-		color: #1EADDB;
+	div.cart-bar ul.links div.container.show div.help-block.text-center a {
+		color: #1785A8;
 		font-size: 20px;
+		text-align: center;
 	}
 	div.cart-bar ul.links div.container.show div.dropdown-menu.show button.btn-primary {
 		background-color: #1EADDB;
@@ -859,9 +859,10 @@ body {
 		width: 600px;
 		border-radius: 10px;
 	}
-	div#login-dp-persona div.help-block.text-right a {
-		color: #1EADDB;
+	div#login-dp-persona div.help-block.text-center a {
+		color: #1785A8;
 		font-size: 20px;
+		text-align: center;
 	}
 	div#login-dp-persona.dropdown-menu.show button.btn-primary {
 		background-color: #1EADDB;
