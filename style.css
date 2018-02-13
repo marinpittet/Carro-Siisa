@@ -873,6 +873,7 @@ body {
 	}
 	button.btn-c a {
 		color: #fff;
+		text-decoration: none;
 	}
 	button.dropdown-toggle.btn.btn-c a {
 		color: #fff;
