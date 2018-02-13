@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+
   
   // Formulario reporte de Personas
   $('#add-persona').click(function() {

@@ -484,6 +484,7 @@ body {
 	
 	div.cart-bar ul.links div.container.show div.help-block.text-right a {
 		color: #1EADDB;
+		font-size: 20px;
 	}
 	div.cart-bar ul.links div.container.show div.dropdown-menu.show button.btn-primary {
 		background-color: #1EADDB;
@@ -835,6 +836,7 @@ body {
 	}
 	div#login-dp-persona div.help-block.text-right a {
 		color: #1EADDB;
+		font-size: 20px;
 	}
 	div#login-dp-persona.dropdown-menu.show button.btn-primary {
 		background-color: #1EADDB;
