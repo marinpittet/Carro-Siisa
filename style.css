@@ -179,6 +179,46 @@ body {
 	}
 /* boton y dropdown de ingreso de usuario */
 /* -------------------------------------------------------------------------------------------------------------------- */
+/* boton y dropdown de sesion de usuario */
+	div.logOut {
+		display: block;
+	}
+	div.logOut h4 {
+		color: #1EADDB;
+		font-family: 'Roboto Condensed', sans-serif;
+		text-align: center;
+		margin-bottom: 0px;
+	}
+	div.logOut p a {
+		color: #1EADDB;
+		font-family: 'Roboto Condensed', sans-serif;
+		text-align: center;
+	}
+	div.logOut a{
+		text-decoration: none;
+		text-align: center;
+	}
+	div.logOut p {
+		margin-bottom: 10px;
+		text-align: center;
+	}
+	div.logOut div.separadorAzul {
+		position: relative;
+		border: solid 1px #1EADDB;
+		margin-bottom: 20px;
+	}
+	div.logOut img.user-logo {
+		width: 120px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 30px;
+	}
+	div.logIn {
+		display: none;
+	}
+/* boton y dropdown de sesion de usuario */
+/* -------------------------------------------------------------------------------------------------------------------- */
 /* imagen de fondo cabecera */
 	header div.back-image {
 		background: url(images/background.jpg) no-repeat center center fixed;
