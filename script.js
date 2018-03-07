@@ -1,5 +1,9 @@
 $( document ).ready(function() {
 
+  // Sesion usuario y cambio de datos y pass
+  $('.dropdown-menu').click(function(e) {
+    e.stopPropagation();
+  });
   
   // Formulario reporte de Personas
   $('#add-persona').click(function() {

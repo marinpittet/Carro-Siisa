@@ -201,6 +201,7 @@ body {
 	div.logOut p {
 		margin-bottom: 10px;
 		text-align: center;
+		color: #1EADDB;
 	}
 	div.logOut div.separadorAzul {
 		position: relative;
@@ -216,6 +217,21 @@ body {
 	}
 	div.logIn {
 		display: none;
+	}
+	div.logOut div.datosUser {
+		display: block;
+	}
+	div.logOut div.cambioPass {
+		display: none;
+	}
+	div.logOut div.cambioData {
+		display: none;
+	}
+	div.logOut button a {
+		color: #fff;
+	}
+	div.logOut button {
+		border: none;
 	}
 /* boton y dropdown de sesion de usuario */
 /* -------------------------------------------------------------------------------------------------------------------- */

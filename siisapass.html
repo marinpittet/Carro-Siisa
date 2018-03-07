@@ -130,18 +130,68 @@
 					<button class="dropdown-toggle" data-toggle="dropdown"><a> <i class="fas fa-user"></i> Andrés Marín</a></button>
 					<ul id="login-dp" class="dropdown-menu">
 						<li>
+							<div class="datosUser" id="datosUser">
 							<div class="row">
 								<div class="col-12">
 									<h4>Bienvenido Andrés Marín</h4>
 									<div class="separadorAzul"></div>
 									<img class="user-logo" src="images/user-logo.svg" alt="">
-									<p><a href="">Cambiar Password Siiisapass</a></p>
-									<p><a href="">Cambiar datos usuario Siiisapass</a></p>
+									<p><a id="PassChange" href="#">Cambiar Password Siiisapass</a></p>
+									<p><a id="DataChange" href="#">Cambiar datos usuario Siiisapass</a></p>
 									<div class="separadorAzul"></div>
-									<a href=""><h4>Cerrar Sesión</h4></a>
+									<button type="submit" class="btn btn-primary btn-block"><a href="">Cerrar Sesión</a></button>
 								</div>
-
 							</div>
+							</div>
+							<!-- cambio password siisapass -->
+							<div class="cambioPass" id="cambioPass">
+							<div class="row">
+								<div class="col-12">
+									<h4>Bienvenido Andrés Marín</h4>
+									<div class="separadorAzul"></div>
+									<p>Cambiar Password Siisapass</p>
+									<div class="form-group">
+										<input type="text" class="form-control" id="oldPass" placeholder="Siisapass Antiguo" required>
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" id="newPass" placeholder="Siisapass Nuevo" required>
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" id="newPass2" placeholder="Repetir Siisapass Nuevo" required>
+									</div>
+									<div class="separadorAzul"></div>
+									
+									<button type="submit" id="Saved" class="btn btn-primary btn-block"><a href="">Guardar y volver</a></button>
+								</div>
+							</div>
+							</div>
+							<!-- cambio password siisapass -->
+							<!-- cambio Datos Usuario siisapass -->
+							<div class="cambioData" id="cambioData">
+							<div class="row">
+								<div class="col-12">
+									<h4>Bienvenido Andrés Marín</h4>
+									<div class="separadorAzul"></div>
+									<p>Cambiar Datos Usuario Siisapass</p>
+									<div class="form-group">
+										<input type="text" class="form-control" id="newRut" placeholder="RUT" required>
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" id="newSerie" placeholder="Nº de Serie" required>
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" id="newMail" placeholder="Nuevo email" required>
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" id="newMail2" placeholder="Repetir Nuevo email" required>
+									</div>
+									<div class="separadorAzul"></div>
+									
+									<button type="submit" id="Saved" class="btn btn-primary btn-block"><a href="">Guardar y volver</a></button>
+								</div>
+							</div>
+							</div>
+							<!-- cambio Datos Usuario siisapass -->
 						</li>
 					</ul>
 				</li>
