@@ -4,6 +4,25 @@ $( document ).ready(function() {
   $('.dropdown-menu').click(function(e) {
     e.stopPropagation();
   });
+
+  $('#PassChange').click(function(e) {
+    e.stopPropagation();
+    $('.cambioPass').css({
+        display: 'block'
+      });
+    $('.datosUser').css({
+        display: 'none'
+      });
+  });
+  $('#DataChange').click(function(e) {
+    e.stopPropagation();
+    $('.cambioData').css({
+        display: 'block'
+      });
+    $('.datosUser').css({
+        display: 'none'
+      });
+  });
   
   // Formulario reporte de Personas
   $('#add-persona').click(function() {
