@@ -293,7 +293,13 @@ body {
 	.form-group input:invalid {
 		border-left: solid 2px red;
 	}
+	.form-group input:required:invalid {
+		border-left: solid 2px red;
+	}
 	.form-group input:valid {
+		border-left: solid 2px palegreen;
+	}
+	.form-group input:required:valid {
 		border-left: solid 2px palegreen;
 	}
 	.form-group input:required {
