@@ -127,6 +127,9 @@ body {
 		border: none;
 		box-sizing: border-box;
 	}
+	nav button.dropdown-toggle:hover {
+		cursor: pointer;
+	}
 	nav ul#login-dp.dropdown-menu.show {
 		padding: 20px;
 		position: absolute;
@@ -727,6 +730,9 @@ body {
 		border: none;
 		color: #fff;
 	}
+	button.add-product:hover {
+		cursor: pointer;
+	}
 	.contactForm {
 		display: none; /* Hidden by default */
 	    position: fixed; /* Stay in place */
@@ -758,6 +764,9 @@ body {
 		background-color: #1785A8;
 		border: solid 2px #1EADDB;
 		border-radius: 5px;
+	}
+	button.btn-d:hover {
+		cursor: pointer;
 	}
 	@media only screen and (max-width: 450px) {
 		div.servicio-vigilancia div.dropdown-menu.show a.dropdown-item {
@@ -972,6 +981,9 @@ body {
 		margin-top: 10px;
 		width: 100%
 	}
+	section.user-bar button.btn-pay:hover {
+		cursor: pointer;
+	}
 	section.user-bar div.col {
 		padding: 0;
 		margin: 0;
@@ -993,6 +1005,9 @@ body {
 		margin-right: 15px;
 		position: relative;
 		right: -22px;
+	}
+	#cd-cart-trigger:hover {
+		cursor: pointer;
 	}
 	#cd-cart-trigger svg path {
 		color: #D4145A;
