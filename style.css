@@ -148,10 +148,10 @@ body {
 	nav ul#login-dp.dropdown-menu.show div.help-block.text-right a {
 		color: #1EADDB;
 	}
-	a.que-es-siisapass:hover{
+	a.que-es-SIISApass:hover{
 		position: relative;
 	}
-	a.que-es-siisapass:hover:after {
+	a.que-es-SIISApass:hover:after {
 		position: fixed;
 		content: url(images/que-es-siisapass.svg); 
     	display: inline-block;
@@ -161,10 +161,10 @@ body {
     	transform: translateX(-50%);
     	z-index: 1000;
    	}
-   	button.que-es-siisapass:hover{
+   	button.que-es-SIISApass:hover{
 		position: relative;
 	}
-	button.que-es-siisapass:hover:after {
+	button.que-es-SIISApass:hover:after {
 		position: fixed;
 		content: url(images/que-es-siisapass.svg); 
     	display: inline-block;
@@ -291,22 +291,22 @@ body {
 /* -------------------------------------------------------------------------------------------------------------------- */
 /* Obtener SiisaPass */
 	.form-group input:invalid {
-		border-left: solid 2px red;
+		border-left: solid 3px red;
 	}
-	.form-group input:required:invalid {
-		border-left: solid 2px red;
-	}
+	/*.form-group input:required:invalid {
+		border-left: solid 3px red;
+	}*/
 	.form-group input:valid {
-		border-left: solid 2px palegreen;
+		border-left: solid 3px palegreen;
 	}
 	.form-group input:required:valid {
-		border-left: solid 2px palegreen;
+		border-left: solid 3px palegreen;
 	}
 	.form-group input:required {
-		border-left: solid 2px #999;
+		border-left: solid 3px #999;
 	}
 	.form-group input:optional {
-		border-left: solid 2px #ddd;
+		border-left: solid 3px #ddd;
 	}
 	section.siisapass div.back-white {
 		background-color: #fff;
@@ -1184,6 +1184,30 @@ body {
 			opacity: 1;
 		}
 	}
+
+	/* burbuja de notificaion carro */
+	.notification {
+		width: 17px;
+		height: 17px;
+		background-color: #1EADDB;
+		position: absolute;
+		border-radius: 5px;
+		top: -6px;
+		right: -9px;
+		border: solid 1px #fff;
+	}
+	span.noti-text {
+		display: inline;
+		color: #fff;
+		text-align: center;
+		font-size: 10px;
+		font-family: sans-serif;
+		position: relative;
+		display: block;
+		top: 0px;
+		left: 0px;
+	}
+
 
 /* carro de compras lateral */
 /* -------------------------------------------------------------------------------------------------------------------- */
