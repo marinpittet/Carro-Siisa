@@ -7,7 +7,7 @@ body {
 		top: 0;
 		padding: 0;
 		margin: 0;
-		z-index: 1000;
+		z-index: 9;
 	}
 /* barra de navegacion con pestañas contenido responsivo */
 	li.nav-item a {
@@ -317,6 +317,9 @@ body {
 	}
 	.form-group input:optional {
 		border-left: solid 5px #ddd;
+	}
+	input {
+		max-height: 30px;
 	}
 /* Cambio de color con la validación de los inputs */
 /* -------------------------------------------------------------------------------------------------------------------- */
@@ -746,7 +749,7 @@ body {
 	.contactForm {
 		display: none; /* Hidden by default */
 	    position: fixed; /* Stay in place */
-	    z-index: 1; /* Sit on top */
+	    z-index: 10; /* Sit on top */
 	    left: 0;
 	    top: 0;
 	    width: 100%; /* Full width */
@@ -759,7 +762,7 @@ body {
 		width: 600px;
 		position: fixed;
 		background-color: #fff;
-		z-index: 1000;
+		z-index: 10;
 		color: #1EADDB;
 		border: solid 2px #1EADDB;
 		border-radius: 10px;
