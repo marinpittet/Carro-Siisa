@@ -1,4 +1,13 @@
 $( document ).ready(function() {
+  // copiar y pegar esta función con los ID de los inputs deseados para editar el mensaje de validación
+  $(function(){
+    var elements = $("input#inputRut");//etiqueta del DOM
+    for (var i = 0; i < elements.length; i++) {
+      elements[i].oninvalid = function(e) {
+        e.target.setCustomValidity("RUT no válido, el RUT debe tener este formato: 12345678-9");//mensaje de validación personalizado
+      };
+    }
+  });
 
   // Sesion usuario y cambio de datos y pass
   $('.dropdown-menu').click(function(e) {

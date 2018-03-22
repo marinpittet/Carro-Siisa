@@ -11,7 +11,7 @@ body {
 	}
 /* barra de navegacion con pestañas contenido responsivo */
 	li.nav-item a {
-		color: rgba(255,255,255,0.6);
+		color: rgba(255,255,255,0.8);
 		background-color: rgba(0,0,0,0.6);
 		text-align: center;
 		margin-left: -12px;
@@ -37,6 +37,9 @@ body {
 		margin-bottom: 0;
 	}
 	@media only screen and (max-width: 450px) {
+		nav button svg.svg-inline--fa.fa-bars.fa-w-14 {
+			color: #fff;
+		}
 		.tabli.col-12.col-sm-12 {
 			font-size: 12px;
 			padding: 0;
@@ -53,7 +56,7 @@ body {
 			display: block;
 		}
 		nav.navbar.navbar-expand-lg.navbar-fixed-top {
-			background-color: rgba(0,0,0,0.6);
+			background-color: rgba(0,0,0,0.7);
 		}
 		nav.navbar.navbar-expand-lg.navbar-fixed-top div.container {
 			padding: 0;
@@ -284,7 +287,7 @@ body {
 	}
 	@media only screen and (max-width: 450px) {
 		header div.back-image {
-			height: 392px;
+			height: 180px;
 		}
 	}
 	@media only screen and (min-width: 451px) and (max-width: 992px) {
@@ -292,25 +295,32 @@ body {
 	}
 /* imagen de fondo cabecera */
 /* -------------------------------------------------------------------------------------------------------------------- */
-/* Obtener SiisaPass */
+/* Cambio de color con la validación de los inputs */
 	.form-group input:invalid {
-		border-left: solid 3px red;
+		border-left: solid 5px red;
+		/*background-color: rgba(255, 0, 0, 0.4); */
 	}
 	/*.form-group input:required:invalid {
-		border-left: solid 3px red;
+		border-left: solid 5px red;
+		background-color: rgba(255, 0, 0, 0.4);
 	}*/
 	.form-group input:valid {
-		border-left: solid 3px palegreen;
+		border-left: solid 5px #84FF19;
+		background-color: rgba(132, 255, 25, 0.4);
 	}
 	.form-group input:required:valid {
-		border-left: solid 3px palegreen;
+		border-left: solid 5px #84FF19;
+		background-color: rgba(132, 255, 25, 0.4);
 	}
 	.form-group input:required {
-		border-left: solid 3px #999;
+		border-left: solid 5px #999;
 	}
 	.form-group input:optional {
-		border-left: solid 3px #ddd;
+		border-left: solid 5px #ddd;
 	}
+/* Cambio de color con la validación de los inputs */
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* Obtener SiisaPass */
 	section.siisapass div.back-white {
 		background-color: #fff;
 		padding-top: 20px;
@@ -999,6 +1009,70 @@ body {
 
 	}
 /* Barra de Usuario y carro */
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* Detalle de la compra */
+	section.detail-bar {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+		border: solid 1px #1785A8;
+		background-color: #fff;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	section.detail-bar h4 {
+		color: #1785A8;	
+		text-align: center;
+		margin-top: 20px;
+		border-bottom: 2px solid #1785A8;
+	}
+	section.detail-bar div.form-group h4 {
+		color: #1785A8;	
+		text-align: center;
+		margin-top: 20px;
+		border-bottom: 2px solid #1785A8;
+	}
+	section.detail-bar img.pago-web {
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	section.detail-bar div.facturaOpcion {
+		text-align: center;
+	}
+	section.detail-bar li.list-group-item {
+		padding: 2px;
+		background-color: rgba(30, 173, 219, 0.3);
+		line-height: 14px;
+		min-height: 20px;
+		margin: 2px;
+	}
+	section.detail-bar div.detail p.cart-title {
+		margin-bottom: 5px;
+		font-size: 1em;
+		padding-left: 5px;
+	}
+	section.detail-bar div.detail,
+	section.detail-bar div.pay {
+		color: #1785A8;	
+		margin: 0;
+		text-align: left;
+		padding-top: 5px;
+	}
+	section.detail-bar div.col {
+		padding: 0;
+		margin: 0;
+		margin-top: 10px
+	}
+	@media only screen and (max-width: 450px) {
+		section.detail-bar div.rut,
+		section.detail-bar div.serie,
+		section.detail-bar div.razon {
+			display: none;
+		}		
+	}	
+	@media only screen and (min-width: 451px) and (max-width: 992px) {
+
+	}
+/* Detalle de la compra */
 /* -------------------------------------------------------------------------------------------------------------------- */
 /* carro de compras lateral */
 	#cd-cart-trigger {
