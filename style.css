@@ -1067,6 +1067,28 @@ body {
 		font-size: 1em;
 		padding-left: 5px;
 	}
+	section.detail-bar div.detalleGeneral {
+		display: block;
+		padding-right: 12px;
+		padding-left: 12px;
+	}
+	section.detail-bar div.detalleCheque {
+		display: block;
+		padding-right: 12px;
+		padding-left: 12px;
+	}
+	section.detail-bar div.detalleVehiculo {
+		display: block;
+		padding-right: 12px;
+		padding-left: 12px;
+	}
+	section.detail-bar div.detalle div.pay {
+		margin-top: 20px;
+		text-align: right;
+	}
+	section.detail-bar div.detalle div.pay li {
+		padding-right: 20px;
+	}
 	section.detail-bar div.detail,
 	section.detail-bar div.pay {
 		color: #1785A8;	
@@ -1076,6 +1098,14 @@ body {
 	}
 	section.detail-bar div.col {
 		padding: 0;
+		margin: 0;
+		margin-top: 10px
+	}
+	section.detail-bar div.detail.col-md-3,
+	section.detail-bar div.detail.col-md-4,
+	section.detail-bar div.detail.col-md-2{
+		padding-left: 2px;
+		padding-right: 2px;
 		margin: 0;
 		margin-top: 10px
 	}
