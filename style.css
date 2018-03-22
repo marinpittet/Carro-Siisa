@@ -1019,6 +1019,20 @@ body {
 		padding-left: 50px;
 		padding-right: 50px;
 	}
+	section.detail-bar button {
+		float: right;
+		max-height: 15px;
+		background-color: #eee;
+		border: solid 2px #eee;
+		border-radius: 3px;
+		font-size: 0.7em;
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+	section.detail-bar button path{
+		color: red;
+		transform: translateY(-20%);
+	}
 	section.detail-bar h4 {
 		color: #1785A8;	
 		text-align: center;
