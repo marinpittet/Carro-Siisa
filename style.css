@@ -1154,6 +1154,13 @@ body {
 		display: inline-block;
 		}	
 	}
+	@media only screen and (min-width: 1200px) {
+		section.detail-bar div.detail,
+		section.detail-bar div.pay {
+			font-size: 1em;
+			padding: 0;
+		}
+	}
 /* Detalle de la compra */
 /* -------------------------------------------------------------------------------------------------------------------- */
 /* confirmacion de la compra */
