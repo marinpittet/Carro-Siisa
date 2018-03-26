@@ -299,7 +299,7 @@
 						<div class="detail col-md-2 col-4">
 							<p class="cart-title">Precio</p>
 							<ul class="list-group list-group-flush product-list">	
-								<li class="list-group-item" id="precio">$$$$$$<button><i class="far fa-trash-alt"></i></button></li>
+								<li class="list-group-item" id="precio">$$$$$$<button class="trash"><i class="far fa-trash-alt"></i></button></li>
 							</ul>
 						</div>	
 					</div>
@@ -336,7 +336,7 @@
 						<div class="detail col-md-2 col-4">
 							<p class="cart-title">Precio</p>
 							<ul class="list-group list-group-flush product-list">	
-								<li class="list-group-item" id="precio">$$$$$$<button><i class="far fa-trash-alt"></i></button></li>
+								<li class="list-group-item" id="precio">$$$$$$<button class="trash"><i class="far fa-trash-alt"></i></button></li>
 							</ul>
 						</div>	
 					</div>
@@ -373,7 +373,7 @@
 						<div class="detail col-md-2 col-4">
 							<p class="cart-title">Precio</p>
 							<ul class="list-group list-group-flush product-list">	
-								<li class="list-group-item" id="precio">$$$$$$<button><i class="far fa-trash-alt"></i></button></li>
+								<li class="list-group-item" id="precio">$$$$$$<button class="trash"><i class="far fa-trash-alt"></i></button></li>
 							</ul>
 						</div>	
 					</div>
@@ -396,34 +396,34 @@
 				</div>
 			</div>
 			<div class="form-group row">
-				<div class="col-12 col-md-4 offset-md-2">
+				<div class=" offset-1 col-10 col-md-5 offset-md-1">
 					<input type="text" class="form-control" id="direccion" placeholder="Nombres:" required>
 				</div>
-				<div class="col-12 col-md-4">
+				<div class=" offset-1 col-10 offset-md-0 col-md-5">
 					<input type="text" class="form-control" id="comuna" placeholder="Apellido Paterno:" required>
 				</div>
 			</div>
 			<div class="form-group row">
-				<div class="col-12 col-md-4 offset-md-2">
+				<div class=" offset-1 col-10 col-md-5 offset-md-1">
 					<input type="email" class="form-control" id="direccion" placeholder="E-mail:" required>
 				</div>
-				<div class="col-12 col-md-4">
+				<div class=" offset-1 col-10 offset-md-0 col-md-5">
 					<input type="text" class="form-control" id="comuna" placeholder="Apellido Materno:" required>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-6 col-md-4 offset-md-2">
+				<div class="offset-1 col-5 col-md-5 offset-md-1">
 					<input class="radio" type="radio" name="toggle">
-					<img class="pago-web" src="images/webpay-logo.png" alt="">
+					<img class="pago-web" src="images/webpay-logo.png" alt="logo-webpay">
 				</div>
-				<div class="col-6 col-md-4">
+				<div class="col-5 col-md-5">
 					<input class="radio" type="radio" name="toggle">
-					<img class="pago-web" src="images/logo_servipag.jpg" alt="">
+					<img class="pago-web" src="images/logo_servipag.jpg" alt="logo-servipag">
 				</div>
 			</div>
 			<!-- MEDIO DE PAGO TRANSBANK, SERVIPAG -->
 			<div class="row">	
-				<div class="form-group facturaOpcion col-12 col-md-6 offset-md-3">
+				<div class="form-group facturaOpcion col-12 col-md-8 offset-md-2">
 					<span>¿Quiere recibir Factura? (válida sólo en Chile)</span>
 					<input class="radio" type="radio" id="factura-toggle-off" name="toggle" >
 					<span for="toggle-off">No</span>
@@ -433,41 +433,41 @@
 			</div>
 			<div class="factura" id="factura">
 				<div class="form-group row">
-					<div class="col-12 col-md-8 offset-md-2">
+					<div class="offset-1 col-10 col-md-10 offset-md-1">
 						<input type="text" class="form-control" id="id-rut" placeholder="Ingrese su RUT aquí" required>
 					</div>
 				</div>
 				<div class="form-group row">
-					<div class="col-12 col-md-8 offset-md-2">
+					<div class="offset-1 col-10 col-md-10 offset-md-1">
 						<input type="text" class="form-control" id="razon" placeholder="Razón Social:" required>
 					</div>
 				</div>
 				<div class="form-group row">
-					<div class="col-12 col-md-4 offset-md-2">
+					<div class="offset-1 col-10 col-md-5 offset-md-1">
 						<input type="text" class="form-control" id="direccion" placeholder="Dirección:" required>
 					</div>
-					<div class="col-12 col-md-4">
+					<div class="offset-1 col-10 offset-md-0 col-md-5">
 						<input type="text" class="form-control" id="comuna" placeholder="Comuna:" required>
 					</div>
 				</div>
 				<div class="form-group row">
-					<div class="col-12 col-md-4 offset-md-2">
+					<div class="offset-1 col-10 col-md-5 offset-md-1">
 						<input type="tel" name="usrtel" class="form-control" placeholder="Teléfono:" required>
 					</div>
-					<div class="col-12 col-md-4">
+					<div class="offset-1 col-10 offset-md-0 col-md-5">
 						<input type="tel" name="usrfax" placeholder="Fax:" class="form-control">
 					</div>
 				</div>
 				<div class="form-group row">
-					<div class="col-12 col-md-8 offset-md-2">
+					<div class="offset-1 col-10 col-md-10 offset-md-1">
 						<input type="text" class="form-control" placeholder="Nombre de Contacto:" required>
 					</div>
 				</div>
 				<div class="form-group row">
-					<div class="col-12 col-md-4 offset-md-2">
+					<div class="offset-1 col-10 col-md-4 offset-md-1">
 						<input type="email" class="form-control" id="id-email" placeholder="Email de Contacto: ejemplo@ejemplo.com" required>
 					</div>
-					<div class="col-12 col-md-4">
+					<div class="offset-1 col-10 col-md-4">
 						<div class="form-check facturaMail">
 							<input class="form-check-input" type="checkbox" id="gridCheck2" required>
 							<label class="form-check-label" for="gridCheck2">
@@ -477,7 +477,7 @@
 					</div>
 				</div>
 				<div class="form-group row">
-					<div class="col-12 col-md-8 offset-md-2">
+					<div class="offset-1 col-10 col-md-10 offset-md-1">
 						<select class="custom-select" name="giro" id="combo">
 							<option value="0" id="0012">Seleccione un Giro Comercial</option>
 							<option value="171200">ACABADO DE PRODUCTOS TEXTIL    </option>

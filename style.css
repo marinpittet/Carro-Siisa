@@ -1022,7 +1022,7 @@ body {
 		padding-left: 50px;
 		padding-right: 50px;
 	}
-	section.detail-bar button {
+	section.detail-bar button.trash {
 		float: right;
 		max-height: 15px;
 		background-color: #eee;
@@ -1032,7 +1032,7 @@ body {
 		padding-left: 3px;
 		padding-right: 3px;
 	}
-	section.detail-bar button path{
+	section.detail-bar button.trash path{
 		color: red;
 		transform: translateY(-20%);
 	}
@@ -1095,6 +1095,7 @@ body {
 		margin: 0;
 		text-align: left;
 		padding-top: 5px;
+		font-size: 0.8em;
 	}
 	section.detail-bar div.col {
 		padding: 0;
@@ -1109,15 +1110,49 @@ body {
 		margin: 0;
 		margin-top: 10px
 	}
+	section.detail-bar .btn-d {
+		color: #FFF;
+		background-color: #1785A8;
+		border: solid 2px #1EADDB;
+		border-radius: 5px;
+	}
+	section.detail-bar button.btn-d:hover {
+		cursor: pointer;
+	}
 	@media only screen and (max-width: 450px) {
 		section.detail-bar div.rut,
 		section.detail-bar div.serie,
 		section.detail-bar div.razon {
 			display: none;
+		}
+		section.detail-bar {
+		padding-left: 10px;
+		padding-right: 10px;
+		box-sizing: border-box;
+		}
+		section.detail-bar img.pago-web {
+		padding-left: 0px;
+		padding-right: 0px;
 		}		
 	}	
 	@media only screen and (min-width: 451px) and (max-width: 992px) {
-
+		section.detail-bar{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		section.detail-bar div.detail p.cart-title {
+			padding: 0;
+		}
+		section.detail-bar div.detail,
+		section.detail-bar div.pay {
+			font-size: 0.6em;
+			padding: 0;
+		}
+		section.detail-bar img.pago-web {
+		max-width: 150px;
+		padding: 0;
+		display: inline-block;
+		}	
 	}
 /* Detalle de la compra */
 /* -------------------------------------------------------------------------------------------------------------------- */
@@ -1217,6 +1252,26 @@ body {
 		margin-top: 10px
 	}
 	@media only screen and (max-width: 450px) {
+		section.confirm-bar {
+		padding-left: 10px;
+		padding-right: 10px;
+		box-sizing: border-box;
+		}
+		section.confirm-bar div.row {
+			margin-left: 2px;
+			margin-right: 2px;
+		}
+		section.confirm-bar div.listaItem ul {
+		padding: 0;
+		font-size: 0.7em;
+		}
+		section.confirm-bar div.listaDatos ul {
+		padding: 0;
+		font-size: 0.7em;
+		}
+		div.importante p {
+			text-align: justify;
+		}
 	}	
 	@media only screen and (min-width: 451px) and (max-width: 992px) {
 
