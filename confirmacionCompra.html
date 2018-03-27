@@ -102,7 +102,18 @@
 										</form>
 										<div class="dropdown-divider"></div>
 										<div class="bottom text-center">
-											<a class="que-es-SIISApass" href="#"><p>¿Qué es SIISApass?</p></a> 
+											<a id="queSiisapass" href="#"><p>¿Qué es SIISApass?</p></a> 
+											<div id="esSiisapass" class="que-es-SIISApass">
+												<div class="formSiisapass">
+													<img src="images/logo-siisa.svg" alt="">
+													<p class="titulo">¿Qué es SIISApass?</p>
+													<p>Es una clave de uso personal, confidencial, intransferible que SIISA genera como consecuencia del proceso de verificación de la identidad del titular de los datos que la solicite a través de las facilidades que considera este site, y solo en el evento de haber resultado positivo este proceso de validación ante el SRCeI.
+
+														Esta clave personal, confidencial e intransferible es condición esencial de disponer para hacer efectivos por parte del titular de los datos, los derechos consagrados en la Ley 19.628 y Ley 20.575 como también para efecto de futuras compras en este site, siendo por lo tanto de su exclusiva responsabilidad su manejo. 
+
+													Para vuestra seguridad en su calidad de titular de los datos, esta clave tendrá una vigencia de 6 meses contados a partir de su fecha de emisión, fecha a partir de la cual deberá ser renovada.</p>
+												</div>
+											</div>
 											<a href="SIISApass.html"><p>Obtener SIISApass</p></a>
 										</div>
 									</div>
@@ -220,13 +231,13 @@
 						<div class="col-6">
 							<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
 								<div class="form-group">
-									<label class="sr-only" for="InputEmail">RUT</label>
-									<input type="email" class="form-control" id="InputEmail" placeholder="RUT" required>
+									<label class="sr-only" for="inputRut">RUT</label>
+									<input type="text" class="form-control" id="inputRut" placeholder="RUT" required>
 								</div>
 								<div class="form-group">
 									<label class="sr-only" for="InputPassword">SIISApass</label>
 									<input type="password" class="form-control" id="InputPassword" placeholder="SIISApass" required>
-									<div class="help-block text-center"><a href="">¿olvido su SIISApass?</a></div>
+									<div class="help-block text-right"><a href="">¿olvido su SIISApass?</a></div>
 								</div>
 							</form>
 						</div>
@@ -234,14 +245,38 @@
 							<button type="submit" class="btn btn-primary btn-block">Ingresar con SIISApass</button>
 							<button type="submit" class="btn btn-secondary btn-block"><a href="infoPersona.html">Continuar Comprando</a></button>
 						</div>
-
 					</div>
+					
+					<div class="row">	
+						<div class="separador"></div>
+
+						<div class="offset-1 col-5">
+							<button id="queSiisapass-2" class="btn btn-secondary btn-block"><a href="#">¿Que es SIISApass?</a></button>
+						</div>
+						<div class="col-5">
+							<button type="submit" class="btn btn-secondary btn-block"><a href="siisapass.html">Obtener SIISApass</a></button>
+						</div>
+					</div>
+					
+
 				</div>
 				<li><a class="menu-link" href="infoEmpresa.html">Información de Empresa</a></li>
-				<li class="	"><a class="menu-link" href="infoVehiculo.html">Vehículos Motorizados</a></li>
+				<li><a class="menu-link" href="infoVehiculo.html">Vehículos Motorizados</a></li>
 
 			</div>
 		</ul>	
+	</div>
+	<!-- tarjeta información que es siisapass -->
+	<div id="esSiisapass-2" class="que-es-SIISApass">
+		<div class="formSiisapass">
+			<img src="images/logo-siisa.svg" alt="">
+			<p class="titulo">¿Qué es SIISApass?</p>
+			<p>Es una clave de uso personal, confidencial, intransferible que SIISA genera como consecuencia del proceso de verificación de la identidad del titular de los datos que la solicite a través de las facilidades que considera este site, y solo en el evento de haber resultado positivo este proceso de validación ante el SRCeI.
+
+				Esta clave personal, confidencial e intransferible es condición esencial de disponer para hacer efectivos por parte del titular de los datos, los derechos consagrados en la Ley 19.628 y Ley 20.575 como también para efecto de futuras compras en este site, siendo por lo tanto de su exclusiva responsabilidad su manejo. 
+
+			Para vuestra seguridad en su calidad de titular de los datos, esta clave tendrá una vigencia de 6 meses contados a partir de su fecha de emisión, fecha a partir de la cual deberá ser renovada.</p>
+		</div>
 	</div>
 	<!-- navegacion carro -->
 	<!-- barra etapa de compra -->

@@ -33,6 +33,46 @@ $( document ).ready(function() {
       });
   });
   
+   // Que es siisapass
+  $('#queSiisapass').click(function() {
+    $('#esSiisapass').fadeToggle();
+  })
+  $(document).mouseup(function (e) {
+    var container = $("#esSiisapass");
+
+    if (container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        container.fadeOut();
+    }
+  });
+
+   $('#queSiisapass-2').click(function() {
+    $('#esSiisapass-2').fadeToggle();
+  })
+  $(document).mouseup(function (e) {
+    var container = $("#esSiisapass-2");
+
+    if (container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        container.fadeOut();
+    }
+  });
+
+   $('#queSiisapass-3').click(function() {
+    $('#esSiisapass-3').fadeToggle();
+  })
+  $(document).mouseup(function (e) {
+    var container = $("#esSiisapass-3");
+
+    if (container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+        container.fadeOut();
+    }
+  });
+
   // Formulario reporte de Personas
   $('#add-persona').click(function() {
     $('#add-personaForm').fadeToggle();
