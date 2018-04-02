@@ -1235,7 +1235,7 @@ body {
 	}
 /* Detalle de la compra */
 /* -------------------------------------------------------------------------------------------------------------------- */
-/* confirmacion de la compra */
+/* confirmacion y de la compra */
 	section.confirm-bar {
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 300;
@@ -1342,11 +1342,17 @@ body {
 		}
 		section.confirm-bar div.listaItem ul {
 		padding: 0;
-		font-size: 0.7em;
+		font-size: 0.8em;
 		}
 		section.confirm-bar div.listaDatos ul {
 		padding: 0;
-		font-size: 0.7em;
+		font-size: 0.8em;
+		}
+		section.confirm-bar div.listaDatos.col-5 {
+			padding: 0;
+		}
+		section.confirm-bar div.listaItem.col-7 {
+			padding-right: 5px;
 		}
 		div.importante p {
 			text-align: justify;
@@ -1356,6 +1362,137 @@ body {
 
 	}
 /* Cofirmacion de la compra */
+/* -------------------------------------------------------------------------------------------------------------------- */
+/* Resultado y de la compra */
+	section.result-bar {
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+		border: solid 1px #1785A8;
+		background-color: #fff;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	section.result-bar h4 {
+		color: #1785A8;	
+		text-align: center;
+		margin-top: 20px;
+	}
+	section.result-bar p.sugerencia {
+		text-align: center;
+	}
+	section.result-bar div.result-title p {
+		border-bottom: 2px solid #1785A8;
+		text-align: center;
+		letter-spacing: 0.1em;
+		color: #1785A8;	
+	}
+	section.result-bar li {
+		list-style-type: none;
+	}
+	section.result-bar div.listaItem {
+		display: inline-block;
+	}
+	section.result-bar div.listaItem ul {
+		float: right;
+		text-align: right;
+		font-weight: 700;
+	}
+	section.result-bar div.listaDatos ul {
+		float: left;
+		text-align: left;
+	}
+	section.result-bar div.listaDatos {
+		display: inline-block;
+	}
+	section.result-bar li.list-group-item {
+		padding: 2px;
+		background-color: rgba(30, 173, 219, 0.3);
+		line-height: 14px;
+		min-height: 20px;
+		margin: 2px;
+		display: block;
+	}
+	section.result-bar div.detail p.cart-title {
+		margin-bottom: 5px;
+		font-size: 1em;
+		padding-left: 5px;
+	}
+	section.result-bar div.detalleGeneral {
+		display: block;
+		padding-right: 12px;
+		padding-left: 12px;
+	}
+	section.result-bar div.detalle div.pay {
+		margin-top: 20px;
+		text-align: right;
+	}
+	section.result-bar div.detalle div.pay li {
+		padding-right: 20px;
+	}
+	section.result-bar div.detail,
+	section.result-bar div.pay {
+		color: #1785A8;	
+		margin: 0;
+		text-align: left;
+		padding-top: 5px;
+	}
+	section.result-bar div.reenviar{
+		margin-top: 30px;
+	}
+	section.result-bar div.reenviar button {
+		background-color: #1EADDB;
+		border: solid 2px #1785A8;
+		color: #fff;
+		border-radius: 5px;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 400;
+		font-size: .9em;
+		width: 90%;
+		margin-bottom: 20px;
+		margin-top: 10px;
+		width: 100%
+	}
+	section.result-bar div.reenviar button:hover {
+		cursor: pointer;
+	}
+	section.result-bar div.detail.col-md-3,
+	section.result-bar div.detail.col-md-4,
+	section.result-bar div.detail.col-md-2,
+	section.result-bar div.detail.col-md-1{
+		padding-left: 2px;
+		padding-right: 2px;
+		margin: 0;
+		margin-top: 10px
+	}
+	@media only screen and (max-width: 450px) {
+		section.result-bar {
+		padding-left: 10px;
+		padding-right: 10px;
+		box-sizing: border-box;
+		}
+		section.result-bar div.row {
+			margin-left: 2px;
+			margin-right: 2px;
+		}
+		section.result-bar div.listaItem ul {
+		padding: 0;
+		font-size: 0.8em;
+		}
+		section.result-bar div.listaDatos ul {
+		padding: 0;
+		font-size: 0.8em;
+		}
+		section.result-bar div.listaDatos.col-6 {
+			padding: 0;
+		}
+		div.importante p {
+			text-align: justify;
+		}
+	}	
+	@media only screen and (min-width: 451px) and (max-width: 992px) {
+
+	}
+/* Resultado de la compra */
 /* -------------------------------------------------------------------------------------------------------------------- */
 /* carro de compras lateral */
 	#cd-cart-trigger {
