@@ -126,7 +126,7 @@ body {
 		border-radius: 0px 0px 5px 5px;
 		padding: 10px;
 		position: relative;
-		top: -11px;
+		top: 13px;
 		border: none;
 		box-sizing: border-box;
 	}
@@ -521,7 +521,7 @@ body {
 	}
 	div.cart-bar ul.links li{
 		float: left;
-		width: 33.3%
+		width: 20%
 	}
 	div.cart-bar ul.links li.active {
 		background-color: rgba(255,255,255,0.2); 
@@ -851,7 +851,7 @@ body {
 /* Seccion descripcion de productos (seleccion de 3 vias)*/
 	section.productos {
 		margin-top:130px;
-		background: linear-gradient(to right, #62C2E1 50%, #1785A8 50%);
+		background: linear-gradient(to right, #1785A8 50%, #62C2E1 50%);
 	}
 	.productos.container.row {
 	  display: flex;
@@ -860,24 +860,41 @@ body {
 	.productos.container.row.col {
 	  flex: 1; 
 	}
+	.sellopro {
+		background-color: #1785A8;
+		color: #fff;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+	}
 	.persona {
-		background-color: #62C2E1;
+		background-color: #1EADDB;
 		color: #fff;
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 300;
 	}
 	.persona img,
 	.empresa img,
-	.vehiculo img  {
+	.vehiculo img, 
+	.cheques img,
+	.sellopro img  {
 		margin-top: 40px;
 		margin-bottom: 40px;
 		width: 100%;
 		padding-left: 20%;
 		padding-right: 20%;
+		max-height: 100px;
+		min-height: 100px;
+	}
+	.sellopro img {
+		padding: 0;
+		margin-left: calc(50% - 50px); 
+		max-width: 100px;
 	}
 	.persona h2,
 	.empresa h2, 
-	.vehiculo h2 {
+	.vehiculo h2,
+	.cheques h2,
+	.sellopro h2 {
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 300;
 		text-transform: uppercase;
@@ -887,23 +904,39 @@ body {
 	}
 	.persona p,
 	.empresa p,
-	.vehiculo p {
+	.vehiculo p,
+	.cheques p,
+	.sellopro p {
 		padding-right: 20px;
 	  	padding-left: 20px;
 	  	text-align: justify;
-	  	margin-bottom: 100px;
+	  	margin-bottom: 60px;
 	}
 	.empresa {
-		background-color: #1EADDB;
+		background-color: #62C2E1;
 		color: #fff;
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 300;
 	}
 	.vehiculo {
-		background-color: #1785A8;
+		background: linear-gradient(to right, #1785A8 , #1EADDB );
 		color: #fff;
 		font-family: 'Roboto Condensed', sans-serif;
 		font-weight: 300;
+	}
+	.cheques {
+		background: linear-gradient(to right, #1EADDB, #62C2E1);
+		color: #fff;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-weight: 300;
+	}
+	@media only screen and (min-width: 576px) {
+		.vehiculo {
+			border-right: solid 2px #FFF;
+		} 
+		.separador-productos {
+			border-top: solid 2px #FFF;
+		}
 	}
 	button.btn-c {
 		padding: 5px;
@@ -976,7 +1009,9 @@ body {
 		}
 		.persona p,
 		.empresa p,
-		.vehiculo p {
+		.vehiculo p,
+		.cheques p,
+		.sellopro p {
 			padding-right: 5px;
 			padding-left: 5px;
 		}
@@ -997,7 +1032,9 @@ body {
 	@media only screen and (min-width: 521px) and (max-width: 800px) {
 		.persona h2,
 		.empresa h2, 
-		.vehiculo h2 {
+		.vehiculo h2,
+		.cheques h2,
+		.sellopro h2 {
 			font-size: 18px;
 		}
 		button.btn-c a {
@@ -1005,7 +1042,9 @@ body {
 		}
 		.persona p,
 		.empresa p,
-		.vehiculo p {
+		.vehiculo p,
+		.cheques p,
+		.sellopro p  {
 			font-size: 12px;
 			padding-right: 5px;
 			padding-left: 5px;
@@ -1021,8 +1060,10 @@ body {
 	@media only screen and (min-width: 1920px) {
 		.persona p,
 		.empresa p,
-		.vehiculo p {
-		  	margin-bottom: 182px;
+		.vehiculo p,
+		.cheques p,
+		.sellopro p  {
+		  	margin-bottom: 60px;
 		}
 	}
 /* Seccion descripcion de productos */
